@@ -118,6 +118,7 @@ class LLMCallTracker:
                 user_id=_app_name,
                 event_properties=props,
             ))
+            client.flush()  # 強制立即發送，避免 process 結束前 batch 未送出
         except Exception as e:
             logger.debug("Amplitude track 失敗（靜默）：%s", e)
 
