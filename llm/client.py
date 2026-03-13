@@ -12,7 +12,7 @@ from .analytics.amplitude import LLMCallTracker, configure as amplitude_configur
 logger = logging.getLogger(__name__)
 
 _DEFAULT_CHAIN = ["codex", "gemini"]  # 優先順序
-MAX_PROMPT_LENGTH = 15_000
+MAX_PROMPT_LENGTH = 20_000
 
 
 def _build_provider(name: str) -> BaseProvider:

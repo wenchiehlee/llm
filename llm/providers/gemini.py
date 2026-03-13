@@ -15,7 +15,7 @@ from . import BaseProvider
 logger = logging.getLogger(__name__)
 
 _RETRY_DELAYS = [5, 15, 30]
-MAX_PROMPT_LENGTH = 15_000
+MAX_PROMPT_LENGTH = 20_000
 
 
 class GeminiProvider(BaseProvider):
