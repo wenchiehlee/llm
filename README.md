@@ -82,8 +82,16 @@ LLM_APP_NAME=your-app-name
 ```python
 from llm import LLMClient
 
-# Auto-detect providers from env vars (codex → gemini fallback)
+# Auto-detect providers (codex → gemini fallback)
 client = LLMClient(app_name="MyApp")
+
+# Select provider at init
+client = LLMClient(providers=["gemini"])
+client = LLMClient(providers=["codex", "gemini"])  # explicit fallback order
+
+# Select Gemini model at init
+client = LLMClient(model="gemini-2.0-flash")
+client = LLMClient(providers=["gemini"], model="gemini-2.5-pro")
 
 # Plain text response
 text = client.generate("分析台積電近期新聞...")
@@ -91,9 +99,11 @@ text = client.generate("分析台積電近期新聞...")
 # JSON response (parsed automatically)
 data = client.generate_json("回傳 JSON：{score: 0-5, reason: str}")
 
-# Force specific provider(s)
-client = LLMClient(providers=["gemini"])
-client = LLMClient(providers=["codex", "gemini"])  # explicit fallback order
+# Override provider / model per call (without rebuilding client)
+text = client.generate(prompt, provider="gemini")
+text = client.generate(prompt, model="gemini-2.0-flash")
+text = client.generate(prompt, provider="gemini", model="gemini-2.5-pro")
+data = client.generate_json(prompt, provider="gemini", model="gemini-2.0-flash")
 ```
 
 ---
