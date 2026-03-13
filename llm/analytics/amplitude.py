@@ -83,6 +83,7 @@ class LLMCallTracker:
         self.model = model
         self.prompt = prompt
         self.result: str = ""
+        self.key_used: str = ""  # 由 client.py 在成功後填入
         self._start: float = 0.0
 
     def __enter__(self) -> "LLMCallTracker":
@@ -101,6 +102,7 @@ class LLMCallTracker:
             "provider":       self.provider,
             "model":          self.model,
             "app_name":       _app_name,
+            "key_used":       self.key_used,
             "input_preview":  _first_n_chars(self.prompt, 100),
             "output_preview": _first_n_words(self.result, 100),
             "duration_ms":    duration_ms,

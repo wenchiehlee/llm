@@ -71,6 +71,7 @@ class LLMClient:
                 try:
                     result = provider.generate(prompt, max_tokens=max_tokens)
                     tracker.result = result
+                    tracker.key_used = getattr(provider, "last_key_used", "")
                     return result
                 except Exception as e:
                     logger.warning("%s 失敗，嘗試下一個 provider：%s", provider.name, e)
@@ -89,6 +90,7 @@ class LLMClient:
                 try:
                     text = provider.generate(prompt, json_mode=True, max_tokens=max_tokens)
                     tracker.result = text
+                    tracker.key_used = getattr(provider, "last_key_used", "")
                     return json.loads(text)
                 except json.JSONDecodeError as e:
                     logger.warning("%s 回傳非 JSON：%s", provider.name, e)

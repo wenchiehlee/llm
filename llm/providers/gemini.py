@@ -27,6 +27,7 @@ class GeminiProvider(BaseProvider):
         self._keys: list[tuple[str, str]] = []
         self._exhausted: set[str] = set()
         self._index: int = 0
+        self.last_key_used: str = ""  # env var 名稱，供 Amplitude 追蹤
 
     # ── key loading ──────────────────────────────────────────────────────────
 
@@ -109,6 +110,7 @@ class GeminiProvider(BaseProvider):
                         contents=prompt,
                         config=types.GenerateContentConfig(**cfg_kwargs),
                     )
+                    self.last_key_used = key_name
                     return resp.text
                 except genai_errors.ServerError as e:
                     if e.code == 503:
