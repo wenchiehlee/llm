@@ -95,7 +95,7 @@ class LLMCallTracker:
         if client is None:
             return False
 
-        duration_ms = int((time.monotonic() - self._start) * 1000)
+        duration_sec = round(time.monotonic() - self._start, 2)
         success = exc_type is None
 
         props: dict[str, Any] = {
@@ -105,7 +105,7 @@ class LLMCallTracker:
             "key_used":       self.key_used,
             "input_preview":  _first_n_chars(self.prompt, 100),
             "output_preview": _first_n_words(self.result, 100),
-            "duration_ms":    duration_ms,
+            "duration_sec":   duration_sec,
             "success":        success,
         }
         if not success and exc_type is not None:
