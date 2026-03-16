@@ -102,11 +102,15 @@ class LLMClient:
         """
         if not prompt or not isinstance(prompt, str):
             raise ValueError("prompt 不能為空")
+
+        providers = self._resolve_providers(provider, model)
         if len(prompt) > MAX_PROMPT_LENGTH:
-            raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
+            p = providers[0]
+            with LLMCallTracker(p.name, p.model, prompt):
+                raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
 
         last_exc: Exception | None = None
-        for p in self._resolve_providers(provider, model):
+        for p in providers:
             tracker = LLMCallTracker(p.name, p.model, prompt)
             with tracker:
                 try:
@@ -130,11 +134,15 @@ class LLMClient:
         """同 generate()，但自動解析 JSON 回傳。"""
         if not prompt or not isinstance(prompt, str):
             raise ValueError("prompt 不能為空")
+
+        providers = self._resolve_providers(provider, model)
         if len(prompt) > MAX_PROMPT_LENGTH:
-            raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
+            p = providers[0]
+            with LLMCallTracker(p.name, p.model, prompt):
+                raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
 
         last_exc: Exception | None = None
-        for p in self._resolve_providers(provider, model):
+        for p in providers:
             tracker = LLMCallTracker(p.name, p.model, prompt)
             with tracker:
                 try:
