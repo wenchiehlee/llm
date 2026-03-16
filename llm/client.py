@@ -111,16 +111,15 @@ class LLMClient:
 
         last_exc: Exception | None = None
         for p in providers:
-            tracker = LLMCallTracker(p.name, p.model, prompt)
-            with tracker:
-                try:
+            try:
+                with LLMCallTracker(p.name, p.model, prompt) as tracker:
                     result = p.generate(prompt, max_tokens=max_tokens)
                     tracker.result = result
                     tracker.key_used = getattr(p, "last_key_used", "")
                     return result
-                except Exception as e:
-                    logger.warning("%s 失敗，嘗試下一個 provider：%s", p.name, e)
-                    last_exc = e
+            except Exception as e:
+                logger.warning("%s 失敗，嘗試下一個 provider：%s", p.name, e)
+                last_exc = e
         raise RuntimeError("所有 provider 均失敗") from last_exc
 
     def generate_json(
@@ -143,17 +142,16 @@ class LLMClient:
 
         last_exc: Exception | None = None
         for p in providers:
-            tracker = LLMCallTracker(p.name, p.model, prompt)
-            with tracker:
-                try:
+            try:
+                with LLMCallTracker(p.name, p.model, prompt) as tracker:
                     text = p.generate(prompt, json_mode=True, max_tokens=max_tokens)
                     tracker.result = text
                     tracker.key_used = getattr(p, "last_key_used", "")
                     return json.loads(text)
-                except json.JSONDecodeError as e:
-                    logger.warning("%s 回傳非 JSON：%s", p.name, e)
-                    last_exc = e
-                except Exception as e:
-                    logger.warning("%s 失敗：%s", p.name, e)
-                    last_exc = e
+            except json.JSONDecodeError as e:
+                logger.warning("%s 回傳非 JSON：%s", p.name, e)
+                last_exc = e
+            except Exception as e:
+                logger.warning("%s 失敗：%s", p.name, e)
+                last_exc = e
         raise RuntimeError("所有 provider 均失敗") from last_exc
