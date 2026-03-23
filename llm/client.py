@@ -72,6 +72,7 @@ class LLMClient:
         self._providers = _detect_available(self._chain, model=model)
         if not self._providers:
             raise RuntimeError(f"沒有可用的 LLM provider（嘗試過：{self._chain}）")
+        self.last_provider: str = self._providers[0].name  # updated after each successful call
         logger.info(
             "LLMClient 初始化，可用 provider：%s",
             ", ".join(p.name for p in self._providers),
@@ -119,6 +120,7 @@ class LLMClient:
                     result = p.generate(prompt, max_tokens=max_tokens)
                     tracker.result = result
                     tracker.key_used = getattr(p, "last_key_used", "")
+                    self.last_provider = p.name
                     return result
             except Exception as e:
                 logger.warning("%s 失敗，嘗試下一個 provider：%s", p.name, e)
@@ -150,6 +152,7 @@ class LLMClient:
                     text = p.generate(prompt, json_mode=True, max_tokens=max_tokens)
                     tracker.result = text
                     tracker.key_used = getattr(p, "last_key_used", "")
+                    self.last_provider = p.name
                     return json.loads(text)
             except json.JSONDecodeError as e:
                 logger.warning("%s 回傳非 JSON：%s", p.name, e)
