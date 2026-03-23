@@ -39,9 +39,17 @@ class MLXProvider(BaseProvider):
 
         messages = [{"role": "user", "content": prompt}]
         if hasattr(self._mlx_tokenizer, "apply_chat_template"):
-            formatted = self._mlx_tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            )
+            # Qwen3 models default to thinking mode — disable it to get clean output
+            is_qwen3 = "qwen3" in self.model.lower()
+            template_kwargs: dict = {"tokenize": False, "add_generation_prompt": True}
+            if is_qwen3:
+                template_kwargs["enable_thinking"] = False
+            try:
+                formatted = self._mlx_tokenizer.apply_chat_template(messages, **template_kwargs)
+            except TypeError:
+                # tokenizer doesn't support enable_thinking — fall back without it
+                template_kwargs.pop("enable_thinking", None)
+                formatted = self._mlx_tokenizer.apply_chat_template(messages, **template_kwargs)
         else:
             formatted = prompt
 
@@ -52,6 +60,9 @@ class MLXProvider(BaseProvider):
             max_tokens=max_tokens,
             verbose=False,
         )
+
+        # Strip <think>...</think> blocks (Qwen3 thinking tokens, safety net)
+        result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL).strip()
 
         if json_mode:
             # strip markdown fences if model still adds them
