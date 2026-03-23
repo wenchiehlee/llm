@@ -11,7 +11,7 @@ from .analytics.amplitude import LLMCallTracker, configure as amplitude_configur
 
 logger = logging.getLogger(__name__)
 
-_DEFAULT_CHAIN = ["codex", "gemini"]  # 優先順序
+_DEFAULT_CHAIN = ["codex", "gemini", "mlx"]  # 優先順序：codex → gemini → mlx(本機)
 MAX_PROMPT_LENGTH = 30_000
 
 
@@ -22,6 +22,9 @@ def _build_provider(name: str, model: str | None = None) -> BaseProvider:
     if name == "codex":
         from .providers.codex import CodexProvider
         return CodexProvider()
+    if name == "mlx":
+        from .providers.mlx import MLXProvider
+        return MLXProvider(model=model)
     raise ValueError(f"Unknown provider: {name}")
 
 
