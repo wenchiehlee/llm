@@ -73,6 +73,8 @@ class LLMClient:
         if not self._providers:
             raise RuntimeError(f"沒有可用的 LLM provider（嘗試過：{self._chain}）")
         self.last_provider: str = self._providers[0].name  # updated after each successful call
+        self.last_model: str = self._providers[0].model
+        self.last_model_repo: str = getattr(self._providers[0], "model_repo", "")
         logger.info(
             "LLMClient 初始化，可用 provider：%s",
             ", ".join(p.name for p in self._providers),
@@ -110,17 +112,19 @@ class LLMClient:
         providers = self._resolve_providers(provider, model)
         if len(prompt) > MAX_PROMPT_LENGTH:
             p = providers[0]
-            with LLMCallTracker(p.name, p.model, prompt):
+            with LLMCallTracker(p.name, p.model, prompt, model_repo=getattr(p, "model_repo", "")):
                 raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
 
         last_exc: Exception | None = None
         for p in providers:
             try:
-                with LLMCallTracker(p.name, p.model, prompt) as tracker:
+                with LLMCallTracker(p.name, p.model, prompt, model_repo=getattr(p, "model_repo", "")) as tracker:
                     result = p.generate(prompt, max_tokens=max_tokens)
                     tracker.result = result
                     tracker.key_used = getattr(p, "last_key_used", "")
                     self.last_provider = p.name
+                    self.last_model = p.model
+                    self.last_model_repo = getattr(p, "model_repo", "")
                     return result
             except Exception as e:
                 logger.warning("%s 失敗，嘗試下一個 provider：%s", p.name, e)
@@ -142,17 +146,19 @@ class LLMClient:
         providers = self._resolve_providers(provider, model)
         if len(prompt) > MAX_PROMPT_LENGTH:
             p = providers[0]
-            with LLMCallTracker(p.name, p.model, prompt):
+            with LLMCallTracker(p.name, p.model, prompt, model_repo=getattr(p, "model_repo", "")):
                 raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
 
         last_exc: Exception | None = None
         for p in providers:
             try:
-                with LLMCallTracker(p.name, p.model, prompt) as tracker:
+                with LLMCallTracker(p.name, p.model, prompt, model_repo=getattr(p, "model_repo", "")) as tracker:
                     text = p.generate(prompt, json_mode=True, max_tokens=max_tokens)
                     tracker.result = text
                     tracker.key_used = getattr(p, "last_key_used", "")
                     self.last_provider = p.name
+                    self.last_model = p.model
+                    self.last_model_repo = getattr(p, "model_repo", "")
                     return json.loads(text)
             except json.JSONDecodeError as e:
                 logger.warning("%s 回傳非 JSON：%s", p.name, e)

@@ -18,7 +18,8 @@ class MLXProvider(BaseProvider):
     name = "mlx"
 
     def __init__(self, model: str | None = None):
-        self.model = model or os.getenv("MLX_MODEL", _DEFAULT_MODEL)
+        self.model_repo = model or os.getenv("MLX_MODEL", _DEFAULT_MODEL)
+        self.model = self.model_repo.split("/")[-1]
         try:
             from mlx_lm import load, generate  # noqa: F401
         except ImportError:
@@ -27,8 +28,8 @@ class MLXProvider(BaseProvider):
 
     def _load(self):
         from mlx_lm import load
-        logger.info("[mlx] loading model %s …", self.model)
-        self._mlx_model, self._mlx_tokenizer = load(self.model)
+        logger.info("[mlx] loading model %s …", self.model_repo)
+        self._mlx_model, self._mlx_tokenizer = load(self.model_repo)
         logger.info("[mlx] model ready")
 
     def generate(self, prompt: str, *, json_mode: bool = False, max_tokens: int = _MAX_TOKENS) -> str:
@@ -40,7 +41,7 @@ class MLXProvider(BaseProvider):
         messages = [{"role": "user", "content": prompt}]
         if hasattr(self._mlx_tokenizer, "apply_chat_template"):
             # Qwen3 models default to thinking mode — disable it to get clean output
-            is_qwen3 = "qwen3" in self.model.lower()
+            is_qwen3 = "qwen3" in self.model_repo.lower()
             template_kwargs: dict = {"tokenize": False, "add_generation_prompt": True}
             if is_qwen3:
                 template_kwargs["enable_thinking"] = False

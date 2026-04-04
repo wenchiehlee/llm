@@ -92,9 +92,10 @@ def _send_sync(event_type: str, user_id: str, props: dict[str, Any]) -> None:
 class LLMCallTracker:
     """context manager：呼叫結束後同步送出單一 llm_call event。"""
 
-    def __init__(self, provider: str, model: str, prompt: str):
+    def __init__(self, provider: str, model: str, prompt: str, model_repo: str = ""):
         self.provider = provider
         self.model = model
+        self.model_repo = model_repo
         self.prompt = prompt
         self.result: str = ""
         self.key_used: str = ""
@@ -111,6 +112,7 @@ class LLMCallTracker:
         props: dict[str, Any] = {
             "provider":       self.provider,
             "model":          self.model,
+            "model_repo":     self.model_repo,
             "app_name":       _app_name,
             "key_used":       self.key_used,
             "input_preview":  _first_n_chars(self.prompt, 100),
