@@ -1,6 +1,6 @@
 """Manual test for MLX provider (Apple Silicon only)."""
-import json
 import logging
+import platform
 import sys
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
@@ -23,6 +23,18 @@ def check(label: str, passed: bool, detail: str = "") -> None:
 
 def main():
     print("=== MLX provider test ===\n")
+
+    # Pre-flight: Apple Silicon check
+    if not (platform.system() == "Darwin" and platform.machine() == "arm64"):
+        print(f"[SKIP] Not Apple Silicon ({platform.system()} {platform.machine()}) — mlx-lm is macOS arm64 only.")
+        sys.exit(0)
+
+    # Pre-flight: mlx-lm installed?
+    try:
+        import mlx_lm  # noqa: F401
+    except ImportError:
+        print("[SKIP] mlx-lm not installed — run: pip install mlx-lm")
+        sys.exit(0)
 
     # 1. init
     try:

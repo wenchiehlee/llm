@@ -4,12 +4,12 @@ Unified LLM client library supporting **Gemini API** (round-robin key rotation),
 
 ## Features
 
-- Auto fallback chain: `codex → gemini → mlx`
-- Gemini multi-key round-robin rotation with daily quota handling (up to 20 keys)
-- Local MLX inference via `mlx-community/Qwen3-14B-4bit` (Apple Silicon only)
-- Single `llm_call` Amplitude event per request (provider, model, model_repo, key_used, input/output preview, duration)
-- Prompt length validation (30,000 chars max)
-- Silent degradation when Amplitude key is absent
+- **Auto fallback chain**: `codex → gemini → mlx`
+- **Gemini multi-key rotation**: Supports up to 20 keys with daily quota handling and round-robin selection.
+- **Local MLX inference**: Optimized for Apple Silicon via `mlx-community/Qwen3-14B-4bit`.
+- **Amplitude Analytics**: Automatic tracking of every `llm_call` (provider, model, duration, tokens, etc.).
+- **JSON Mode**: Native support for structured data extraction across all providers.
+- **Prompt Validation**: Integrated safety check for prompt length (max 20,000 characters).
 
 ---
 
@@ -38,51 +38,28 @@ dependencies = [
 ]
 ```
 
-Then:
-```bash
-uv sync
-# or: pip install -e .
-```
-
-### Optional: Amplitude support
-
-```bash
-uv add amplitude-analytics
-# or: pip install amplitude-analytics
-```
-
-### Optional: MLX support (Apple Silicon only)
-
-```bash
-pip install mlx-lm
-```
-
 ---
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and fill in:
+Copy `.env.example` to `.env`. **Important: Avoid using `#` characters in API keys as they may be interpreted as comments.**
 
 ```env
 # Gemini — primary key + up to 19 rotation keys (GEMINI_API_KEY_1 … GEMINI_API_KEY_19)
 GEMINI_API_KEY=AIza...
 GEMINI_API_KEY_1=AIza...
-GEMINI_API_KEY_2=AIza...
-# Pre-skip exhausted keys (comma-separated env var names)
 # GEMINI_SKIP_KEYS=GEMINI_API_KEY_7
 
-# Codex-API-Server — base URL (without /exec)
-CODEX_API_URL=https://your-server:8443
-SERVER_API_KEY=your-key
+# Codex-API-Server (Mac-mini / Synology NAS)
+CODEX_API_URL=https://api.wenchiehlee.synology.me:8443
+SERVER_API_KEY=your-key-without-hash
 
-# MLX — override default model (optional, Apple Silicon only)
+# MLX — override default model (optional)
 # MLX_MODEL=mlx-community/Qwen3-14B-4bit
 
-# Amplitude (optional — omit to disable tracking)
+# Amplitude (optional)
 AMPLITUDE_API_KEY=your-amplitude-key
-
-# App name shown in Amplitude user_id
-LLM_APP_NAME=your-app-name
+LLM_APP_NAME=my-app-name
 ```
 
 ---
@@ -92,76 +69,56 @@ LLM_APP_NAME=your-app-name
 ```python
 from llm import LLMClient
 
-# Auto-detect providers (codex → gemini → mlx fallback)
+# Auto-detect providers (default fallback: codex → gemini → mlx)
 client = LLMClient(app_name="MyApp")
-
-# Select provider at init
-client = LLMClient(providers=["gemini"])
-client = LLMClient(providers=["codex", "gemini"])  # explicit fallback order
-
-# Select Gemini model at init
-client = LLMClient(model="gemini-2.0-flash")
-client = LLMClient(providers=["gemini"], model="gemini-2.5-pro")
 
 # Plain text response
 text = client.generate("分析台積電近期新聞...")
 
-# JSON response (parsed automatically)
-data = client.generate_json("回傳 JSON：{score: 0-5, reason: str}")
+# JSON response (returns a dict or list)
+data = client.generate_json("分析此公司並以 JSON 格式回傳：{score: 0-5, reason: str}")
 
-# Override provider / model per call (without rebuilding client)
-text = client.generate(prompt, provider="gemini")
-text = client.generate(prompt, model="gemini-2.0-flash")
-text = client.generate(prompt, provider="gemini", model="gemini-2.5-pro")
-data = client.generate_json(prompt, provider="gemini", model="gemini-2.0-flash")
+# Override provider/model per call
+text = client.generate(prompt, provider="gemini", model="gemini-2.0-flash")
 
-# Inspect last used provider / model after a call
-print(client.last_provider)    # e.g. "codex"
-print(client.last_model)       # e.g. "chatgpt-pro"
-print(client.last_model_repo)  # e.g. "mlx-community/Qwen3-14B-4bit"
+# Inspect last call metadata
+print(f"Used {client.last_provider} ({client.last_model})")
 ```
 
 ---
 
-## Provider Selection Logic
+## Testing & Verification
 
-```
-CODEX_API_URL + SERVER_API_KEY set?  ──yes──► use Codex first
-                                      ──no───► skip Codex
-GEMINI_API_KEY set?                  ──yes──► use Gemini
-                                      ──no───► skip Gemini
-mlx-lm installed?                    ──yes──► use MLX (local)
-                                      ──no───► skip MLX
-No providers available?              ──────► raise RuntimeError
+You can verify the integration with `CodexAPIServer` using the provided test script:
+
+```bash
+python test_codex.py
 ```
 
-If a provider fails at runtime, automatically falls back to the next in chain.
+This script checks:
+- Connection to the Codex API Server.
+- `SERVER_API_KEY` authentication.
+- Plain text and JSON mode generation.
 
 ---
 
 ## Providers
 
-| Provider | Model | Requires |
-|----------|-------|---------|
+| Provider | Model (Default) | Requirements |
+|----------|-----------------|--------------|
 | `codex` | `chatgpt-pro` | `CODEX_API_URL` + `SERVER_API_KEY` |
-| `gemini` | `gemini-2.5-flash` (default) | `GEMINI_API_KEY` |
-| `mlx` | `Qwen3-14B-4bit` (default) | `mlx-lm` + Apple Silicon |
+| `gemini` | `gemini-2.5-flash` | `GEMINI_API_KEY` |
+| `mlx` | `Qwen3-14B-4bit` | `mlx-lm` (Apple Silicon only) |
 
 ---
 
-## Amplitude Events
+## Amplitude Events (`llm_call`)
 
-Each `generate()` / `generate_json()` call emits one `llm_call` event:
-
-| Property | Example |
-|----------|---------|
+| Property | Description |
+|----------|-------------|
 | `provider` | `gemini` / `codex` / `mlx` |
-| `model` | `gemini-2.5-flash` / `chatgpt-pro` / `Qwen3-14B-4bit` |
-| `model_repo` | `mlx-community/Qwen3-14B-4bit` |
-| `key_used` | `GEMINI_API_KEY_3` |
-| `input_preview` | first 100 chars of prompt |
-| `output_preview` | first 100 words of response |
-| `duration_sec` | `1.84` |
+| `model` | The specific model name used |
+| `key_used` | The env var name (e.g., `GEMINI_API_KEY_3`) |
 | `success` | `true` / `false` |
-| `error_type` | `rate_limit` / `auth_error` / `timeout` / ... |
-| `app_name` | value of `LLM_APP_NAME` |
+| `duration_sec` | Response time in seconds |
+| `app_name` | Identifier from `LLM_APP_NAME` |
