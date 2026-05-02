@@ -1,72 +1,76 @@
-"""Local MLX LLM provider（Apple Silicon only）。"""
+"""MLX-API-Server provider — HTTP client for Mac-mini MLX inference server."""
 from __future__ import annotations
 
-import json
 import logging
 import os
 import re
+
+import httpx
 
 from . import BaseProvider
 
 logger = logging.getLogger(__name__)
 
-_DEFAULT_MODEL = "mlx-community/Qwen3-14B-4bit"
-_MAX_TOKENS = 4096
+_CONNECT_TIMEOUT = 10
+_READ_TIMEOUT    = 900   # MLX 大模型推理最長 15 分鐘
+
+_MODEL_ALIASES = {
+    "mlx-qwen3":  "mlx-community/Qwen3.5-9B-MLX-4bit",
+    "qwen3-mlx":  "mlx-community/Qwen3.5-9B-MLX-4bit",
+    "mlx-gemma4": "mlx-community/gemma-4-31b-it-4bit",
+}
+
+
+def _parse_mlx_output(raw: str) -> str:
+    """Extract clean answer from mlx_lm output.
+
+    mlx_lm output format:
+        ==========
+        Thinking Process: ...
+        </think>
+
+        ANSWER HERE
+        ==========
+        Prompt: X tokens, ...
+    """
+    # Strip trailing stats block (==========\nPrompt: ...)
+    raw = re.sub(r"\n=+\nPrompt:.*$", "", raw, flags=re.DOTALL).strip()
+    # Strip leading ========== separator
+    raw = re.sub(r"^=+\n", "", raw).strip()
+    # Strip thinking section up to and including </think>
+    if "</think>" in raw:
+        raw = raw.split("</think>", 1)[1].strip()
+    return raw
 
 
 class MLXProvider(BaseProvider):
     name = "mlx"
 
-    def __init__(self, model: str | None = None):
-        self.model_repo = model or os.getenv("MLX_MODEL", _DEFAULT_MODEL)
-        self.model = self.model_repo.split("/")[-1]
-        try:
-            from mlx_lm import load, generate  # noqa: F401
-        except ImportError:
-            raise RuntimeError("mlx-lm not installed — run: pip install mlx-lm")
-        self._load()
+    def __init__(self, model: str | None = None, url: str | None = None, api_key: str | None = None):
+        self.url     = (url     or os.getenv("MLX_API_URL",        "")).rstrip("/")
+        self.api_key = api_key  or os.getenv("MLX_SERVER_API_KEY", "")
+        if not self.url:
+            raise RuntimeError("Missing env var: MLX_API_URL (e.g. http://mac-mini.tail28f10.ts.net:5001)")
+        if not self.api_key:
+            raise RuntimeError("Missing env var: MLX_SERVER_API_KEY")
 
-    def _load(self):
-        from mlx_lm import load
-        logger.info("[mlx] loading model %s …", self.model_repo)
-        self._mlx_model, self._mlx_tokenizer = load(self.model_repo)
-        logger.info("[mlx] model ready")
+        alias = model or os.getenv("MLX_MODEL", "mlx-qwen3")
+        self.model      = alias
+        self.model_repo = _MODEL_ALIASES.get(alias, alias)
 
-    def generate(self, prompt: str, *, json_mode: bool = False, max_tokens: int = _MAX_TOKENS) -> str:
-        from mlx_lm import generate
-
+    def generate(self, prompt: str, *, json_mode: bool = False, max_tokens: int = 8192) -> str:
         if json_mode:
-            prompt = prompt + "\n\nRespond with valid JSON only, no markdown fences."
+            prompt = prompt + "\n\nRespond with valid JSON only, no markdown fences, no explanation."
 
-        messages = [{"role": "user", "content": prompt}]
-        if hasattr(self._mlx_tokenizer, "apply_chat_template"):
-            # Qwen3 models default to thinking mode — disable it to get clean output
-            is_qwen3 = "qwen3" in self.model_repo.lower()
-            template_kwargs: dict = {"tokenize": False, "add_generation_prompt": True}
-            if is_qwen3:
-                template_kwargs["enable_thinking"] = False
-            try:
-                formatted = self._mlx_tokenizer.apply_chat_template(messages, **template_kwargs)
-            except TypeError:
-                # tokenizer doesn't support enable_thinking — fall back without it
-                template_kwargs.pop("enable_thinking", None)
-                formatted = self._mlx_tokenizer.apply_chat_template(messages, **template_kwargs)
-        else:
-            formatted = prompt
+        payload: dict = {"prompt": prompt, "model": self.model}
 
-        result = generate(
-            self._mlx_model,
-            self._mlx_tokenizer,
-            prompt=formatted,
-            max_tokens=max_tokens,
-            verbose=False,
+        resp = httpx.post(
+            f"{self.url}/exec",
+            json=payload,
+            headers={"X-API-Key": self.api_key, "Content-Type": "application/json"},
+            timeout=httpx.Timeout(connect=_CONNECT_TIMEOUT, read=_READ_TIMEOUT,
+                                  write=_CONNECT_TIMEOUT, pool=_CONNECT_TIMEOUT),
         )
-
-        # Strip <think>...</think> blocks (Qwen3 thinking tokens, safety net)
-        result = re.sub(r"<think>.*?</think>", "", result, flags=re.DOTALL).strip()
-
-        if json_mode:
-            # strip markdown fences if model still adds them
-            result = re.sub(r"^```(?:json)?\s*|\s*```$", "", result.strip())
-
-        return result
+        resp.raise_for_status()
+        raw = resp.json().get("output", "")
+        return _parse_mlx_output(raw)
