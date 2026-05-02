@@ -62,7 +62,7 @@ def main():
     try:
         gemma_client = LLMClient(providers=["mlx"], app_name="test-mlx-gemma4")
         gemma_client._providers[0].model = "mlx-gemma4"
-        gemma_client._providers[0].model_repo = "mlx-community/gemma-4-31b-it-4bit"
+        gemma_client._providers[0].model_repo = "mlx-community/gemma-4-e4b-it-8bit"
         result = gemma_client.generate("Reply with exactly: Hello from Gemma.")
         check("mlx-gemma4 generate()", isinstance(result, str) and len(result) > 0, repr(result[:80]))
     except Exception as e:
