@@ -6,7 +6,7 @@ Unified LLM client library supporting **Gemini API** (round-robin key rotation),
 
 - **Auto fallback chain**: `codex → gemini → mlx`
 - **Gemini multi-key rotation**: Supports up to 20 keys with daily quota handling and round-robin selection.
-- **Local MLX inference**: Optimized for Apple Silicon via `mlx-community/Qwen3-14B-4bit`.
+- **Local MLX inference**: High-performance inference via `MLX-API-Server` (e.g., `Qwen3.5-9B`, `Gemma-4`).
 - **Amplitude Analytics**: Automatic tracking of every `llm_call` (provider, model, duration, tokens, etc.).
 - **JSON Mode**: Native support for structured data extraction across all providers.
 - **Prompt Validation**: Integrated safety check for prompt length (max 20,000 characters).
@@ -54,8 +54,10 @@ GEMINI_API_KEY_1=AIza...
 CODEX_API_URL=https://api.wenchiehlee.synology.me:8443
 SERVER_API_KEY=your-key-without-hash
 
-# MLX — override default model (optional)
-# MLX_MODEL=mlx-community/Qwen3-14B-4bit
+# MLX-API-Server (Mac-mini / Apple Silicon)
+MLX_API_URL=http://mac-mini.local:5001
+MLX_SERVER_API_KEY=your-mlx-key
+# MLX_MODEL=mlx-qwen3
 
 # Amplitude (optional)
 AMPLITUDE_API_KEY=your-amplitude-key
@@ -107,8 +109,8 @@ This script checks:
 | Provider | Model (Default) | Requirements |
 |----------|-----------------|--------------|
 | `codex` | `chatgpt-pro` | `CODEX_API_URL` + `SERVER_API_KEY` |
-| `gemini` | `gemini-2.5-flash` | `GEMINI_API_KEY` |
-| `mlx` | `Qwen3-14B-4bit` | `mlx-lm` (Apple Silicon only) |
+| `gemini` | `gemini-2.5-flash` | `GEMINI_API_KEY` (supports rotation) |
+| `mlx` | `mlx-qwen3` / `mlx-gemma4` | `MLX_API_URL` + `MLX_SERVER_API_KEY` |
 
 ---
 
