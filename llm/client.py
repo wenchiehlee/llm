@@ -8,6 +8,7 @@ from typing import Sequence
 
 from .providers import BaseProvider
 from .analytics.amplitude import LLMCallTracker, configure as amplitude_configure
+from .routing import RoutingManager
 
 logger = logging.getLogger(__name__)
 
@@ -21,7 +22,7 @@ def _build_provider(name: str, model: str | None = None) -> BaseProvider:
         return GeminiProvider(model=model)
     if name == "codex":
         from .providers.codex import CodexProvider
-        return CodexProvider()
+        return CodexProvider(model=model)
     if name == "mlx":
         from .providers.mlx import MLXProvider
         return MLXProvider(model=model)
@@ -66,6 +67,9 @@ class LLMClient:
         providers: Sequence[str] | None = None,
         model: str | None = None,
         app_name: str | None = None,
+        routing_file: str | None = None,
+        min_samples: int = 10,
+        threshold: float = 0.8,
     ):
         self._chain = list(providers) if providers else _DEFAULT_CHAIN
         self._default_model = model
@@ -75,6 +79,9 @@ class LLMClient:
         self.last_provider: str = self._providers[0].name  # updated after each successful call
         self.last_model: str = self._providers[0].model
         self.last_model_repo: str = getattr(self._providers[0], "model_repo", "")
+
+        self.routing = RoutingManager(routing_file, min_samples=min_samples, threshold=threshold)
+
         logger.info(
             "LLMClient 初始化，可用 provider：%s",
             ", ".join(p.name for p in self._providers),
@@ -90,6 +97,113 @@ class LLMClient:
         if not override:
             raise RuntimeError(f"指定的 provider '{provider}' 不可用")
         return override
+
+    def generate_smart(
+        self,
+        task_name: str,
+        prompt: str,
+        *,
+        draft_provider: str = "mlx",
+        draft_model: str | None = None,
+        judge_provider: str | None = None,
+        judge_model: str | None = None,
+        max_tokens: int = 8192,
+    ) -> str:
+        """
+        智慧路由模式：
+        1. 檢查 task_name 是否已達標 (晉升至 draft_provider)。
+        2. 若已達標：直接呼叫 draft_provider 並回傳。
+        3. 若未達標：
+           a. 呼叫 draft_provider 取得草稿。
+           b. 將草稿送給強大模型 (Gemini/Codex) 評審。
+           c. 若評審回傳 "OK"，紀錄成功並回傳草稿。
+           d. 若評審回傳其他內容，紀錄失敗並回傳該內容 (重新生成的答案)。
+        """
+        promoted = self.routing.get_promoted_provider(task_name)
+
+        # 狀態 A: 已達標，且達標的 provider 正是我們這次要求的 draft_provider
+        if promoted == draft_provider:
+            try:
+                return self.generate(prompt, provider=draft_provider, model=draft_model, max_tokens=max_tokens)
+            except Exception as e:
+                logger.warning("SmartRoute [%s] %s 失敗，退回標準流程: %s", task_name, draft_provider, e)
+                return self.generate(prompt, max_tokens=max_tokens)
+
+        # 狀態 B: 評估階段 (Judging) 或達標 provider 不同
+
+        # --- 效能優化 (Server-Side Smart Routing) ---
+        # 如果 draft_provider 是 codex，且未指定特定評審者，
+        # 我們優先將整個「草稿+評審」流程交給 NAS 伺服器端處理，以消除網路延遲。
+        if draft_provider == "codex" and judge_provider is None:
+            try:
+                codex_p = next((p for p in self._providers if p.name == "codex"), None)
+                if codex_p and hasattr(codex_p, "generate_smart"):
+                    # 使用伺服器預設的評審邏輯 (gemini-cli -> gemini-cli)
+                    result = codex_p.generate_smart(
+                        task_name, prompt, model=draft_model, max_tokens=max_tokens
+                    )
+                    self.last_provider = getattr(codex_p, "last_provider_used", "codex")
+                    return result
+            except Exception as e:
+                logger.warning("SmartRoute [%s] Server-side 失敗，退回 Client-side: %s", task_name, e)
+
+        # --- 標準流程 (Client-Side Smart Routing) ---
+        # 1. 取得草稿
+        draft_result = ""
+        try:
+            draft_result = self.generate(prompt, provider=draft_provider, model=draft_model, max_tokens=max_tokens)
+        except Exception as e:
+            logger.warning("SmartRoute [%s] 評估階段 %s 取得失敗: %s", task_name, draft_provider, e)
+            self.routing.record(task_name, success=False, provider=draft_provider)
+            return self.generate(prompt, max_tokens=max_tokens)
+
+        # 2. 準備評審 Prompt
+        judge_prompt = (
+            f"你是評審員。以下是使用者的問題與本地模型的回答。\n"
+            f"如果本地模型的回答已經達到你的水準（正確、完整且格式正確），請回覆：OK\n"
+            f"如果本地模型的回答不夠好，請直接回覆你認為正確的完整答案。\n\n"
+            f"問題：{prompt}\n"
+            f"本地回答：{draft_result}"
+        )
+
+        # 3. 挑選強大模型進行評審
+        strong_provider = judge_provider
+        if not strong_provider:
+            for p in self._providers:
+                # 避開直接呼叫 API 的 gemini，優先選擇 codex (NAS CLI)，以節省 API 配額
+                if p.name not in ("mlx", "gemini"):
+                    strong_provider = p.name
+                    break
+            # 若沒找到 codex，才勉強用其他非 mlx 的 (可能是 gemini API)
+            if not strong_provider:
+                for p in self._providers:
+                    if p.name != "mlx":
+                        strong_provider = p.name
+                        break
+
+        if not strong_provider:
+            logger.error("SmartRoute [%s] 找不到可用於評審的強大模型", task_name)
+            return draft_result
+
+        judge_response = self.generate(
+            judge_prompt,
+            provider=strong_provider,
+            model=judge_model,
+            max_tokens=max_tokens
+        ).strip()
+
+        # 4. 判斷結果 (容忍 OK 後面帶有標點符號或換行)
+        if judge_response.upper() == "OK" or judge_response.upper().startswith("OK"):
+            self.routing.record(task_name, success=True, provider=draft_provider)
+            logger.info("SmartRoute [%s] %s 通過評審", task_name, draft_provider)
+            # 確保 last_provider 停留在 draft_provider (因為最終回傳的是 draft_result)
+            self.last_provider = draft_provider
+            return draft_result
+        else:
+            self.routing.record(task_name, success=False, provider=draft_provider)
+            logger.info("SmartRoute [%s] %s 評審失敗，使用強大模型回傳", task_name, draft_provider)
+            # last_provider 會自動停留在 strong_provider (由最後一次 generate 填入)
+            return judge_response
 
     def generate(
         self,
