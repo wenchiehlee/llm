@@ -127,6 +127,14 @@ text = client.generate_smart("TaskB", "請摘要此內容...", draft_provider="c
 
 ### 3. 效能優化：伺服器端路由
 當 `draft_provider` 設為 `"codex"` 時，`llm` 會自動將整個路由邏輯交給 NAS 端的 `CodexAPIServer` 處理。這使得「自我反思」流程（如 `gemini-cli` 產生並由 `gemini-cli` 評審）完全在伺服器內部瞬間完成，對客戶端而言僅有一次網路請求的延遲。
+
+### 4. 如何啟用？(Migration Guide)
+使用者僅需將原本的 `generate()` 呼叫改為 `generate_smart()`，並指定一個具代表性的 **`task_name`**：
+
+*   **舊寫法** (無優化)：`res = client.generate("請翻譯...")`
+*   **新寫法** (智慧路由)：`res = client.generate_smart("translation_task", "請翻譯...", draft_provider="codex")`
+
+系統會自動管理 `.llm_routing.json` 狀態文件。一旦任務達成晉升條件，後續呼叫將自動切換至最速路徑，使用者無需手動干預。
 ```
 
 ### 指定路徑與模型
