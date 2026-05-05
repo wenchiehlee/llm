@@ -21,16 +21,23 @@
 *Powered by [Amplitude Analytics](https://amplitude.com)*
 
 ### 1. API 使用統計 (Usage Statistics)
-| Provider | 預設模型 | 成功率 (7d) | 平均耗時 |
-| :--- | :--- | :--- | :--- |
-| `codex` | `chatgpt-pro` | > 98% | ~45s |
-| `gemini` | `gemini-2.5-flash` | > 99% | ~25s |
-| `mlx` | `mlx-qwen3` | - | ~5s (本地) |
+| 主要應用 (App Name) | Provider | 預設模型 | 成功率 (7d) | 平均耗時 |
+| :--- | :--- | :--- | :--- | :--- |
+| `llm-api` (Finance) | `codex` | `chatgpt-pro` | > 98% | ~45s |
+| `llm-api` (Alerts) | `gemini` | `gemini-2.5-flash` | > 99% | ~25s |
+| `llm-api` (Local) | `mlx` | `mlx-gemma4` | > 95% | ~12s (本地) |
 
 ### 2. 智慧路由晉升狀態 (Routing Status)
-智慧路由的狀態儲存於本地 `.llm_routing.json` (或伺服器端的 `routing.json`)。
-- **Judging (評估中)**：正在進行「草稿 + 評審」流程。
-- **Promoted (已晉升)**：已自動切換至高速/免費路徑。
+
+智慧路由的狀態儲存於本地 `.llm_routing.json`。系統會自動根據成功率決定是否晉升至高速路徑。
+
+| 任務名稱 (Task Name) | 成功 | 失敗 | 當前狀態 | 備註 |
+| :--- | :---: | :---: | :--- | :--- |
+| `ServerReflectionTest` | 2 | 0 | 🔍 **Judging** | 測試紀錄 (NAS 橋接) |
+| `FinanceSummary` | - | - | 🔍 **Judging** | 財報摘要任務 (評估中) |
+
+> **晉升門檻**：樣本數 ≥ 10 且成功率 ≥ 80%。
+
 
 ---
 
@@ -139,13 +146,13 @@ text = client.generate_smart("TaskB", "請摘要此內容...", draft_provider="c
 
 ### 指定路徑與模型
 ```python
-# 強制指定使用 Codex 伺服器上的 gemini-cli 調用 Gemini 2.0
-client = LLMClient(providers=["codex"], model="gemini-2.0-flash")
+# 強制指定使用 Codex 伺服器上的 gemini-cli 調用 Gemini 2.5
+client = LLMClient(providers=["codex"], model="gemini-2.5-flash")
 text = client.generate("透過 NAS 伺服器上的 gemini-cli 進行調用。")
 
 # 查詢最後一次調用的詳細資訊
 print(f"Provider: {client.last_provider}")  # 會顯示 'codex'
-print(f"Model: {client.last_model}")        # 會顯示 'gemini-2.0-flash'
+print(f"Model: {client.last_model}")        # 會顯示 'gemini-2.5-flash'
 ```
 
 ---

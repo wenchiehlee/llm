@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import logging
 import os
+import re
 from typing import Sequence
 
 from .providers import BaseProvider
@@ -37,6 +38,17 @@ def _detect_available(chain: list[str], model: str | None = None) -> list[BasePr
         except RuntimeError as e:
             logger.debug("跳過 %s（%s）", name, e)
     return providers
+
+
+def _strip_markdown(text: str) -> str:
+    """去除 ```json ... ``` 標記。"""
+    text = text.strip()
+    if text.startswith("```"):
+        # 移除開頭的 ```json 或 ```
+        text = re.sub(r"^```(?:json)?\n?", "", text, flags=re.IGNORECASE)
+        # 移除結尾的 ```
+        text = re.sub(r"\n?```$", "", text)
+    return text.strip()
 
 
 class LLMClient:
@@ -107,6 +119,7 @@ class LLMClient:
         draft_model: str | None = None,
         judge_provider: str | None = None,
         judge_model: str | None = None,
+        json_mode: bool = False,
         max_tokens: int = 8192,
     ) -> str:
         """
@@ -124,10 +137,12 @@ class LLMClient:
         # 狀態 A: 已達標，且達標的 provider 正是我們這次要求的 draft_provider
         if promoted == draft_provider:
             try:
-                return self.generate(prompt, provider=draft_provider, model=draft_model, max_tokens=max_tokens)
+                return self.generate(
+                    prompt, provider=draft_provider, model=draft_model, json_mode=json_mode, max_tokens=max_tokens
+                )
             except Exception as e:
                 logger.warning("SmartRoute [%s] %s 失敗，退回標準流程: %s", task_name, draft_provider, e)
-                return self.generate(prompt, max_tokens=max_tokens)
+                return self.generate(prompt, json_mode=json_mode, max_tokens=max_tokens)
 
         # 狀態 B: 評估階段 (Judging) 或達標 provider 不同
 
@@ -140,7 +155,8 @@ class LLMClient:
                 if codex_p and hasattr(codex_p, "generate_smart"):
                     # 使用伺服器預設的評審邏輯 (gemini-cli -> gemini-cli)
                     result = codex_p.generate_smart(
-                        task_name, prompt, model=draft_model, max_tokens=max_tokens
+                        task_name, prompt, draft_cli="gemini", judge_cli="gemini",
+                        model=draft_model, json_mode=json_mode, max_tokens=max_tokens
                     )
                     self.last_provider = getattr(codex_p, "last_provider_used", "codex")
                     return result
@@ -151,11 +167,13 @@ class LLMClient:
         # 1. 取得草稿
         draft_result = ""
         try:
-            draft_result = self.generate(prompt, provider=draft_provider, model=draft_model, max_tokens=max_tokens)
+            draft_result = self.generate(
+                prompt, provider=draft_provider, model=draft_model, json_mode=json_mode, max_tokens=max_tokens
+            )
         except Exception as e:
             logger.warning("SmartRoute [%s] 評估階段 %s 取得失敗: %s", task_name, draft_provider, e)
             self.routing.record(task_name, success=False, provider=draft_provider)
-            return self.generate(prompt, max_tokens=max_tokens)
+            return self.generate(prompt, json_mode=json_mode, max_tokens=max_tokens)
 
         # 2. 準備評審 Prompt
         judge_prompt = (
@@ -165,6 +183,8 @@ class LLMClient:
             f"問題：{prompt}\n"
             f"本地回答：{draft_result}"
         )
+        if json_mode:
+            judge_prompt += "\n注意：請確保你的回覆是合法的 JSON 格式（除非你回覆 OK）。"
 
         # 3. 挑選強大模型進行評審
         strong_provider = judge_provider
@@ -189,6 +209,7 @@ class LLMClient:
             judge_prompt,
             provider=strong_provider,
             model=judge_model,
+            json_mode=json_mode,
             max_tokens=max_tokens
         ).strip()
 
@@ -205,12 +226,42 @@ class LLMClient:
             # last_provider 會自動停留在 strong_provider (由最後一次 generate 填入)
             return judge_response
 
+    def generate_json_smart(
+        self,
+        task_name: str,
+        prompt: str,
+        *,
+        draft_provider: str = "mlx",
+        draft_model: str | None = None,
+        judge_provider: str | None = None,
+        judge_model: str | None = None,
+        max_tokens: int = 8192,
+    ) -> dict | list:
+        """智慧路由模式，並自動解析 JSON 回傳。"""
+        text = self.generate_smart(
+            task_name,
+            prompt,
+            draft_provider=draft_provider,
+            draft_model=draft_model,
+            judge_provider=judge_provider,
+            judge_model=judge_model,
+            json_mode=True,
+            max_tokens=max_tokens,
+        )
+        try:
+            return json.loads(_strip_markdown(text))
+        except json.JSONDecodeError as e:
+            logger.error("SmartRoute [%s] 回傳非 JSON：%s\n內容：%s", task_name, e, text)
+            # 嘗試重新透過強大模型取得正確 JSON (如果不幸 draft 通過了評審但解析失敗)
+            return self.generate_json(prompt, max_tokens=max_tokens)
+
     def generate(
         self,
         prompt: str,
         *,
         provider: str | None = None,
         model: str | None = None,
+        json_mode: bool = False,
         max_tokens: int = 8192,
     ) -> str:
         """
@@ -218,6 +269,7 @@ class LLMClient:
             prompt:   輸入文字
             provider: 臨時指定 provider（"gemini" / "codex"），覆寫初始化設定
             model:    臨時指定模型（如 "gemini-2.0-flash"），僅對 gemini 有效
+            json_mode: 是否回傳 JSON 格式
             max_tokens: 最大輸出 token 數
         """
         if not prompt or not isinstance(prompt, str):
@@ -233,7 +285,7 @@ class LLMClient:
         for p in providers:
             try:
                 with LLMCallTracker(p.name, p.model, prompt, model_repo=getattr(p, "model_repo", "")) as tracker:
-                    result = p.generate(prompt, max_tokens=max_tokens)
+                    result = p.generate(prompt, json_mode=json_mode, max_tokens=max_tokens)
                     tracker.result = result
                     tracker.key_used = getattr(p, "last_key_used", "")
                     self.last_provider = p.name
@@ -273,7 +325,7 @@ class LLMClient:
                     self.last_provider = p.name
                     self.last_model = p.model
                     self.last_model_repo = getattr(p, "model_repo", "")
-                    return json.loads(text)
+                    return json.loads(_strip_markdown(text))
             except json.JSONDecodeError as e:
                 logger.warning("%s 回傳非 JSON：%s", p.name, e)
                 last_exc = e

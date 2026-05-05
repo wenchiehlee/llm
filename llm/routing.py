@@ -13,7 +13,8 @@ class RoutingManager:
     管理任務路由狀態，決定是否可以安全切換到特定 Provider (例如 MLX 或 Gemini-CLI)。
     """
     def __init__(self, storage_path: str | None = None, min_samples: int = 10, threshold: float = 0.8):
-        self.path = Path(storage_path or os.getenv("LLM_ROUTING_FILE", ".llm_routing.json"))
+        default_path = str(Path.home() / ".llm_routing.json")
+        self.path = Path(storage_path or os.getenv("LLM_ROUTING_FILE", default_path))
         self.min_samples = min_samples
         self.threshold = threshold
         self._data: dict[str, dict] = {}
