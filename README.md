@@ -79,7 +79,7 @@ dependencies = [
 - `GEMINI_SKIP_KEYS`: 以逗號分隔，指定要手動跳過的金鑰名稱。
 
 ### 2. LLM CLI API Server (遠端 CLI 橋接)
-- `CODEX_API_URL`: 伺服器網址 (例如 `https://your-nas.ts.net:8443`)。
+- `CODEX_API_URL`: 伺服器網址 (例如 `https://api.wenchiehlee.synology.me:8443`)。
 - `SERVER_API_KEY`: 存取伺服器的驗證金鑰。
 - *註：伺服器需預先安裝 `codex-cli` 與 `gemini-cli`。*
 
@@ -161,8 +161,8 @@ print(f"Model: {client.last_model}")        # 會顯示 'gemini-2.5-flash'
 
 專案提供多個測試腳本以驗證不同路徑的整合狀態：
 
-- `python test_codex.py`: 驗證 `Llm-Cli-APIServer` 的 `codex-cli` (ChatGPT) 路徑。
-- `python test_codex_gemini.py`: 驗證 `Llm-Cli-APIServer` 的 `gemini-cli` (Gemini) 路徑。
+- `python test_llm_cli.py`: 驗證 `Llm-Cli-APIServer` 的 `codex-cli` (ChatGPT) 路徑（自動偵測可用 provider）。
+- `python test_llm_cli_gemini.py`: 驗證 `Llm-Cli-APIServer` 的 `gemini-cli` (Gemini) 路徑。
 - `python test_mlx.py`: 驗證本地 MLX 伺服器路徑。
 
 ---
