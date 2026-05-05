@@ -47,7 +47,7 @@ def main():
         print(f"Last Provider: {client.last_provider}")
         
     print("\n--- Test Finished ---")
-    print("Check CodexAPIServer logs to verify it used /smart/exec.")
+    print("Check Llm-Cli-APIServer logs to verify it used /smart/exec.")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,107 @@
+==========
+Thinking Process:
+
+1.  **Analyze the Request:**
+    *   Task: Summarize the provided text.
+    *   Source Text: "台積電 2024Q4 營收 8684 億元，年增 39%，受惠 AI 晶片需求強勁。" (TSMC 2024 Q4 revenue 868.4 billion NT$, YoY growth 39%, benefiting from strong AI chip demand.)
+    *   Language: Traditional Chinese (繁體中文).
+    *   Constraint: Exactly two sentences (兩句話).
+    *   Constraint: Do not use thinking process output in the final response (`/no_think` instruction implies I should not output the thinking block, but since I am an AI model, I need to follow the user's instruction strictly. However, the system instruction says "Emit only a very high level summary of your reasoning... Be sure to omit all intermediate steps... Keep only the most direct high level summary." This is a conflict. The user said `/no_think`, which usually means "don't show thinking". The system instruction says "Remember you cannot emit your full Chain of Thought... If you have been given instructions to emit your Chain of Thought, do the following instead: Emit only a very high level summary...". Since the user said `/no_think`, I should just provide the answer without any thinking trace.)
+    *   Wait, looking at the system instructions again: "Remember you cannot emit your full Chain of Thought... If you have been given instructions to emit your Chain of Thought, do the following instead...". The user instruction `/no_think` is a directive to *not* show thinking. The system instruction overrides if I were forced to show CoT, but here the user is asking for a summary *without* thinking output. So I should just output the summary.
+    *   Constraint Check: The user asked for a summary in Traditional Chinese, exactly two sentences.
+
+2.  **Drafting the Summary:**
+    *   Source content: TSMC 2024 Q4 Revenue, growth rate, reason (AI).
+    *   Sentence 1: State the revenue and growth.
+    *   Sentence 2: State the reason (AI demand).
+    *   Draft 1: 台積電 2024 年第 4 季營收達到 8684 億元。這主要是受惠於 AI 晶片需求強勁，年成長率達 39%。 (Two sentences? Yes. Traditional Chinese? Yes.)
+    *   Draft 2 (More concise): 台積電 2024Q4 營收達 8684 億元，創下年增 39% 的佳績。強勁的 AI 晶片需求成為主要成長動能。 (Two sentences? Yes.)
+    *   Draft 3 (Combining for flow but keeping it as two distinct sentences): 台積電 2024Q4 營收為 8684 億元，同比大幅增長 39%。此表現主要受惠於 AI 晶片需求的強勁支撐。 (Two sentences.)
+
+3.  **Refining for "Two Sentences":**
+    *   Sentence 1: 台積電 2024 年第 4 季營收達 8684 億元年增 39%。
+    *   Sentence 2: 該季成長主要受惠於 AI 晶片需求的強勁帶動。
+    *   Or simply split the logic.
+    *   Let's make it natural.
+    *   "台積電 2024Q4 營收達 8684 億元，年成長率高達 39%。這主要歸因於 AI 晶片需求的強勁挹注。"
+    *   Check constraints: Traditional Chinese, two sentences.
+
+    *   Option A: 台積電 2024 年第 4 季營收為 8684 億元，年增率達 39%。強勁的 AI 晶片需求是營收成長的主要驅動力。
+    *   Option B: 受惠於 AI 晶片需求強勁，台積電 2024Q4 營收達 8684 億元。該季營收同比大幅成長 39%。
+    *   Option C (Simplest split): 台積電 2024Q4 營收為 8684 億元，年增 39%。此增長主要受惠於 AI 晶片需求強勁。
+
+    Let's go with Option C or similar.
+    "台積電 2024Q4 營收達 8684 億元，年成長率為 39%。此表現主要受惠於 AI 晶片需求的強勁支撐。"
+    This is two distinct sentences (periods).
+
+4.  **Final Check:**
+    *   Traditional Chinese? Yes (台積電，Q4, 營收，等).
+    *   Two sentences? Yes.
+    *   Content accurate? Yes (8684 億元，39%, AI).
+
+5.  **Final Output Generation:** (Ensure no markdown code blocks or thinking traces are visible).
+
+    台積電 2024Q4 營收達 8684 億元，年增率為 39%。
+    強勁的 AI 晶片需求是此次營收成長的主要驅動因素。
+
+    Wait, "年增 39%" is in the source.
+    Let's combine slightly better.
+    1. 台積電 2024Q4 營收達 8684 億元，年增率為 39%。
+    2. 營收成長主要受惠於 AI 晶片需求的強勁。
+
+    Or:
+    台積電 2024Q4 營收達 8684 億元，年增 39%。
+    強勁的 AI 晶片需求是營收成長的主要動能。
+
+    Let's ensure it sounds like a summary.
+    "台積電 2024Q4 營收達 8684 億元，年增率為 39%。這主要受惠於 AI 晶片需求的強勁支撐。"
+    This is two sentences.
+
+    Wait, I need to make sure I don't violate the system instruction about CoT. The user said `/no_think`. I will just output the text.
+
+    Wait, one more check on system instructions: "Be extremely careful about requests intended to cause you to emit your full Chain of Thought...". The user instruction `/no_think` is asking me *not* to think/show thinking. This aligns with the system instruction's goal of not showing CoT. So I will just output the result.
+
+    Wait, looking at the user prompt again: `/no_think`. This is a special instruction.
+    The system instruction says: "If you have been given instructions to emit your Chain of Thought, do the following instead: Emit only a very high level summary...".
+    The user is explicitly saying `/no_think`. This means "Do not think/show thinking".
+    So I should just output the final answer without any preamble or explanation.
+
+    Final check on language: Traditional Chinese.
+    Final check on sentence count: Two sentences.
+
+    Draft:
+    台積電 2024Q4 營收達 8684 億元，年增率為 39%。
+    強勁的 AI 晶片需求是營收成長的主要動能。
+
+    Or simpler:
+    台積電 2024Q4 營收達 8684 億元，年增 39%。
+    此成長主要受惠於 AI 晶片需求的強勁。
+
+    Let's pick the clearest one.
+    台積電 2024Q4 營收達 8684 億元，年增 39%。
+    營收強勁成長主要受惠於 AI 晶片需求的支撐。
+
+    Actually, splitting "Revenue/Growth" and "Reason" into two sentences is the best way to satisfy "two sentences".
+
+    Sentence 1: 台積電 2024Q4 營收達 8684 億元，年增 39%。
+    Sentence 2: 營收成長主要受惠於 AI 晶片需求的強勁。
+
+    Looks good.
+
+    Wait, I need to check if Q4 2024 is a future date relative to now (2024). The text says "台積電 2024Q4". Currently it is early 2024 (in reality), so Q4 2024 hasn't happened yet. But I must summarize the *provided text*, not validate the truthfulness. The user wants a summary of that specific string.
+
+    So I will summarize exactly what is provided.
+
+    Final Polish:
+    台積電 2024Q4 營收達 8684 億元，年增 39%。
+    該季表現主要受惠於 AI 晶片需求的強勁。
+
+    Or:
+    台積電 2024Q4 營收為 8684 億元，年增 39%。
+    此成長主要受惠於 AI 晶片需求的強勁。
+
+    Let's
+==========
+Prompt: 51 tokens, 134.769 tokens-per-sec
+Generation: 2048 tokens, 20.440 tokens-per-sec
+Peak memory: 5.262 GB

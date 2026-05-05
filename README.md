@@ -1,12 +1,12 @@
 # llm
 
-一個統一的 LLM 客戶端函式庫，封裝了 **Gemini API** (具備金鑰輪轉功能)、**Codex-API-Server** (封裝 `codex-cli` 與 `gemini-cli` 的橋接器) 以及 **MLX** (本地 Apple Silicon 推論)。
+一個統一的 LLM 客戶端函式庫，封裝了 **Gemini API** (具備金鑰輪轉功能)、**LLM-CLI-API-Server** (封裝 `codex-cli` 與 `gemini-cli` 的橋接器) 以及 **MLX** (本地 Apple Silicon 推論)。
 
 ## 🌟 核心特色
 
 - **自動備援鏈 (Fallback Chain)**：預設路徑為 `codex` → `gemini` → `mlx`。當高優先級的 CLI 橋接或 API 失敗時，自動切換至備援方案。
 - **Gemini 金鑰輪轉**：支援多達 20 把 API Key (`GEMINI_API_KEY` + `_1` 到 `_19`)，具備每日配額偵測與 Round-robin 輪轉機制。
-- **CLI 橋接功能 (Codex-API-Server)**：
+- **CLI 橋接功能 (LLM-CLI-API-Server)**：
     - **ChatGPT Pro**：透過伺服器端的 `codex-cli` 調用具備訂閱權限的 ChatGPT。
     - **遠端 Gemini**：透過伺服器端的 `gemini-cli` 調用 Gemini (適用於 IP 受限或需集中管理金鑰的場景)。
 - **本地 MLX 推論**：支援連線至 `MLX-API-Server` 進行本地高效能推論。
@@ -78,7 +78,7 @@ dependencies = [
 - `GEMINI_API_KEY_1` ... `19`: 額外的輪轉金鑰。
 - `GEMINI_SKIP_KEYS`: 以逗號分隔，指定要手動跳過的金鑰名稱。
 
-### 2. Codex API Server (遠端 CLI 橋接)
+### 2. LLM CLI API Server (遠端 CLI 橋接)
 - `CODEX_API_URL`: 伺服器網址 (例如 `https://your-nas.ts.net:8443`)。
 - `SERVER_API_KEY`: 存取伺服器的驗證金鑰。
 - *註：伺服器需預先安裝 `codex-cli` 與 `gemini-cli`。*
@@ -133,7 +133,7 @@ text = client.generate_smart("TaskB", "請摘要此內容...", draft_provider="c
 當特定任務（Task Name）表現穩定（預設樣本 > 10 次且成功率 > 80%）時，系統會將該任務「晉升」。後續呼叫將**直接執行草稿模型**，完全跳過評審步驟。
 
 ### 3. 效能優化：伺服器端路由
-當 `draft_provider` 設為 `"codex"` 時，`llm` 會自動將整個路由邏輯交給 NAS 端的 `CodexAPIServer` 處理。這使得「自我反思」流程（如 `gemini-cli` 產生並由 `gemini-cli` 評審）完全在伺服器內部瞬間完成，對客戶端而言僅有一次網路請求的延遲。
+當 `draft_provider` 設為 `"codex"` 時，`llm` 會自動將整個路由邏輯交給 NAS 端的 `Llm-Cli-APIServer` 處理。這使得「自我反思」流程（如 `gemini-cli` 產生並由 `gemini-cli` 評審）完全在伺服器內部瞬間完成，對客戶端而言僅有一次網路請求的延遲。
 
 ### 4. 如何啟用？(Migration Guide)
 使用者僅需將原本的 `generate()` 呼叫改為 `generate_smart()`，並指定一個具代表性的 **`task_name`**：
@@ -161,8 +161,8 @@ print(f"Model: {client.last_model}")        # 會顯示 'gemini-2.5-flash'
 
 專案提供多個測試腳本以驗證不同路徑的整合狀態：
 
-- `python test_codex.py`: 驗證 `CodexAPIServer` 的 `codex-cli` (ChatGPT) 路徑。
-- `python test_codex_gemini.py`: 驗證 `CodexAPIServer` 的 `gemini-cli` (Gemini) 路徑。
+- `python test_codex.py`: 驗證 `Llm-Cli-APIServer` 的 `codex-cli` (ChatGPT) 路徑。
+- `python test_codex_gemini.py`: 驗證 `Llm-Cli-APIServer` 的 `gemini-cli` (Gemini) 路徑。
 - `python test_mlx.py`: 驗證本地 MLX 伺服器路徑。
 
 ---

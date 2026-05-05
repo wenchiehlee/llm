@@ -1,0 +1,22 @@
+{
+  "instruction": {
+    "qwen3": "台灣最高的山是玉山。",
+    "gemma4": "台灣最高的山是玉山。"
+  },
+  "summary": {
+    "qwen3": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input text: \"台積電 2024Q4 營收 8684 億元，年增 39%，受惠 AI 晶片需求強勁。\" (TSMC 2024 Q4 revenue 868.4 billion NTD, 39% YoY growth, benefited from strong AI chip demand.)\n    *   Task: Summarize the text.\n    *   Constraint: Use Traditional Chinese (繁體中文).\n    *",
+    "gemma4": "台積電在 2024 年第四季營收達 8684 億元，年增率高達 39%。此顯著的成長主要得益於強勁的 AI 晶片市場需求驅動。"
+  },
+  "keywords": {
+    "qwen3": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: Three key figures with descriptions.\n        *   Gross Margin (毛利率): 57.8%\n        *   Capital Expenditure (資本支出): 110 億美元 (110 billion USD)\n        *   Earnings Per Share (EPS): 32.3 元 (32.3 Yuan/USD? Context implies currency, likely US",
+    "gemma4": "以下是三個關鍵數字：\n\n1. **毛利率 57.8%**: 代表公司每單位產品或服務的利潤比重。\n2. **資本支出 110億美元**: 指公司在特定季度或期間內用於購買資產（如設備、廠房）的總投資金額。\n3. **EPS 32.3元**: 代表公司每股盈餘，是衡量公司獲利能力的指標。"
+  },
+  "sentiment": {
+    "qwen3": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input sentence: 「本季需求強勁，但地緣政治仍是不確定因素。」 (This season's demand is strong, but geopolitical issues remain an uncertain factor.)\n    *   Task: Determine the sentiment polarity (Positive, Negative, Neutral) and explain the reasoning.\n\n2.  **Analyze ",
+    "gemma4": "這句話的語氣是**中性偏正面**。\n\n以下是詳細的分析：\n\n### 1. 語氣判斷：中性偏正面\n\n* **核心判斷：** 雖然提到了「不確定因素」（帶有負面警示），但整體敘事結構是先提出一個積極的趨勢，再提出一個風險。在商業或市場分析的語境中，這種「優勢 + 風險」的表達通常被視為**客觀的風險評估（中性）**，但因為開頭是「需求強勁」，所以整體情緒傾向於**正面（樂觀）**。\n\n### 2. 詞彙分解說明\n\n| 詞彙/片語 | 語氣屬性 | 說明 |\n| :--- | :--- | :--- |\n| **「本季需求強勁」** | **強烈正面** | 「強勁」是極為積極的詞彙，直接指向市場表"
+  },
+  "json_zh": {
+    "qwen3": "{\"company\":\"台積電\",\"revenue_growth\":39}",
+    "gemma4": "{\"company\": \"台積電\", \"revenue_growth\": 39}"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "mlx-qwen3": {
+      "duration_s": 1.6,
+      "raw_start": "",
+      "error": "MLX execution failed (rc=2) stderr_len=1224. TAIL: SYSTEM_PROMPT] [--prompt PROMPT]\n                   [--prefill-response PREFILL_RESPONSE]\n                   [--max-tokens MAX_TOKENS] [--temp TEMP] [--top-p TOP_P]\n                   [--min-p MIN_P] [--top-k TOP_K]\n                   [--xtc-probability XTC_PROBABILITY]\n                   [--xtc-threshold XTC_THRESHOLD]\n                   [--min-tokens-to-keep MIN_TOKENS_TO_KEEP] [--seed SEED]\n                   [--ignore-chat-template] [--use-default-chat-template]\n                   [--chat-template-config CHAT_TEMPLATE_CONFIG]\n                   [--verbose VERBOSE] [--max-kv-size MAX_KV_SIZE]\n                   [--prompt-cache-file PROMPT_CACHE_FILE]\n                   [--quantize-activations] [--kv-bits KV_BITS]\n                   [--kv-group-size KV_GROUP_SIZE]\n                   [--quantized-kv-start QUANTIZED_KV_START]\n                   [--draft-model DRAFT_MODEL]\n                   [--num-draft-tokens NUM_DRAFT_TOKENS]\n__main__.py: error: unrecognized arguments: --no-thinking\n"
+    },
+    "mlx-gemma4": {
+      "duration_s": 11.3,
+      "raw_start": "==========\nFiles: [] \n\nPrompt: <bos><|turn>user\n請用繁體中文，以兩句話摘要：台積電2024Q4營收8684億元，",
+      "error": ""
+    }
+  },
+  "keywords": {
+    "mlx-qwen3": {
+      "duration_s": 1.3,
+      "raw_start": "",
+      "error": "MLX execution failed (rc=2) stderr_len=1224. TAIL: SYSTEM_PROMPT] [--prompt PROMPT]\n                   [--prefill-response PREFILL_RESPONSE]\n                   [--max-tokens MAX_TOKENS] [--temp TEMP] [--top-p TOP_P]\n                   [--min-p MIN_P] [--top-k TOP_K]\n                   [--xtc-probability XTC_PROBABILITY]\n                   [--xtc-threshold XTC_THRESHOLD]\n                   [--min-tokens-to-keep MIN_TOKENS_TO_KEEP] [--seed SEED]\n                   [--ignore-chat-template] [--use-default-chat-template]\n                   [--chat-template-config CHAT_TEMPLATE_CONFIG]\n                   [--verbose VERBOSE] [--max-kv-size MAX_KV_SIZE]\n                   [--prompt-cache-file PROMPT_CACHE_FILE]\n                   [--quantize-activations] [--kv-bits KV_BITS]\n                   [--kv-group-size KV_GROUP_SIZE]\n                   [--quantized-kv-start QUANTIZED_KV_START]\n                   [--draft-model DRAFT_MODEL]\n                   [--num-draft-tokens NUM_DRAFT_TOKENS]\n__main__.py: error: unrecognized arguments: --no-thinking\n"
+    },
+    "mlx-gemma4": {
+      "duration_s": 11.0,
+      "raw_start": "==========\nFiles: [] \n\nPrompt: <bos><|turn>user\n列出三個關鍵數字（格式：數字+說明）：本季毛利率57.8%，資本",
+      "error": ""
+    }
+  },
+  "sentiment": {
+    "mlx-qwen3": {
+      "duration_s": 1.3,
+      "raw_start": "",
+      "error": "MLX execution failed (rc=2) stderr_len=1224. TAIL: SYSTEM_PROMPT] [--prompt PROMPT]\n                   [--prefill-response PREFILL_RESPONSE]\n                   [--max-tokens MAX_TOKENS] [--temp TEMP] [--top-p TOP_P]\n                   [--min-p MIN_P] [--top-k TOP_K]\n                   [--xtc-probability XTC_PROBABILITY]\n                   [--xtc-threshold XTC_THRESHOLD]\n                   [--min-tokens-to-keep MIN_TOKENS_TO_KEEP] [--seed SEED]\n                   [--ignore-chat-template] [--use-default-chat-template]\n                   [--chat-template-config CHAT_TEMPLATE_CONFIG]\n                   [--verbose VERBOSE] [--max-kv-size MAX_KV_SIZE]\n                   [--prompt-cache-file PROMPT_CACHE_FILE]\n                   [--quantize-activations] [--kv-bits KV_BITS]\n                   [--kv-group-size KV_GROUP_SIZE]\n                   [--quantized-kv-start QUANTIZED_KV_START]\n                   [--draft-model DRAFT_MODEL]\n                   [--num-draft-tokens NUM_DRAFT_TOKENS]\n__main__.py: error: unrecognized arguments: --no-thinking\n"
+    },
+    "mlx-gemma4": {
+      "duration_s": 24.5,
+      "raw_start": "==========\nFiles: [] \n\nPrompt: <bos><|turn>user\n判斷以下語氣正負中性並說明：「本季需求強勁，但地緣政治仍是不確定",
+      "error": ""
+    }
+  }
+}

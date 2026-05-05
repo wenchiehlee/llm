@@ -1,4 +1,4 @@
-"""Codex-API-Server provider（Mac-mini Flask bridge to ChatGPT Pro）。"""
+"""LLM-CLI-APIServer provider（Mac-mini Flask bridge to ChatGPT Pro）。"""
 from __future__ import annotations
 
 import logging
@@ -10,7 +10,7 @@ from . import BaseProvider
 
 logger = logging.getLogger(__name__)
 
-MAX_PROMPT_LENGTH = 20_000  # 與 Codex-API-Server CODEX_MAX_PROMPT_LENGTH 一致
+MAX_PROMPT_LENGTH = 20_000  # 與 LLM-CLI-APIServer CODEX_MAX_PROMPT_LENGTH 一致
 _CONNECT_TIMEOUT = 10       # 連線建立上限（秒）
 _READ_TIMEOUT = 180         # codex exec 最長執行時間（秒）
 

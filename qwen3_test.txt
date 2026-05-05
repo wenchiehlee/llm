@@ -1,0 +1,1 @@
+{'dur': 3.6, 'leaked': False, 'chars': 10, 'err': '', 'out_start': '=========='}

@@ -1,0 +1,12 @@
+==========
+Files: [] 
+
+Prompt: <bos><|turn>user
+請用繁體中文，以兩句話摘要：台積電2024Q4營收8684億元，年增39%，受惠AI晶片需求強勁。<turn|>
+<|turn>model
+
+台積電在2024年第四季實現了8684億元的營收，年增率高達39%。此顯著增長主要歸功於全球AI晶片市場強勁的需求推動。
+==========
+Prompt: 52 tokens, 204.684 tokens-per-sec
+Generation: 51 tokens, 19.460 tokens-per-sec
+Peak memory: 9.098 GB
