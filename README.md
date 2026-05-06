@@ -16,7 +16,7 @@
 
 ---
 
-## 📊 運作狀態 (Status Summary)
+## API Usage Statistics
 
 *Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 12:23 CST*
 
