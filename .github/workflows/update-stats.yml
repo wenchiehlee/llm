@@ -33,7 +33,7 @@ jobs:
           from urllib.request import Request, urlopen
 
           README    = Path("README.md")
-          HEADER    = "## 📊 運作狀態 (Status Summary)"
+          HEADER    = "## API Usage Statistics"
           TW_TZ     = timezone(timedelta(hours=8))
           AMP_START = (datetime.now(TW_TZ) - timedelta(days=365)).strftime("%Y%m%d")
 
@@ -41,15 +41,20 @@ jobs:
               "blue", "green", "orange", "red", "purple", "yellowgreen", 
               "cyan", "teal", "pink", "indigo", "gold", "silver"
           ]
+          
+          # Models categorized for llm/README.md
           SERVICE_MODELS = {
               "Gemini API (Direct)": ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"],
+              "NAS Bridge (Codex/ChatGPT)": ["codex", "chatgpt-pro"],
+              "Local Inference (MLX)": ["mlx-qwen3", "mlx-gemma4", "whisper-large-v3"]
           }
+          
           SERVICE_SVG = {
               "Gemini API (Direct)": ["assets/chart_gemini_7d.svg", "assets/chart_gemini_models_7d.svg"],
+              "NAS Bridge (Codex/ChatGPT)": ["assets/chart_nas_7d.svg"],
+              "Local Inference (MLX)": ["assets/chart_mlx_7d.svg"]
           }
-          SERVICE_DISPLAY_NAME = {
-              "Gemini API (Direct)": "Gemini API",
-          }
+          
           CHART_COLORS = [
               "#1A6CF7", "#00C2A0", "#F7931A", "#A456F0", "#FF5733", "#20B2AA",
               "#E91E63", "#9C27B0", "#673AB7", "#3F51B5", "#2196F3", "#009688"
@@ -67,27 +72,32 @@ jobs:
                   except HTTPError as e:
                       if e.code == 429:
                           wait = (attempt + 1) * 15 + random.uniform(0, 5)
-                          print(f"  [amplitude] HTTP 429, retrying in {wait:.1f}s...", file=sys.stderr)
                           time.sleep(wait)
                           continue
                       raise
               raise Exception("Amplitude API failed after retries")
 
-          def query_total_calls(api_key, secret_key, days=None, offset_days=0):
+          def query_total_calls(api_key, secret_key, days=None, offset_days=0, model_filter=None):
               end_dt = datetime.now(TW_TZ) - timedelta(days=offset_days)
               end = end_dt.strftime("%Y%m%d")
               start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else AMP_START
-              params = {"e": json.dumps({"event_type": "llm_call"}), "start": start, "end": end, "m": "totals", "i": "1"}
+              event_def = {"event_type": "llm_call"}
+              if model_filter:
+                  event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
+              params = {"e": json.dumps(event_def), "start": start, "end": end, "m": "totals", "i": "1"}
               try:
                   data = amp_get(api_key, secret_key, params)
                   series = data.get("data", {}).get("series", [[]])
                   return sum(sum(s) for s in series if s)
               except: return 0
 
-          def query_daily_series(api_key, secret_key, days):
+          def query_daily_series(api_key, secret_key, days, model_filter=None):
               end_dt = datetime.now(TW_TZ)
               start_dt = end_dt - timedelta(days=days-1)
-              params = {"e": json.dumps({"event_type": "llm_call"}), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1"}
+              event_def = {"event_type": "llm_call"}
+              if model_filter:
+                  event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
+              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1"}
               try:
                   data = amp_get(api_key, secret_key, params)
                   return data.get("data", {}).get("series", [[]])[0]
@@ -114,7 +124,7 @@ jobs:
                   return result
               except: return {}
 
-          def query_avg_duration_all(api_key, secret_key, model_names):
+          def query_avg_duration_all(api_key, secret_key):
               end = datetime.now(TW_TZ).strftime("%Y%m%d")
               event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": "model"}]}
               params = {"e": json.dumps(event_def), "start": AMP_START, "end": end, "m": "avg_prop", "prop_key": "duration_sec", "prop_type": "event", "i": "1"}
@@ -227,11 +237,21 @@ jobs:
               return "\n".join(lines)
 
           api_key, secret_key = os.environ["AMPLITUDE_API_KEY"], os.environ["AMPLITUDE_QUERY_KEY"]
+          
+          # Logic for llm total: all models in SERVICE_MODELS
+          all_models = [m for svc in SERVICE_MODELS.values() for m in svc]
+          
           model_counts = query_grouped(api_key, secret_key, "model")
           svc_app_counts = {svc: query_grouped(api_key, secret_key, "app_name", model_filter=list(models)) for svc, models in SERVICE_MODELS.items()}
-          model_avg_dur = query_avg_duration_all(api_key, secret_key, list(model_counts.keys()))
-          daily_data = query_daily_series(api_key, secret_key, days=14)
-          recent_stats = {"total": query_total_calls(api_key, secret_key), "24h": daily_data[-1], "prev_24h": daily_data[-2], "7d": sum(daily_data[-7:]), "prev_7d": sum(daily_data[-14:-7])}
+          model_avg_dur = query_avg_duration_all(api_key, secret_key)
+          
+          daily_data = query_daily_series(api_key, secret_key, days=14, model_filter=all_models)
+          recent_stats = {
+              "total": query_total_calls(api_key, secret_key, model_filter=all_models),
+              "24h": daily_data[-1], "prev_24h": daily_data[-2],
+              "7d": sum(daily_data[-7:]), "prev_7d": sum(daily_data[-14:-7])
+          }
+          
           for service, models in SERVICE_MODELS.items():
               svg_paths = SERVICE_SVG.get(service, [])
               if not svg_paths: continue
