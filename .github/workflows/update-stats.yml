@@ -25,7 +25,7 @@ jobs:
           AMPLITUDE_QUERY_KEY: ${{ secrets.AMPLITUDE_QUERY_KEY }}
         run: |
           python3 - <<'PYEOF'
-          import base64, json, os, sys
+          import base64, json, os, sys, time
           from datetime import datetime, timezone, timedelta
           from pathlib import Path
           from urllib.error import HTTPError
@@ -57,16 +57,16 @@ jobs:
           CHART_COLORS = ["#1A6CF7", "#00C2A0", "#F7931A", "#A456F0", "#FF5733", "#20B2AA", "#E91E63", "#9C27B0"]
 
           def amp_get(api_key, secret_key, params):
-              import time, random
               url = "https://amplitude.com/api/2/events/segmentation?" + urlencode(params)
               creds = base64.b64encode(f"{api_key}:{secret_key}".encode()).decode()
               req = Request(url, headers={"Authorization": f"Basic {creds}"})
               for attempt in range(5):
                   try:
+                      time.sleep(2) # rate limit prevention
                       with urlopen(req, timeout=30) as r: return json.loads(r.read())
                   except HTTPError as e:
                       if e.code == 429:
-                          wait = (attempt + 1) * 15 + random.uniform(0, 5)
+                          wait = (attempt + 1) * 20
                           time.sleep(wait); continue
                       raise
               raise Exception("Amplitude API failed after retries")
@@ -179,7 +179,14 @@ jobs:
               if not svc_m: continue
               lines += [f"### {svc}", "", "| Model | Total Calls | Avg Duration |", "|-------|-------------|--------------|"]
               for m, count in sorted(svc_m.items(), key=lambda x: -x[1]):
-                  avg = m_avg_dur.get(m); lines.append(f"| `{m}` | {count:,} | {f'{avg:.1f}s' if avg else 'N/A'} |")
+                  avg = m_avg_dur.get(m); lines.append(f"| `{m}` | {count} | {f'{avg:.1f}s' if avg else 'N/A'} |")
+              svc_apps = query_grouped(api_key, secret_key, "app_name", model_filter=list(models))
+              if svc_apps:
+                  lines += ["", "#### Top Applications", "", "| Application | Total Calls |", "|-------------|-------------|"]
+                  sorted_apps = sorted(svc_apps.items(), key=lambda x: -x[1])
+                  for app, count in sorted_apps[:10]: lines.append(f"| {app} | {count} |")
+                  lines.append("")
+                  for i, (app, count) in enumerate(sorted_apps[:15]): lines.append(badge(app, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
               svgs = SERVICE_SVG.get(svc, [])
               for p in svgs: lines += ["", f"![](./{p})"]
               lines.append("")
