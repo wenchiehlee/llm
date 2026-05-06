@@ -18,11 +18,113 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 13:00 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 13:01 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4,467-black)
 ![](https://img.shields.io/badge/Last_7_Days-562_↑35.7%-blue)
 ![](https://img.shields.io/badge/Last_24_Hours-45_↓72.9%-green)
+
+### Gemini API (Direct)
+
+| Model | Total Calls | Avg Duration |
+|-------|-------------|--------------|
+| `gemini-2.5-flash` | 2,822 | N/A |
+| `gemini-2.0-flash` | 10 | N/A |
+| `gemini-2.5-flash-lite` | 3 | N/A |
+
+#### Top Applications
+
+| Application | Total Calls |
+|-------------|-------------|
+| GoogleAlertManager | 2,611 |
+| CompanyInfo | 220 |
+| InvestorEvents | 22 |
+| TAIEX_Finguider_Pro | 12 |
+| llm-api | 8 |
+| TravelAPP | 3 |
+| ConceptStocks | 2 |
+| TestSmartRouting | 2 |
+
+![](https://img.shields.io/badge/GoogleAlertManager-2611_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-220_calls-green)
+![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-12_calls-red)
+![](https://img.shields.io/badge/llm--api-8_calls-purple)
+![](https://img.shields.io/badge/TravelAPP-3_calls-yellowgreen)
+![](https://img.shields.io/badge/ConceptStocks-2_calls-cyan)
+![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
+
+![](./assets/chart_gemini_7d.svg)
+
+![](./assets/chart_gemini_models_7d.svg)
+
+### NAS Bridge (Codex/ChatGPT)
+
+| Model | Total Calls | Avg Duration |
+|-------|-------------|--------------|
+| `codex` | 616 | N/A |
+| `chatgpt-pro` | 134 | N/A |
+
+#### Top Applications
+
+| Application | Total Calls |
+|-------------|-------------|
+| whisper-merge-review | 616 |
+| TAIEX_Finguider_Pro | 38 |
+| GoogleAlertManager | 27 |
+| llm-api | 22 |
+| ServerSmartTest | 14 |
+| InvestorEvents | 11 |
+| TAIEX_Finguider_Gen | 7 |
+| TAIEX_Visualizer | 7 |
+| SmartTest | 6 |
+| TAIEX_Finguider_HighQual | 1 |
+
+![](https://img.shields.io/badge/whisper--merge--review-616_calls-blue)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-38_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-27_calls-orange)
+![](https://img.shields.io/badge/llm--api-22_calls-red)
+![](https://img.shields.io/badge/ServerSmartTest-14_calls-purple)
+![](https://img.shields.io/badge/InvestorEvents-11_calls-yellowgreen)
+![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-cyan)
+![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-teal)
+![](https://img.shields.io/badge/SmartTest-6_calls-pink)
+![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-indigo)
+![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-gold)
+
+![](./assets/chart_nas_7d.svg)
+
+### Local Inference (MLX)
+
+| Model | Total Calls | Avg Duration |
+|-------|-------------|--------------|
+| `whisper-large-v3` | 774 | N/A |
+| `mlx-qwen3` | 43 | N/A |
+| `mlx-gemma4` | 20 | N/A |
+
+#### Top Applications
+
+| Application | Total Calls |
+|-------------|-------------|
+| whisper-transcription-stage | 578 |
+| whisper-transcription | 163 |
+| whisper-poc-sample | 33 |
+| eval-gemma4 | 26 |
+| test-mlx | 20 |
+| SmartTest | 8 |
+| test-mlx-gemma4 | 5 |
+| TAIEX_Finguider_Pro | 4 |
+
+![](https://img.shields.io/badge/whisper--transcription--stage-578_calls-blue)
+![](https://img.shields.io/badge/whisper--transcription-163_calls-green)
+![](https://img.shields.io/badge/whisper--poc--sample-33_calls-orange)
+![](https://img.shields.io/badge/eval--gemma4-26_calls-red)
+![](https://img.shields.io/badge/test--mlx-20_calls-purple)
+![](https://img.shields.io/badge/SmartTest-8_calls-yellowgreen)
+![](https://img.shields.io/badge/test--mlx--gemma4-5_calls-cyan)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-teal)
+
+![](./assets/chart_mlx_7d.svg)
 
 ## 📦 安裝方式
 
