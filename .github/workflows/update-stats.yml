@@ -46,13 +46,16 @@ jobs:
           SERVICE_MODELS = {
               "Gemini API (Direct)": ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"],
               "NAS Bridge (Codex/ChatGPT)": ["codex", "chatgpt-pro"],
-              "Local Inference (MLX)": ["mlx-qwen3", "mlx-gemma4", "whisper-large-v3"]
+              "Local Inference (MLX/Whisper)": [
+                  "mlx-qwen3", "mlx-gemma4", "whisper-large-v3", 
+                  "mlx-community/whisper-large-v3-turbo", "whisper-large-v3-turbo", "distil-whisper-large-v3"
+              ]
           }
           
           SERVICE_SVG = {
               "Gemini API (Direct)": ["assets/chart_gemini_7d.svg", "assets/chart_gemini_models_7d.svg"],
               "NAS Bridge (Codex/ChatGPT)": ["assets/chart_nas_7d.svg"],
-              "Local Inference (MLX)": ["assets/chart_mlx_7d.svg"]
+              "Local Inference (MLX/Whisper)": ["assets/chart_mlx_7d.svg"]
           }
           
           CHART_COLORS = [
@@ -216,8 +219,8 @@ jobs:
                   if prev <= 0: return ""
                   diff = curr - prev
                   pct = (diff / max(1, prev)) * 100
-                  return f" {'↑' if diff > 0 else '↓' if diff < 0 else '→'}{abs(pct):.1f}%"
-              lines += [badge("Total_Calls", f"{recent_stats['total']:,}", "black"), badge("Last_7_Days", f"{recent_stats['7d']:,}{get_growth(recent_stats['7d'], recent_stats['prev_7d'])}", "blue"), badge("Last_24_Hours", f"{recent_stats['24h']:,}{get_growth(recent_stats['24h'], recent_stats['prev_24h'])}", "green"), ""]
+                  return f"_{'↑' if diff > 0 else '↓' if diff < 0 else '→'}{abs(pct):.1f}%"
+              lines += [badge("Total_Calls", f"{recent_stats['total']}", "black"), badge("Last_7_Days", f"{recent_stats['7d']}{get_growth(recent_stats['7d'], recent_stats['prev_7d'])}", "blue"), badge("Last_24_Hours", f"{recent_stats['24h']}{get_growth(recent_stats['24h'], recent_stats['prev_24h'])}", "green"), ""]
               for service, models in SERVICE_MODELS.items():
                   svc_models = {m: model_counts[m] for m in models if m in model_counts}
                   if not svc_models: continue
