@@ -18,9 +18,9 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 13:13 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 14:04 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4,467-black)
+![](https://img.shields.io/badge/Total_Calls-4485-black)
 ![](https://img.shields.io/badge/Last_7_Days-562_↑35.7%-blue)
 ![](https://img.shields.io/badge/Last_24_Hours-45_↓72.9%-green)
 
@@ -28,7 +28,7 @@
 
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
-| `gemini-2.5-flash` | 2,822 | N/A |
+| `gemini-2.5-flash` | 2822 | N/A |
 | `gemini-2.0-flash` | 10 | N/A |
 | `gemini-2.5-flash-lite` | 3 | N/A |
 
@@ -36,7 +36,7 @@
 
 | Application | Total Calls |
 |-------------|-------------|
-| GoogleAlertManager | 2,611 |
+| GoogleAlertManager | 2611 |
 | CompanyInfo | 220 |
 | InvestorEvents | 22 |
 | TAIEX_Finguider_Pro | 12 |
@@ -88,26 +88,29 @@
 ![](https://img.shields.io/badge/InvestorEvents-11_calls-yellowgreen)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-cyan)
 ![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-teal)
-![](https://img.shields.io/badge/SmartTest-6_calls-pink)
-![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-indigo)
-![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-gold)
+![](https://img.shields.io/badge/SmartTest-6_calls-blue)
+![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-green)
+![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-orange)
 
 ![](./assets/chart_nas_7d.svg)
 
-### Local Inference (MLX)
+### Local Inference (MLX/Whisper)
 
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
 | `whisper-large-v3` | 774 | N/A |
 | `mlx-qwen3` | 43 | N/A |
 | `mlx-gemma4` | 20 | N/A |
+| `mlx-community/whisper-large-v3-turbo` | 11 | N/A |
+| `whisper-large-v3-turbo` | 6 | N/A |
+| `distil-whisper-large-v3` | 1 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls |
 |-------------|-------------|
-| whisper-transcription-stage | 578 |
-| whisper-transcription | 163 |
+| whisper-transcription-stage | 579 |
+| whisper-transcription | 180 |
 | whisper-poc-sample | 33 |
 | eval-gemma4 | 26 |
 | test-mlx | 20 |
@@ -115,8 +118,8 @@
 | test-mlx-gemma4 | 5 |
 | TAIEX_Finguider_Pro | 4 |
 
-![](https://img.shields.io/badge/whisper--transcription--stage-578_calls-blue)
-![](https://img.shields.io/badge/whisper--transcription-163_calls-green)
+![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-blue)
+![](https://img.shields.io/badge/whisper--transcription-180_calls-green)
 ![](https://img.shields.io/badge/whisper--poc--sample-33_calls-orange)
 ![](https://img.shields.io/badge/eval--gemma4-26_calls-red)
 ![](https://img.shields.io/badge/test--mlx-20_calls-purple)
@@ -125,7 +128,6 @@
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-teal)
 
 ![](./assets/chart_mlx_7d.svg)
-
 ## 📦 安裝方式
 
 ### 選項 A：本地路徑 (開發環境)
