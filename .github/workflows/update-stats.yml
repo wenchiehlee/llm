@@ -7,7 +7,7 @@ on:
       - 'llm/**'
       - '.github/workflows/update-stats.yml'
   schedule:
-    - cron: "43 * * * *"   # every hour at :43 UTC
+    - cron: "43 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,7 @@ jobs:
           AMPLITUDE_QUERY_KEY: ${{ secrets.AMPLITUDE_QUERY_KEY }}
         run: |
           python3 - <<'PYEOF'
-          import base64, json, os, sys, time
+          import base64, json, os, sys, time, re
           from datetime import datetime, timezone, timedelta
           from pathlib import Path
           from urllib.error import HTTPError
@@ -36,9 +36,9 @@ jobs:
           HEADER    = "## API Usage Statistics"
           TW_TZ     = timezone(timedelta(hours=8))
           AMP_START = (datetime.now(TW_TZ) - timedelta(days=365)).strftime("%Y%m%d")
+          APP_COLORS = ["blue", "green", "orange", "red", "purple", "yellowgreen", "cyan", "teal", "pink", "indigo"]
+          CHART_COLORS = ["#1A6CF7", "#00C2A0", "#F7931A", "#A456F0", "#FF5733", "#20B2AA", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5"]
 
-          APP_COLORS = ["blue", "green", "orange", "red", "purple", "yellowgreen", "cyan", "teal"]
-          
           SERVICE_MODELS = {
               "Gemini API (Direct)": ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"],
               "NAS Bridge (Codex/ChatGPT)": ["codex", "chatgpt-pro"],
@@ -47,14 +47,11 @@ jobs:
                   "mlx-community/whisper-large-v3-turbo", "whisper-large-v3-turbo", "distil-whisper-large-v3"
               ]
           }
-          
           SERVICE_SVG = {
               "Gemini API (Direct)": ["assets/chart_gemini_7d.svg", "assets/chart_gemini_models_7d.svg"],
               "NAS Bridge (Codex/ChatGPT)": ["assets/chart_nas_7d.svg"],
               "Local Inference (MLX/Whisper)": ["assets/chart_mlx_7d.svg"]
           }
-          
-          CHART_COLORS = ["#1A6CF7", "#00C2A0", "#F7931A", "#A456F0", "#FF5733", "#20B2AA", "#E91E63", "#9C27B0"]
 
           def amp_get(api_key, secret_key, params):
               url = "https://amplitude.com/api/2/events/segmentation?" + urlencode(params)
@@ -62,14 +59,13 @@ jobs:
               req = Request(url, headers={"Authorization": f"Basic {creds}"})
               for attempt in range(5):
                   try:
-                      time.sleep(2) # rate limit prevention
+                      time.sleep(3)
                       with urlopen(req, timeout=30) as r: return json.loads(r.read())
                   except HTTPError as e:
                       if e.code == 429:
-                          wait = (attempt + 1) * 20
-                          time.sleep(wait); continue
+                          time.sleep((attempt + 1) * 20); continue
                       raise
-              raise Exception("Amplitude API failed after retries")
+              raise Exception("Amplitude API failed")
 
           def query_total_calls(api_key, secret_key, days=None, offset_days=0, model_filter=None):
               end_dt = datetime.now(TW_TZ) - timedelta(days=offset_days)
@@ -93,10 +89,9 @@ jobs:
               except: return [0] * days
 
           def query_grouped(api_key, secret_key, group_prop, model_filter=None):
-              end = datetime.now(TW_TZ).strftime("%Y%m%d")
               event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": group_prop}]}
               if model_filter: event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
-              params = {"e": json.dumps(event_def), "start": AMP_START, "end": end, "m": "totals", "i": "1", "limit": "20"}
+              params = {"e": json.dumps(event_def), "start": AMP_START, "end": datetime.now(TW_TZ).strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
               data = amp_get(api_key, secret_key, params)
               series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
               for i, label in enumerate(labels):
@@ -107,9 +102,7 @@ jobs:
               return result
 
           def query_avg_duration_all(api_key, secret_key):
-              end = datetime.now(TW_TZ).strftime("%Y%m%d")
-              event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": "model"}]}
-              params = {"e": json.dumps(event_def), "start": AMP_START, "end": end, "m": "avg_prop", "prop_key": "duration_sec", "prop_type": "event", "i": "1"}
+              params = {"e": json.dumps({"event_type": "llm_call", "group_by": [{"type": "event", "value": "model"}]}), "start": AMP_START, "end": datetime.now(TW_TZ).strftime("%Y%m%d"), "m": "avg_prop", "prop_key": "duration_sec", "prop_type": "event", "i": "1"}
               try:
                   data = amp_get(api_key, secret_key, params)
                   series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
@@ -120,43 +113,6 @@ jobs:
                           if vals: result[label] = sum(vals) / len(vals)
                   return result
               except: return {}
-
-          def query_grouped_over_time(api_key, secret_key, group_prop, model_names=None):
-              end_dt = datetime.now(TW_TZ); start_dt = end_dt - timedelta(days=6)
-              event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": group_prop}]}
-              if model_names: event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_names}]
-              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
-              data = amp_get(api_key, secret_key, params)
-              series, labels, xvals, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), data.get("data", {}).get("xValues", []), {}
-              for i, label in enumerate(labels):
-                  if i < len(series):
-                      if isinstance(label, list): label = [x for x in label if isinstance(x, str)][0] if any(isinstance(x, str) for x in label) else ""
-                      if label: result[label] = [v if v is not None else 0 for v in series[i]]
-              return xvals, result
-
-          def generate_stacked_bar_svg(title, xdates, series, filepath):
-              import math
-              W, H, ML, MR, MT, MB = 900, 480, 65, 20, 55, 145; CW, CH = W - ML - MR, H - MT - MB
-              short_dates = [d[5:].replace("-", "/") if len(d) >= 10 else d for d in xdates]; n = len(short_dates)
-              if n == 0 or not series: return
-              app_names = list(series.keys()); data = [[int(series[a][i]) if i < len(series[a]) else 0 for i in range(n)] for a in app_names]
-              max_val = max([sum(data[j][i] for j in range(len(app_names))) for i in range(n)]) if n > 0 else 1
-              mag = 10 ** max(0, math.floor(math.log10(max_val))); y_ceil = math.ceil(max_val * 1.15 / mag) * mag
-              TICKS = 5; step = y_ceil / TICKS; esc = lambda s: s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
-              sv = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}">', f'<rect width="{W}" height="{H}" fill="#FFFFFF"/>', f'<text x="{W//2}" y="34" text-anchor="middle" font-size="16" font-weight="bold" font-family="Segoe UI,Arial,sans-serif" fill="#1a1a2e">{esc(title)}</text>']
-              for k in range(TICKS + 1):
-                  val = k * step; gy = MT + CH - int(val / y_ceil * CH)
-                  sv.append(f'<line x1="{ML}" y1="{gy}" x2="{ML+CW}" y2="{gy}" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>')
-                  sv.append(f'<text x="{ML-8}" y="{gy+4}" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">{int(val)}</text>')
-              for i in range(n):
-                  bx, bot = ML + i * (CW / n) + (CW / n * 0.15), MT + CH
-                  for j in range(len(app_names)):
-                      val = data[j][i]
-                      if val > 0:
-                          bh = val / y_ceil * CH; sv.append(f'<rect x="{bx:.1f}" y="{(bot-bh):.1f}" width="{(CW/n*0.7):.1f}" height="{bh:.1f}" fill="{CHART_COLORS[j % len(CHART_COLORS)]}" rx="2"/>'); bot -= bh
-                  sv.append(f'<text x="{(ML + i * (CW / n) + (CW / n) / 2):.1f}" y="{MT+CH+20}" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">{esc(short_dates[i])}</text>')
-              sv.append('</svg>'); os.makedirs(os.path.dirname(filepath) or ".", exist_ok=True)
-              with open(filepath, "w", encoding="utf-8") as f: f.write("\n".join(sv))
 
           def badge(label, message, color): return f"![](https://img.shields.io/badge/{label.replace('-','--').replace(' ','_')}-{message.replace('-','--').replace(' ','_')}-{color})"
 
@@ -193,9 +149,11 @@ jobs:
 
           content = README.read_text(encoding="utf-8")
           if HEADER in content:
-              import re; start = content.index(HEADER); rest = content[start+len(HEADER):]; m = re.search(r'\n## ', rest)
-              end = start + len(HEADER) + (m.start() + 1 if m else len(rest))
-              content = content[:start].rstrip("\n") + "\n\n" + "\n".join(lines) + content[end:].lstrip("\n")
+              start = content.index(HEADER); rest = content[start+len(HEADER):]
+              # Look for the next section header (## ) or horizontal rule (---)
+              match = re.search(r'\n(## |---)', rest)
+              end = start + len(HEADER) + (match.start() if match else len(rest))
+              content = content[:start].rstrip() + "\n\n" + "\n".join(lines) + "\n" + content[end:].lstrip()
               README.write_text(content, encoding="utf-8")
           PYEOF
 
