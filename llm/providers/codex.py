@@ -16,7 +16,7 @@ _READ_TIMEOUT = 180         # codex exec 最長執行時間（秒）
 
 
 class CodexProvider(BaseProvider):
-    name = "codex"
+    name = "llm-cli"
 
     def __init__(self, url: str | None = None, api_key: str | None = None, model: str | None = None):
         self.url = (url or os.getenv("CODEX_API_URL", "")).rstrip("/")

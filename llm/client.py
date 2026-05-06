@@ -151,14 +151,14 @@ class LLMClient:
         # 我們優先將整個「草稿+評審」流程交給 NAS 伺服器端處理，以消除網路延遲。
         if draft_provider == "codex" and judge_provider is None:
             try:
-                codex_p = next((p for p in self._providers if p.name == "codex"), None)
+                codex_p = next((p for p in self._providers if p.name == "llm-cli"), None)
                 if codex_p and hasattr(codex_p, "generate_smart"):
                     # 使用伺服器預設的評審邏輯 (gemini-cli -> gemini-cli)
                     result = codex_p.generate_smart(
                         task_name, prompt, draft_cli="gemini", judge_cli="gemini",
                         model=draft_model, json_mode=json_mode, max_tokens=max_tokens
                     )
-                    self.last_provider = getattr(codex_p, "last_provider_used", "codex")
+                    self.last_provider = getattr(codex_p, "last_provider_used", "llm-cli")
                     return result
             except Exception as e:
                 logger.warning("SmartRoute [%s] Server-side 失敗，退回 Client-side: %s", task_name, e)
@@ -267,7 +267,7 @@ class LLMClient:
         """
         Args:
             prompt:   輸入文字
-            provider: 臨時指定 provider（"gemini" / "codex"），覆寫初始化設定
+            provider: 臨時指定 provider（"gemini" / "llm-cli"），覆寫初始化設定
             model:    臨時指定模型（如 "gemini-2.0-flash"），僅對 gemini 有效
             json_mode: 是否回傳 JSON 格式
             max_tokens: 最大輸出 token 數
