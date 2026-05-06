@@ -18,45 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 12:23 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 13:00 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4,481-black)
-![](https://img.shields.io/badge/Last_7_Days-558_↑34.8%-blue)
-![](https://img.shields.io/badge/Last_24_Hours-41_↓75.3%-green)
-
-### Gemini API (Direct)
-
-| Model | Total Calls | Avg Duration |
-|-------|-------------|--------------|
-| `gemini-2.5-flash` | 2,822 | N/A |
-| `gemini-2.0-flash` | 10 | N/A |
-| `gemini-2.5-flash-lite` | 3 | N/A |
-
-#### Top Applications
-
-| Application | Total Calls |
-|-------------|-------------|
-| GoogleAlertManager | 2,611 |
-| CompanyInfo | 220 |
-| InvestorEvents | 22 |
-| TAIEX_Finguider_Pro | 12 |
-| llm-api | 8 |
-| TravelAPP | 3 |
-| ConceptStocks | 2 |
-| TestSmartRouting | 2 |
-
-![](https://img.shields.io/badge/GoogleAlertManager-2611_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-220_calls-green)
-![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-12_calls-red)
-![](https://img.shields.io/badge/llm--api-8_calls-purple)
-![](https://img.shields.io/badge/TravelAPP-3_calls-yellowgreen)
-![](https://img.shields.io/badge/ConceptStocks-2_calls-cyan)
-![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
-
-![](./assets/chart_gemini_7d.svg)
-
-![](./assets/chart_gemini_models_7d.svg)
+![](https://img.shields.io/badge/Total_Calls-4,467-black)
+![](https://img.shields.io/badge/Last_7_Days-562_↑35.7%-blue)
+![](https://img.shields.io/badge/Last_24_Hours-45_↓72.9%-green)
 
 ## 📦 安裝方式
 
