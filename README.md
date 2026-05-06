@@ -18,28 +18,45 @@
 
 ## 📊 運作狀態 (Status Summary)
 
-*Powered by [Amplitude Analytics](https://amplitude.com)*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 12:23 CST*
 
-### 1. API 使用統計 (Usage Statistics)
-| 主要應用 (App Name) | Provider | 預設模型 | 成功率 (7d) | 平均耗時 |
-| :--- | :--- | :--- | :--- | :--- |
-| `llm-api` (Finance) | `codex` | `chatgpt-pro` | > 98% | ~45s |
-| `llm-api` (Alerts) | `gemini` | `gemini-2.5-flash` | > 99% | ~25s |
-| `llm-api` (Local) | `mlx` | `mlx-gemma4` | > 95% | ~12s (本地) |
+![](https://img.shields.io/badge/Total_Calls-4,481-black)
+![](https://img.shields.io/badge/Last_7_Days-558_↑34.8%-blue)
+![](https://img.shields.io/badge/Last_24_Hours-41_↓75.3%-green)
 
-### 2. 智慧路由晉升狀態 (Routing Status)
+### Gemini API (Direct)
 
-智慧路由的狀態儲存於本地 `.llm_routing.json`。系統會自動根據成功率決定是否晉升至高速路徑。
+| Model | Total Calls | Avg Duration |
+|-------|-------------|--------------|
+| `gemini-2.5-flash` | 2,822 | N/A |
+| `gemini-2.0-flash` | 10 | N/A |
+| `gemini-2.5-flash-lite` | 3 | N/A |
 
-| 任務名稱 (Task Name) | 成功 | 失敗 | 當前狀態 | 備註 |
-| :--- | :---: | :---: | :--- | :--- |
-| `ServerReflectionTest` | 2 | 0 | 🔍 **Judging** | 測試紀錄 (NAS 橋接) |
-| `FinanceSummary` | - | - | 🔍 **Judging** | 財報摘要任務 (評估中) |
+#### Top Applications
 
-> **晉升門檻**：樣本數 ≥ 10 且成功率 ≥ 80%。
+| Application | Total Calls |
+|-------------|-------------|
+| GoogleAlertManager | 2,611 |
+| CompanyInfo | 220 |
+| InvestorEvents | 22 |
+| TAIEX_Finguider_Pro | 12 |
+| llm-api | 8 |
+| TravelAPP | 3 |
+| ConceptStocks | 2 |
+| TestSmartRouting | 2 |
 
+![](https://img.shields.io/badge/GoogleAlertManager-2611_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-220_calls-green)
+![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-12_calls-red)
+![](https://img.shields.io/badge/llm--api-8_calls-purple)
+![](https://img.shields.io/badge/TravelAPP-3_calls-yellowgreen)
+![](https://img.shields.io/badge/ConceptStocks-2_calls-cyan)
+![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
 
----
+![](./assets/chart_gemini_7d.svg)
+
+![](./assets/chart_gemini_models_7d.svg)
 
 ## 📦 安裝方式
 
