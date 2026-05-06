@@ -1,6 +1,11 @@
 name: Update README Stats
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'llm/**'
+      - '.github/workflows/update-stats.yml'
   schedule:
     - cron: "43 * * * *"   # every hour at :43 UTC
   workflow_dispatch:
