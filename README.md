@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 14:05 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 14:09 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4485-black)
 ![](https://img.shields.io/badge/Last_7_Days-562_↑35.7%-blue)
@@ -88,9 +88,9 @@
 ![](https://img.shields.io/badge/InvestorEvents-11_calls-yellowgreen)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-cyan)
 ![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-teal)
-![](https://img.shields.io/badge/SmartTest-6_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-green)
-![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-orange)
+![](https://img.shields.io/badge/SmartTest-6_calls-pink)
+![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-indigo)
+![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-blue)
 
 ![](./assets/chart_nas_7d.svg)
 
@@ -128,6 +128,7 @@
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-teal)
 
 ![](./assets/chart_mlx_7d.svg)
+
 ## 📦 安裝方式
 
 ### 選項 A：本地路徑 (開發環境)
