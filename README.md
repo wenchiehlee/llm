@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-06 23:15 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-07 01:13 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4485-black)
-![](https://img.shields.io/badge/Last_7_Days-581_↑40.3%-blue)
-![](https://img.shields.io/badge/Last_24_Hours-64_↓61.4%-green)
+![](https://img.shields.io/badge/Total_Calls-4506-black)
+![](https://img.shields.io/badge/Last_7_Days-521_↑27.4%-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0_↓100.0%-green)
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
-| `gemini-2.5-flash` | 2822 | N/A |
+| `gemini-2.5-flash` | 2876 | N/A |
 | `gemini-2.0-flash` | 10 | N/A |
 | `gemini-2.5-flash-lite` | 3 | N/A |
 
@@ -37,21 +37,21 @@
 | Application | Total Calls |
 |-------------|-------------|
 | GoogleAlertManager | 2611 |
-| CompanyInfo | 220 |
+| CompanyInfo | 224 |
 | InvestorEvents | 22 |
-| TAIEX_Finguider_Pro | 12 |
+| TAIEX_Finguider_Pro | 15 |
 | llm-api | 8 |
+| ConceptStocks | 4 |
 | TravelAPP | 3 |
-| ConceptStocks | 2 |
 | TestSmartRouting | 2 |
 
 ![](https://img.shields.io/badge/GoogleAlertManager-2611_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-220_calls-green)
+![](https://img.shields.io/badge/CompanyInfo-224_calls-green)
 ![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-12_calls-red)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-15_calls-red)
 ![](https://img.shields.io/badge/llm--api-8_calls-purple)
-![](https://img.shields.io/badge/TravelAPP-3_calls-yellowgreen)
-![](https://img.shields.io/badge/ConceptStocks-2_calls-cyan)
+![](https://img.shields.io/badge/ConceptStocks-4_calls-yellowgreen)
+![](https://img.shields.io/badge/TravelAPP-3_calls-cyan)
 ![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
 
 ![](./assets/chart_gemini_7d.svg)
@@ -63,14 +63,14 @@
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
 | `codex` | 616 | N/A |
-| `chatgpt-pro` | 134 | N/A |
+| `chatgpt-pro` | 146 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls |
 |-------------|-------------|
 | whisper-merge-review | 616 |
-| TAIEX_Finguider_Pro | 38 |
+| TAIEX_Finguider_Pro | 50 |
 | GoogleAlertManager | 27 |
 | llm-api | 22 |
 | ServerSmartTest | 14 |
@@ -81,7 +81,7 @@
 | TAIEX_Finguider_HighQual | 1 |
 
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-38_calls-green)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-50_calls-green)
 ![](https://img.shields.io/badge/GoogleAlertManager-27_calls-orange)
 ![](https://img.shields.io/badge/llm--api-22_calls-red)
 ![](https://img.shields.io/badge/ServerSmartTest-14_calls-purple)
