@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-07 23:54 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-08 02:14 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4506-black)
-![](https://img.shields.io/badge/Last_7_Days-568_↑38.9%-blue)
-![](https://img.shields.io/badge/Last_24_Hours-47_↓28.8%-green)
+![](https://img.shields.io/badge/Total_Calls-4586-black)
+![](https://img.shields.io/badge/Last_7_Days-537_↑23.7%-blue)
+![](https://img.shields.io/badge/Last_24_Hours-33_↓29.8%-green)
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
-| `gemini-2.5-flash` | 2876 | N/A |
+| `gemini-2.5-flash` | 2920 | N/A |
 | `gemini-2.0-flash` | 10 | N/A |
 | `gemini-2.5-flash-lite` | 3 | N/A |
 
@@ -36,21 +36,21 @@
 
 | Application | Total Calls |
 |-------------|-------------|
-| GoogleAlertManager | 2611 |
-| CompanyInfo | 224 |
+| GoogleAlertManager | 2679 |
+| CompanyInfo | 228 |
 | InvestorEvents | 22 |
 | TAIEX_Finguider_Pro | 15 |
+| ConceptStocks | 9 |
 | llm-api | 8 |
-| ConceptStocks | 4 |
 | TravelAPP | 3 |
 | TestSmartRouting | 2 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-2611_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-224_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-2679_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-228_calls-green)
 ![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-15_calls-red)
-![](https://img.shields.io/badge/llm--api-8_calls-purple)
-![](https://img.shields.io/badge/ConceptStocks-4_calls-yellowgreen)
+![](https://img.shields.io/badge/ConceptStocks-9_calls-purple)
+![](https://img.shields.io/badge/llm--api-8_calls-yellowgreen)
 ![](https://img.shields.io/badge/TravelAPP-3_calls-cyan)
 ![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
 
@@ -63,14 +63,14 @@
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
 | `codex` | 616 | N/A |
-| `chatgpt-pro` | 146 | N/A |
+| `chatgpt-pro` | 149 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls |
 |-------------|-------------|
 | whisper-merge-review | 616 |
-| TAIEX_Finguider_Pro | 50 |
+| TAIEX_Finguider_Pro | 52 |
 | GoogleAlertManager | 27 |
 | llm-api | 22 |
 | ServerSmartTest | 14 |
@@ -78,10 +78,10 @@
 | TAIEX_Finguider_Gen | 7 |
 | TAIEX_Visualizer | 7 |
 | SmartTest | 6 |
-| TAIEX_Finguider_HighQual | 1 |
+| TAIEX_Compare | 1 |
 
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-50_calls-green)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-52_calls-green)
 ![](https://img.shields.io/badge/GoogleAlertManager-27_calls-orange)
 ![](https://img.shields.io/badge/llm--api-22_calls-red)
 ![](https://img.shields.io/badge/ServerSmartTest-14_calls-purple)
@@ -89,8 +89,9 @@
 ![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-cyan)
 ![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-teal)
 ![](https://img.shields.io/badge/SmartTest-6_calls-pink)
-![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-indigo)
-![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-blue)
+![](https://img.shields.io/badge/TAIEX_Compare-1_calls-indigo)
+![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-blue)
+![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-green)
 
 ![](./assets/chart_nas_7d.svg)
 
