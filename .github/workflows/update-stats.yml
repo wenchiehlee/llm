@@ -1,4 +1,4 @@
-name: Update README Stats # Final Sync Fix
+name: Update README Stats # Final Sync Fix v2
 
 on:
   push:
@@ -128,7 +128,13 @@ jobs:
               return f"_{'↑' if diff > 0 else '↓' if diff < 0 else '→'}{abs(pct):.1f}%"
 
           lines = [HEADER, "", f"*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: {datetime.now(TW_TZ).strftime('%Y-%m-%d %H:%M CST')}*", ""]
-          lines += [badge("Total_Calls", f"{recent['total']}", "black"), badge("Last_7_Days", f"{recent['7d']}{get_growth(recent['7d'], recent['prev_7d'])}", "blue"), badge("Last_24_Hours", f"{recent['24h']}{get_growth(recent['24h'], recent['prev_24h'])}", "green"), ""]
+          # Combine badges into a single line
+          badges = [
+              badge("Total_Calls", f"{recent['total']}", "black"),
+              badge("Last_7_Days", f"{recent['7d']}{get_growth(recent['7d'], recent['prev_7d'])}", "blue"),
+              badge("Last_24_Hours", f"{recent['24h']}{get_growth(recent['24h'], recent['prev_24h'])}", "green")
+          ]
+          lines += [" ".join(badges), ""]
           
           for svc, models in SERVICE_MODELS.items():
               svc_m = {m: m_counts[m] for m in models if m in m_counts}
@@ -150,7 +156,6 @@ jobs:
           content = README.read_text(encoding="utf-8")
           if HEADER in content:
               start = content.index(HEADER); rest = content[start+len(HEADER):]
-              # Look for the next section header (## ) or horizontal rule (---)
               match = re.search(r'\n(## |---)', rest)
               end = start + len(HEADER) + (match.start() if match else len(rest))
               content = content[:start].rstrip() + "\n\n" + "\n".join(lines) + "\n" + content[end:].lstrip()
