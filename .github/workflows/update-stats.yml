@@ -41,7 +41,7 @@ jobs:
 
           SERVICE_MODELS = {
               "Gemini API (Direct)": ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"],
-              "NAS Bridge (Codex/ChatGPT)": ["codex", "chatgpt-pro"],
+              "Llm-Cli-APIServer": ["codex", "chatgpt-pro"],
               "Local Inference (MLX/Whisper)": [
                   "mlx-qwen3", "mlx-gemma4", "whisper-large-v3", 
                   "mlx-community/whisper-large-v3-turbo", "whisper-large-v3-turbo", "distil-whisper-large-v3"
@@ -49,7 +49,7 @@ jobs:
           }
           SERVICE_SVG = {
               "Gemini API (Direct)": ["assets/chart_gemini_7d.svg", "assets/chart_gemini_models_7d.svg"],
-              "NAS Bridge (Codex/ChatGPT)": ["assets/chart_nas_7d.svg"],
+              "Llm-Cli-APIServer": ["assets/chart_nas_7d.svg"],
               "Local Inference (MLX/Whisper)": ["assets/chart_mlx_7d.svg"]
           }
 
@@ -128,7 +128,6 @@ jobs:
               return f"_{'↑' if diff > 0 else '↓' if diff < 0 else '→'}{abs(pct):.1f}%"
 
           lines = [HEADER, "", f"*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: {datetime.now(TW_TZ).strftime('%Y-%m-%d %H:%M CST')}*", ""]
-          # Combine badges into a single line
           badges = [
               badge("Total_Calls", f"{recent['total']}", "black"),
               badge("Last_7_Days", f"{recent['7d']}{get_growth(recent['7d'], recent['prev_7d'])}", "blue"),
