@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-08 09:24 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-08 12:43 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4586-black)
-![](https://img.shields.io/badge/Last_7_Days-537_↑23.7%-blue)
-![](https://img.shields.io/badge/Last_24_Hours-33_↓29.8%-green)
+![](https://img.shields.io/badge/Last_7_Days-538_↑24.0%-blue)
+![](https://img.shields.io/badge/Last_24_Hours-34_↓27.7%-green)
 
 ### Gemini API (Direct)
 
