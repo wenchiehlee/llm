@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-09 23:35 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-10 00:34 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4594-black)
-![](https://img.shields.io/badge/Last_7_Days-495_↑1.6%-blue)
-![](https://img.shields.io/badge/Last_24_Hours-42_↑2.4%-green)
+![](https://img.shields.io/badge/Total_Calls-4636-black)
+![](https://img.shields.io/badge/Last_7_Days-426_↓11.8%-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0_↓100.0%-green)
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Avg Duration |
 |-------|-------------|--------------|
-| `gemini-2.5-flash` | 2961 | N/A |
+| `gemini-2.5-flash` | 3003 | N/A |
 | `gemini-2.0-flash` | 10 | N/A |
 | `gemini-2.5-flash-lite` | 3 | N/A |
 
@@ -36,20 +36,20 @@
 
 | Application | Total Calls |
 |-------------|-------------|
-| GoogleAlertManager | 2680 |
-| CompanyInfo | 232 |
+| GoogleAlertManager | 2715 |
+| CompanyInfo | 236 |
 | InvestorEvents | 22 |
+| ConceptStocks | 15 |
 | TAIEX_Finguider_Pro | 15 |
-| ConceptStocks | 12 |
 | llm-api | 8 |
 | TravelAPP | 3 |
 | TestSmartRouting | 2 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-2680_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-232_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-2715_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-236_calls-green)
 ![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-15_calls-red)
-![](https://img.shields.io/badge/ConceptStocks-12_calls-purple)
+![](https://img.shields.io/badge/ConceptStocks-15_calls-red)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-15_calls-purple)
 ![](https://img.shields.io/badge/llm--api-8_calls-yellowgreen)
 ![](https://img.shields.io/badge/TravelAPP-3_calls-cyan)
 ![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
