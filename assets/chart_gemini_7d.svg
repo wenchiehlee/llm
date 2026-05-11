@@ -1,55 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480">
-<rect width="900" height="480" fill="#FFFFFF"/>
-<rect x="65" y="55" width="815" height="280" fill="#FAFAFA" rx="4"/>
-<text x="450" y="34" text-anchor="middle" font-size="16" font-weight="bold" font-family="Segoe UI,Arial,sans-serif" fill="#1a1a2e">App Usage (Last 7 Days)</text>
-<text transform="rotate(-90,16,195)" x="16" y="195" text-anchor="middle" font-size="12" font-family="Segoe UI,Arial,sans-serif" fill="#666">Events</text>
-<line x1="65" y1="335" x2="880" y2="335" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="339" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">0</text>
-<line x1="65" y1="279" x2="880" y2="279" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="283" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">18</text>
-<line x1="65" y1="223" x2="880" y2="223" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="227" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">36</text>
-<line x1="65" y1="167" x2="880" y2="167" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="171" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">54</text>
-<line x1="65" y1="111" x2="880" y2="111" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="115" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">72</text>
-<line x1="65" y1="55" x2="880" y2="55" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="59" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">90</text>
-<rect x="82.5" y="160.8" width="81.5" height="174.2" fill="#1A6CF7" rx="2"/>
-<rect x="82.5" y="148.3" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<text x="123.2" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">04/30</text>
-<rect x="198.9" y="191.9" width="81.5" height="143.1" fill="#1A6CF7" rx="2"/>
-<rect x="198.9" y="179.4" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<text x="239.6" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/01</text>
-<rect x="315.3" y="226.1" width="81.5" height="108.9" fill="#1A6CF7" rx="2"/>
-<rect x="315.3" y="213.7" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<text x="356.1" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/02</text>
-<rect x="431.8" y="132.8" width="81.5" height="202.2" fill="#1A6CF7" rx="2"/>
-<rect x="431.8" y="120.3" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<text x="472.5" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/03</text>
-<rect x="548.2" y="148.3" width="81.5" height="186.7" fill="#1A6CF7" rx="2"/>
-<rect x="548.2" y="135.9" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<text x="588.9" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/04</text>
-<rect x="664.6" y="185.7" width="81.5" height="149.3" fill="#1A6CF7" rx="2"/>
-<rect x="664.6" y="173.2" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<rect x="664.6" y="135.9" width="81.5" height="37.3" fill="#F7931A" rx="2"/>
-<rect x="664.6" y="111.0" width="81.5" height="24.9" fill="#A456F0" rx="2"/>
-<rect x="664.6" y="104.8" width="81.5" height="6.2" fill="#FF5733" rx="2"/>
-<rect x="664.6" y="98.6" width="81.5" height="6.2" fill="#20B2AA" rx="2"/>
-<text x="705.4" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/05</text>
-<rect x="781.0" y="207.4" width="81.5" height="127.6" fill="#1A6CF7" rx="2"/>
-<rect x="781.0" y="195.0" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<text x="821.8" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/06</text>
-<rect x="65" y="380" width="12" height="12" fill="#1A6CF7" rx="2"/>
-<text x="83" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">GoogleAlertManager</text>
-<rect x="268" y="380" width="12" height="12" fill="#00C2A0" rx="2"/>
-<text x="286" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">CompanyInfo</text>
-<rect x="471" y="380" width="12" height="12" fill="#F7931A" rx="2"/>
-<text x="489" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TAIEX_Finguider_Pro</text>
-<rect x="674" y="380" width="12" height="12" fill="#A456F0" rx="2"/>
-<text x="692" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">llm-api</text>
-<rect x="65" y="402" width="12" height="12" fill="#FF5733" rx="2"/>
-<text x="83" y="412" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">ConceptStocks</text>
-<rect x="268" y="402" width="12" height="12" fill="#20B2AA" rx="2"/>
-<text x="286" y="412" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TestSmartRouting</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420">
+<rect width="900" height="420" fill="white"/>
+<text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events of Gemini API (Direct) by App (Last 7 Days)</text>
+<line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
+<line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">18</text>
+<line x1="65" y1="223" x2="880" y2="223" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">36</text>
+<line x1="65" y1="167" x2="880" y2="167" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">54</text>
+<line x1="65" y1="111" x2="880" y2="111" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">72</text>
+<line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">90</text>
+<rect x="88.3" y="185.7" width="69.9" height="149.3" fill="#1A6CF7"/>
+<rect x="88.3" y="173.2" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="88.3" y="167.0" width="69.9" height="6.2" fill="#F7931A"/>
+<rect x="88.3" y="129.7" width="69.9" height="37.3" fill="#A456F0"/>
+<rect x="88.3" y="104.8" width="69.9" height="24.9" fill="#FF5733"/>
+<rect x="88.3" y="98.6" width="69.9" height="6.2" fill="#20B2AA"/>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/05</text>
+<rect x="204.7" y="207.4" width="69.9" height="127.6" fill="#1A6CF7"/>
+<rect x="204.7" y="182.6" width="69.9" height="24.9" fill="#00C2A0"/>
+<rect x="204.7" y="176.3" width="69.9" height="6.2" fill="#F7931A"/>
+<rect x="204.7" y="167.0" width="69.9" height="9.3" fill="#A456F0"/>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/06</text>
+<rect x="321.1" y="226.1" width="69.9" height="108.9" fill="#1A6CF7"/>
+<rect x="321.1" y="213.7" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="321.1" y="198.1" width="69.9" height="15.6" fill="#F7931A"/>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/07</text>
+<rect x="437.6" y="229.2" width="69.9" height="105.8" fill="#1A6CF7"/>
+<rect x="437.6" y="216.8" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="437.6" y="207.4" width="69.9" height="9.3" fill="#F7931A"/>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/08</text>
+<rect x="554.0" y="226.1" width="69.9" height="108.9" fill="#1A6CF7"/>
+<rect x="554.0" y="213.7" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="554.0" y="204.3" width="69.9" height="9.3" fill="#F7931A"/>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/09</text>
+<rect x="670.4" y="123.4" width="69.9" height="211.6" fill="#1A6CF7"/>
+<rect x="670.4" y="111.0" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="670.4" y="101.7" width="69.9" height="9.3" fill="#F7931A"/>
+<rect x="670.4" y="98.6" width="69.9" height="3.1" fill="#A456F0"/>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/10</text>
+<rect x="786.9" y="123.4" width="69.9" height="211.6" fill="#1A6CF7"/>
+<rect x="786.9" y="120.3" width="69.9" height="3.1" fill="#A456F0"/>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/11</text>
 </svg>

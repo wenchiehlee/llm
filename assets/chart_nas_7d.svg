@@ -1,52 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480">
-<rect width="900" height="480" fill="#FFFFFF"/>
-<rect x="65" y="55" width="815" height="280" fill="#FAFAFA" rx="4"/>
-<text x="450" y="34" text-anchor="middle" font-size="16" font-weight="bold" font-family="Segoe UI,Arial,sans-serif" fill="#1a1a2e">App Usage (Last 7 Days)</text>
-<text transform="rotate(-90,16,195)" x="16" y="195" text-anchor="middle" font-size="12" font-family="Segoe UI,Arial,sans-serif" fill="#666">Events</text>
-<line x1="65" y1="335" x2="880" y2="335" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="339" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">0</text>
-<line x1="65" y1="279" x2="880" y2="279" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="283" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">18</text>
-<line x1="65" y1="223" x2="880" y2="223" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="227" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">36</text>
-<line x1="65" y1="167" x2="880" y2="167" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="171" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">54</text>
-<line x1="65" y1="111" x2="880" y2="111" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="115" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">72</text>
-<line x1="65" y1="55" x2="880" y2="55" stroke="#E0E0E0" stroke-width="1" stroke-dasharray="2,2"/>
-<text x="57" y="59" text-anchor="end" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">90</text>
-<rect x="82.5" y="328.8" width="81.5" height="6.2" fill="#00C2A0" rx="2"/>
-<text x="123.2" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">04/30</text>
-<rect x="198.9" y="291.4" width="81.5" height="43.6" fill="#00C2A0" rx="2"/>
-<text x="239.6" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/01</text>
-<rect x="315.3" y="328.8" width="81.5" height="6.2" fill="#00C2A0" rx="2"/>
-<text x="356.1" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/02</text>
-<text x="472.5" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/03</text>
-<text x="588.9" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/04</text>
-<rect x="664.6" y="216.8" width="81.5" height="118.2" fill="#1A6CF7" rx="2"/>
-<rect x="664.6" y="204.3" width="81.5" height="12.4" fill="#00C2A0" rx="2"/>
-<rect x="664.6" y="160.8" width="81.5" height="43.6" fill="#F7931A" rx="2"/>
-<rect x="664.6" y="139.0" width="81.5" height="21.8" fill="#A456F0" rx="2"/>
-<rect x="664.6" y="117.2" width="81.5" height="21.8" fill="#FF5733" rx="2"/>
-<rect x="664.6" y="98.6" width="81.5" height="18.7" fill="#20B2AA" rx="2"/>
-<rect x="664.6" y="95.4" width="81.5" height="3.1" fill="#E91E63" rx="2"/>
-<rect x="664.6" y="92.3" width="81.5" height="3.1" fill="#9C27B0" rx="2"/>
-<text x="705.4" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/05</text>
-<text x="821.8" y="355" text-anchor="middle" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#666">05/06</text>
-<rect x="65" y="380" width="12" height="12" fill="#1A6CF7" rx="2"/>
-<text x="83" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TAIEX_Finguider_Pro</text>
-<rect x="268" y="380" width="12" height="12" fill="#00C2A0" rx="2"/>
-<text x="286" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">llm-api</text>
-<rect x="471" y="380" width="12" height="12" fill="#F7931A" rx="2"/>
-<text x="489" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">ServerSmartTest</text>
-<rect x="674" y="380" width="12" height="12" fill="#A456F0" rx="2"/>
-<text x="692" y="390" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TAIEX_Finguider_Gen</text>
-<rect x="65" y="402" width="12" height="12" fill="#FF5733" rx="2"/>
-<text x="83" y="412" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TAIEX_Visualizer</text>
-<rect x="268" y="402" width="12" height="12" fill="#20B2AA" rx="2"/>
-<text x="286" y="412" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">SmartTest</text>
-<rect x="471" y="402" width="12" height="12" fill="#E91E63" rx="2"/>
-<text x="489" y="412" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TAIEX_Finguider_HighQual</text>
-<rect x="674" y="402" width="12" height="12" fill="#9C27B0" rx="2"/>
-<text x="692" y="412" font-size="11" font-family="Segoe UI,Arial,sans-serif" fill="#444">TAIEX_Google_Visualizer</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420">
+<rect width="900" height="420" fill="white"/>
+<text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events of Llm-Cli-APIServer by App (Last 7 Days)</text>
+<line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
+<line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">18</text>
+<line x1="65" y1="223" x2="880" y2="223" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">36</text>
+<line x1="65" y1="167" x2="880" y2="167" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">54</text>
+<line x1="65" y1="111" x2="880" y2="111" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">72</text>
+<line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">90</text>
+<rect x="88.3" y="216.8" width="69.9" height="118.2" fill="#1A6CF7"/>
+<rect x="88.3" y="173.2" width="69.9" height="43.6" fill="#00C2A0"/>
+<rect x="88.3" y="151.4" width="69.9" height="21.8" fill="#F7931A"/>
+<rect x="88.3" y="129.7" width="69.9" height="21.8" fill="#A456F0"/>
+<rect x="88.3" y="111.0" width="69.9" height="18.7" fill="#FF5733"/>
+<rect x="88.3" y="98.6" width="69.9" height="12.4" fill="#20B2AA"/>
+<rect x="88.3" y="95.4" width="69.9" height="3.1" fill="#9C27B0"/>
+<rect x="88.3" y="92.3" width="69.9" height="3.1" fill="#673AB7"/>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/05</text>
+<rect x="204.7" y="297.7" width="69.9" height="37.3" fill="#1A6CF7"/>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/06</text>
+<rect x="321.1" y="328.8" width="69.9" height="6.2" fill="#1A6CF7"/>
+<rect x="321.1" y="325.7" width="69.9" height="3.1" fill="#E91E63"/>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/07</text>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/08</text>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/09</text>
+<rect x="670.4" y="331.9" width="69.9" height="3.1" fill="#1A6CF7"/>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/10</text>
+<rect x="786.9" y="331.9" width="69.9" height="3.1" fill="#1A6CF7"/>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/11</text>
 </svg>
