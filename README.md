@@ -18,38 +18,38 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-11 21:33 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-12 00:19 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4713-black)
-![](https://img.shields.io/badge/Last_7_Days-516-blue)
-![](https://img.shields.io/badge/Last_24_Hours-77-green)
+![](https://img.shields.io/badge/Total_Calls-4790-black)
+![](https://img.shields.io/badge/Last_7_Days-350-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0-green)
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3079 | 407 | 76 | N/A |
-| `gemini-2.0-flash` | 10 | 2 | 0 | N/A |
+| `gemini-2.5-flash` | 3155 | 333 | 0 | N/A |
+| `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 2783 | 329 | 68 |
-| CompanyInfo | 240 | 32 | 4 |
+| GoogleAlertManager | 2851 | 281 | 0 |
+| CompanyInfo | 244 | 28 | 0 |
 | InvestorEvents | 22 | 0 | 0 |
-| ConceptStocks | 18 | 21 | 3 |
-| TAIEX_Finguider_Pro | 16 | 17 | 1 |
-| llm-api | 8 | 8 | 0 |
+| ConceptStocks | 21 | 19 | 0 |
+| TAIEX_Finguider_Pro | 17 | 5 | 0 |
+| llm-api | 8 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
-| TestSmartRouting | 2 | 2 | 0 |
+| TestSmartRouting | 2 | 0 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-2783_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-240_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-2851_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-244_calls-green)
 ![](https://img.shields.io/badge/InvestorEvents-22_calls-orange)
-![](https://img.shields.io/badge/ConceptStocks-18_calls-red)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-16_calls-purple)
+![](https://img.shields.io/badge/ConceptStocks-21_calls-red)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-17_calls-purple)
 ![](https://img.shields.io/badge/llm--api-8_calls-yellowgreen)
 ![](https://img.shields.io/badge/TravelAPP-3_calls-cyan)
 ![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
@@ -63,25 +63,25 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 150 | 95 | 1 | N/A |
+| `chatgpt-pro` | 151 | 17 | 0 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 53 | 54 | 1 |
+| TAIEX_Finguider_Pro | 54 | 16 | 0 |
 | GoogleAlertManager | 27 | 0 | 0 |
-| llm-api | 22 | 4 | 0 |
-| ServerSmartTest | 14 | 14 | 0 |
+| llm-api | 22 | 0 | 0 |
+| ServerSmartTest | 14 | 0 | 0 |
 | InvestorEvents | 11 | 0 | 0 |
-| TAIEX_Finguider_Gen | 7 | 7 | 0 |
-| TAIEX_Visualizer | 7 | 7 | 0 |
-| SmartTest | 6 | 6 | 0 |
+| TAIEX_Finguider_Gen | 7 | 0 | 0 |
+| TAIEX_Visualizer | 7 | 0 | 0 |
+| SmartTest | 6 | 0 | 0 |
 | TAIEX_Compare | 1 | 1 | 0 |
 
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-53_calls-green)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-54_calls-green)
 ![](https://img.shields.io/badge/GoogleAlertManager-27_calls-orange)
 ![](https://img.shields.io/badge/llm--api-22_calls-red)
 ![](https://img.shields.io/badge/ServerSmartTest-14_calls-purple)
@@ -100,8 +100,8 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `whisper-large-v3` | 774 | 0 | 0 | N/A |
-| `mlx-qwen3` | 43 | 10 | 0 | N/A |
-| `mlx-gemma4` | 20 | 2 | 0 | N/A |
+| `mlx-qwen3` | 43 | 0 | 0 | N/A |
+| `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
 | `whisper-large-v3-turbo` | 6 | 0 | 0 | N/A |
 | `distil-whisper-large-v3` | 1 | 0 | 0 | N/A |
@@ -115,9 +115,9 @@
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
-| SmartTest | 8 | 8 | 0 |
+| SmartTest | 8 | 0 | 0 |
 | test-mlx-gemma4 | 5 | 0 | 0 |
-| TAIEX_Finguider_Pro | 4 | 4 | 0 |
+| TAIEX_Finguider_Pro | 4 | 0 | 0 |
 
 ![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-blue)
 ![](https://img.shields.io/badge/whisper--transcription-180_calls-green)
