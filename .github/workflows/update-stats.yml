@@ -88,10 +88,12 @@ jobs:
                   return data.get("data", {}).get("series", [[]])[0]
               except: return [0] * days
 
-          def query_grouped(api_key, secret_key, group_prop, model_filter=None):
+          def query_grouped(api_key, secret_key, group_prop, model_filter=None, days=None):
+              end_dt = datetime.now(TW_TZ)
+              start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else AMP_START
               event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": group_prop}]}
               if model_filter: event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
-              params = {"e": json.dumps(event_def), "start": AMP_START, "end": datetime.now(TW_TZ).strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
+              params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
               data = amp_get(api_key, secret_key, params)
               series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
               for i, label in enumerate(labels):
@@ -114,20 +116,55 @@ jobs:
                   return result
               except: return {}
 
+          def query_last7days(api_key, secret_key, model_names, group_by="app_name"):
+              end_dt = datetime.now(TW_TZ); start_dt = end_dt - timedelta(days=6)
+              event_def = {"event_type": "llm_call", "filters": [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_names}], "group_by": [{"type": "event", "value": group_by}]}
+              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
+              data = amp_get(api_key, secret_key, params)
+              series, labels, xvals, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), data.get("data", {}).get("xValues", []), {}
+              for i, label in enumerate(labels):
+                  if i < len(series):
+                      if isinstance(label, list): label = [x for x in label if isinstance(x, str)][0] if any(isinstance(x, str) for x in label) else ""
+                      if label: result[label] = [v if v is not None else 0 for v in series[i]]
+              return xvals, result
+
+          def generate_stacked_bar_svg(title, xdates, series, filepath):
+              import math
+              W, H, ML, MR, MT, MB = 900, 420, 65, 20, 55, 85; CW, CH = W - ML - MR, H - MT - MB
+              short_dates = [d[5:].replace("-", "/") if len(d) >= 10 else d for d in xdates]; n = len(short_dates)
+              if n == 0 or not series: return
+              group_names = list(series.keys()); data = [[int(series[a][i]) if i < len(series[a]) else 0 for i in range(n)] for a in group_names]
+              max_val = max([sum(data[j][i] for j in range(len(group_names))) for i in range(n)]) if n > 0 else 1
+              mag = 10 ** max(0, math.floor(math.log10(max_val))); y_ceil = math.ceil(max_val * 1.15 / mag) * mag
+              TICKS = 5; step = y_ceil / TICKS; esc = lambda s: s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+              sv = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}">', f'<rect width="{W}" height="{H}" fill="white"/>', f'<text x="{W//2}" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">{esc(title)}</text>']
+              for k in range(TICKS + 1):
+                  val = k * step; gy = MT + CH - int(val / y_ceil * CH)
+                  sv.append(f'<line x1="{ML}" y1="{gy}" x2="{ML+CW}" y2="{gy}" stroke="#EEEEEE" stroke-width="1"/>')
+                  sv.append(f'<text x="{ML-6}" y="{gy+4}" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">{int(val)}</text>')
+              for i in range(n):
+                  bx, bot = ML + i * (CW / n) + (CW / n * 0.2), MT + CH
+                  for j in range(len(group_names)):
+                      val = data[j][i]
+                      if val > 0:
+                          bh = val / y_ceil * CH; sv.append(f'<rect x="{bx:.1f}" y="{(bot-bh):.1f}" width="{(CW/n*0.6):.1f}" height="{bh:.1f}" fill="{CHART_COLORS[j % len(CHART_COLORS)]}"/>'); bot -= bh
+                  sv.append(f'<text x="{(ML + i * (CW / n) + (CW / n) / 2):.1f}" y="{MT+CH+16}" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">{esc(short_dates[i])}</text>')
+              sv.append('</svg>'); os.makedirs(os.path.dirname(filepath) or ".", exist_ok=True)
+              with open(filepath, "w", encoding="utf-8") as f: f.write("\n".join(sv))
+
           def badge(label, message, color): return f"![](https://img.shields.io/badge/{label.replace('-','--').replace(' ','_')}-{message.replace('-','--').replace(' ','_')}-{color})"
 
           api_key, secret_key = os.environ["AMPLITUDE_API_KEY"], os.environ["AMPLITUDE_QUERY_KEY"]
           all_models = [m for svc in SERVICE_MODELS.values() for m in svc]
-          m_counts = query_grouped(api_key, secret_key, "model"); m_avg_dur = query_avg_duration_all(api_key, secret_key)
+          m_counts = query_grouped(api_key, secret_key, "model")
+          m_counts_7d = query_grouped(api_key, secret_key, "model", days=7)
+          m_counts_24h = query_grouped(api_key, secret_key, "model", days=1)
+          m_avg_dur = query_avg_duration_all(api_key, secret_key)
           daily = query_daily_series(api_key, secret_key, days=14, model_filter=all_models)
           recent = {"total": query_total_calls(api_key, secret_key, model_filter=all_models), "24h": daily[-1], "prev_24h": daily[-2], "7d": sum(daily[-7:]), "prev_7d": sum(daily[-14:-7])}
           
-          def get_growth(curr, prev):
-              if prev <= 0: return ""
-              diff = curr - prev; pct = (diff / max(1, prev)) * 100
-              return f"_{'↑' if diff > 0 else '↓' if diff < 0 else '→'}{abs(pct):.1f}%"
-
-          lines = [HEADER, "", f"*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: {datetime.now(TW_TZ).strftime('%Y-%m-%d %H:%M CST')}*", ""]
+          now_tw = datetime.now(TW_TZ).strftime('%Y-%m-%d %H:%M CST')
+          lines = [HEADER, "", f"*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: {now_tw}*", ""]
           # Badges on separate lines as requested
           lines += [
               badge("Total_Calls", f"{recent['total']}", "black"),
@@ -139,17 +176,32 @@ jobs:
           for svc, models in SERVICE_MODELS.items():
               svc_m = {m: m_counts[m] for m in models if m in m_counts}
               if not svc_m: continue
-              lines += [f"### {svc}", "", "| Model | Total Calls | Avg Duration |", "|-------|-------------|--------------|"]
+              lines += [f"### {svc}", "", "| Model | Total Calls | Last 7D | Last 24H | Avg Duration |", "|-------|-------------|---------|----------|--------------|"]
               for m, count in sorted(svc_m.items(), key=lambda x: -x[1]):
-                  avg = m_avg_dur.get(m); lines.append(f"| `{m}` | {count} | {f'{avg:.1f}s' if avg else 'N/A'} |")
+                  c7d = m_counts_7d.get(m, 0); c24h = m_counts_24h.get(m, 0)
+                  avg = m_avg_dur.get(m); lines.append(f"| `{m}` | {count} | {c7d} | {c24h} | {f'{avg:.1f}s' if avg else 'N/A'} |")
+              
               svc_apps = query_grouped(api_key, secret_key, "app_name", model_filter=list(models))
+              svc_apps_7d = query_grouped(api_key, secret_key, "app_name", model_filter=list(models), days=7)
+              svc_apps_24h = query_grouped(api_key, secret_key, "app_name", model_filter=list(models), days=1)
+              
               if svc_apps:
-                  lines += ["", "#### Top Applications", "", "| Application | Total Calls |", "|-------------|-------------|"]
+                  lines += ["", "#### Top Applications", "", "| Application | Total Calls | Last 7D | Last 24H |", "|-------------|-------------|---------|----------|"]
                   sorted_apps = sorted(svc_apps.items(), key=lambda x: -x[1])
-                  for app, count in sorted_apps[:10]: lines.append(f"| {app} | {count} |")
+                  for app, count in sorted_apps[:10]:
+                      c7d = svc_apps_7d.get(app, 0); c24h = svc_apps_24h.get(app, 0)
+                      lines.append(f"| {app} | {count} | {c7d} | {c24h} |")
                   lines.append("")
                   for i, (app, count) in enumerate(sorted_apps[:15]): lines.append(badge(app, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
+              
               svgs = SERVICE_SVG.get(svc, [])
+              if len(svgs) >= 1:
+                  xdates, daily_app = query_last7days(api_key, secret_key, models, group_by="app_name")
+                  if xdates and daily_app: generate_stacked_bar_svg(f"Total events of {svc} by App (Last 7 Days)", xdates, daily_app, svgs[0])
+              if len(svgs) >= 2:
+                  xdates, daily_mod = query_last7days(api_key, secret_key, models, group_by="model")
+                  if xdates and daily_mod: generate_stacked_bar_svg(f"Total events of {svc} by Model (Last 7 Days)", xdates, daily_mod, svgs[1])
+              
               for p in svgs: lines += ["", f"![](./{p})"]
               lines.append("")
 
