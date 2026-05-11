@@ -131,8 +131,8 @@ jobs:
           # Badges on separate lines as requested
           lines += [
               badge("Total_Calls", f"{recent['total']}", "black"),
-              badge("Last_7_Days", f"{recent['7d']}{get_growth(recent['7d'], recent['prev_7d'])}", "blue"),
-              badge("Last_24_Hours", f"{recent['24h']}{get_growth(recent['24h'], recent['prev_24h'])}", "green"),
+              badge("Last_7_Days", f"{recent['7d']}", "blue"),
+              badge("Last_24_Hours", f"{recent['24h']}", "green"),
               ""
           ]
           
