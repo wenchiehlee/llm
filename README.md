@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-12 16:13 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-12 19:05 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4790-black)
-![](https://img.shields.io/badge/Last_7_Days-383-blue)
-![](https://img.shields.io/badge/Last_24_Hours-33-green)
+![](https://img.shields.io/badge/Last_7_Days-388-blue)
+![](https://img.shields.io/badge/Last_24_Hours-38-green)
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3155 | 366 | 33 | N/A |
+| `gemini-2.5-flash` | 3155 | 371 | 38 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -37,10 +37,10 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 2851 | 314 | 33 |
-| CompanyInfo | 244 | 28 | 0 |
+| CompanyInfo | 244 | 32 | 4 |
 | InvestorEvents | 22 | 0 | 0 |
 | ConceptStocks | 21 | 19 | 0 |
-| TAIEX_Finguider_Pro | 17 | 5 | 0 |
+| TAIEX_Finguider_Pro | 17 | 6 | 1 |
 | llm-api | 8 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
 | TestSmartRouting | 2 | 0 | 0 |
