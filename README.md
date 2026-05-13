@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-13 19:15 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-13 21:53 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4835-black)
-![](https://img.shields.io/badge/Last_7_Days-395-blue)
-![](https://img.shields.io/badge/Last_24_Hours-66-green)
+![](https://img.shields.io/badge/Last_7_Days-402-blue)
+![](https://img.shields.io/badge/Last_24_Hours-73-green)
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3197 | 362 | 41 | N/A |
+| `gemini-2.5-flash` | 3197 | 365 | 44 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -38,7 +38,7 @@
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 2884 | 308 | 35 |
 | CompanyInfo | 248 | 28 | 4 |
-| ConceptStocks | 24 | 20 | 0 |
+| ConceptStocks | 24 | 23 | 3 |
 | InvestorEvents | 22 | 0 | 0 |
 | TAIEX_Finguider_Pro | 19 | 5 | 1 |
 | llm-api | 8 | 0 | 0 |
@@ -63,14 +63,14 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 154 | 33 | 25 | N/A |
+| `chatgpt-pro` | 154 | 37 | 29 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 57 | 17 | 10 |
+| TAIEX_Finguider_Pro | 57 | 19 | 12 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
