@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-13 13:34 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-13 16:22 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4835-black)
-![](https://img.shields.io/badge/Last_7_Days-375-blue)
-![](https://img.shields.io/badge/Last_24_Hours-46-green)
+![](https://img.shields.io/badge/Last_7_Days-384-blue)
+![](https://img.shields.io/badge/Last_24_Hours-55-green)
 
 ### Gemini API (Direct)
 
@@ -63,14 +63,14 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 154 | 19 | 11 | N/A |
+| `chatgpt-pro` | 154 | 28 | 20 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 57 | 14 | 7 |
+| TAIEX_Finguider_Pro | 57 | 15 | 8 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
