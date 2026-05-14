@@ -92,11 +92,23 @@ def _send_sync(event_type: str, user_id: str, props: dict[str, Any]) -> None:
 class LLMCallTracker:
     """context manager：呼叫結束後同步送出單一 llm_call event。"""
 
-    def __init__(self, provider: str, model: str, prompt: str, model_repo: str = ""):
+    def __init__(
+        self,
+        provider: str,
+        model: str,
+        prompt: str,
+        model_repo: str = "",
+        routing_task: str | None = None,
+        draft_provider: str | None = None,
+        smart_route_status: str | None = None,
+    ):
         self.provider = provider
         self.model = model
         self.model_repo = model_repo
         self.prompt = prompt
+        self.routing_task = routing_task
+        self.draft_provider = draft_provider
+        self.smart_route_status = smart_route_status
         self.result: str = ""
         self.key_used: str = ""
         self._start: float = 0.0
@@ -120,6 +132,13 @@ class LLMCallTracker:
             "duration_sec":   duration_sec,
             "success":        success,
         }
+        if self.routing_task:
+            props["routing_task"] = self.routing_task
+        if self.draft_provider:
+            props["draft_provider"] = self.draft_provider
+        if self.smart_route_status:
+            props["smart_route_status"] = self.smart_route_status
+
         if not success and exc_type is not None:
             props["error_type"] = _classify_error(exc_type)
 

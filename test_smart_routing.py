@@ -1,4 +1,4 @@
-"""Test for Smart Routing feature."""
+"""Test for Smart Routing feature (Stateless & Amplitude-based)."""
 import logging
 import os
 import sys
@@ -16,45 +16,27 @@ from llm import LLMClient
 
 
 def main():
-    print("=== Smart Routing Test ===\n")
+    print("=== Smart Routing Test (Stateless) ===\n")
     
-    # 初始化客戶端，設定較小的樣本數門檻以便測試
-    routing_file = "test_routing.json"
-    if os.path.exists(routing_file):
-        os.remove(routing_file)
-        
+    # 初始化客戶端 (不再需要 routing 參數)
     client = LLMClient(
-        app_name="SmartTest",
-        routing_file=routing_file,
-        min_samples=3,    # 只要 3 次樣本就判斷
-        threshold=0.6     # 成功率 60% 即可
+        app_name="SmartTestStateless"
     )
 
     task = "SimpleTranslation"
     prompt = "Translate 'Apple' to Traditional Chinese."
 
-    print(f"--- Phase 1: Judging (Expecting judging status) ---")
-    for i in range(4):
+    print(f"--- Calling generate_smart (Expected: Draft -> Judge) ---")
+    for i in range(2):
         print(f"\n[Call {i+1}]")
-        result = client.generate_smart(task, prompt)
+        result = client.generate_smart(task, prompt, draft_provider="mlx")
         print(f"Result: {result}")
-        # 查看目前狀態
-        stats = client.routing._data.get(task, {})
-        print(f"Stats: {stats}")
+        print(f"Last Provider: {client.last_provider}")
+        # 注意：現在沒有 client.routing 了，所有紀錄請至 Amplitude 查看。
         time.sleep(1)
 
-    print(f"\n--- Phase 2: Check if promoted ---")
-    promoted = client.routing.get_promoted_provider(task)
-    print(f"Final Promoted Provider: {promoted}")
-    
-    if promoted == "mlx":
-        print("\n[PASS] Task promoted to MLX successfully.")
-    else:
-        print("\n[INFO] Task not promoted (maybe low success rate or not enough samples).")
-
-    # Clean up
-    if os.path.exists(routing_file):
-        os.remove(routing_file)
+    print("\n--- Test Finished ---")
+    print("Note: Local JSON routing is removed. Check Amplitude for performance data.")
 
 
 if __name__ == "__main__":

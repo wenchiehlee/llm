@@ -179,6 +179,36 @@ jobs:
               badge("Last_24_Hours", f"{recent['24h']}", "green"),
               ""
           ]
+
+          # --- Smart Routing Section ---
+          sr_stats = query_grouped(api_key, secret_key, "smart_route_status")
+          if sr_stats:
+              sr_7d = query_grouped(api_key, secret_key, "smart_route_status", days=7)
+              sr_24h = query_grouped(api_key, secret_key, "smart_route_status", days=1)
+              lines += ["### Smart Routing (Efficiency)", "", "| Status | Total | Last 7D | Last 24H | Description |", "|--------|-------|---------|----------|-------------|"]
+              status_map = {
+                  "judged_passed": "Draft Passed",
+                  "judged_failed": "Judge Replaced",
+                  "draft_failed": "Fallback (Error)",
+                  "server_side_executed": "NAS Reflection"
+              }
+              desc_map = {
+                  "judged_passed": "Saved powerful model cost.",
+                  "judged_failed": "Corrected by powerful model.",
+                  "draft_failed": "Automatic fallback to Gemini.",
+                  "server_side_executed": "Executed zero-latency on NAS."
+              }
+              for k, label in status_map.items():
+                  if k in sr_stats:
+                      lines.append(f"| {label} | {sr_stats[k]} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
+              
+              sr_tasks = query_grouped(api_key, secret_key, "routing_task")
+              if sr_tasks:
+                  lines += ["", "#### Active Routing Tasks", ""]
+                  sorted_tasks = sorted(sr_tasks.items(), key=lambda x: -x[1])
+                  for i, (task, count) in enumerate(sorted_tasks[:10]):
+                      lines.append(badge(task, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
+              lines += ["", ""]
           
           for svc, models in SERVICE_MODELS.items():
               svc_m = {m: m_counts[m] for m in models if m in m_counts}
