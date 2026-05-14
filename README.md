@@ -18,21 +18,21 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-14 23:59 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 02:23 CST*
 
-![](https://img.shields.io/badge/Total_Calls-4908-black)
-![](https://img.shields.io/badge/Last_7_Days-412-blue)
-![](https://img.shields.io/badge/Last_24_Hours-57-green)
+![](https://img.shields.io/badge/Total_Calls-5001-black)
+![](https://img.shields.io/badge/Last_7_Days-407-blue)
+![](https://img.shields.io/badge/Last_24_Hours-36-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Fallback (Error) | 7 | 7 | 7 | Automatic fallback to Gemini. |
+| Fallback (Error) | 7 | 7 | 0 | Automatic fallback to Gemini. |
 
 #### Active Routing Tasks
 
-![](https://img.shields.io/badge/(none)-4949_calls-blue)
+![](https://img.shields.io/badge/(none)-4994_calls-blue)
 ![](https://img.shields.io/badge/CompanyInfo_ConceptStock-4_calls-green)
 ![](https://img.shields.io/badge/ConceptStocks_Metadata-3_calls-orange)
 
@@ -41,7 +41,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3241 | 365 | 44 | N/A |
+| `gemini-2.5-flash` | 3321 | 360 | 36 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -49,9 +49,9 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 2919 | 310 | 37 |
-| CompanyInfo | 252 | 28 | 4 |
-| ConceptStocks | 27 | 21 | 3 |
+| GoogleAlertManager | 2992 | 312 | 36 |
+| CompanyInfo | 256 | 24 | 0 |
+| ConceptStocks | 30 | 18 | 0 |
 | InvestorEvents | 22 | 0 | 0 |
 | TAIEX_Finguider_Pro | 20 | 5 | 0 |
 | llm-api | 8 | 0 | 0 |
@@ -59,9 +59,9 @@
 | TestSmartRouting | 2 | 0 | 0 |
 | TAIEX_Revenue_History | 1 | 1 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-2919_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-252_calls-green)
-![](https://img.shields.io/badge/ConceptStocks-27_calls-orange)
+![](https://img.shields.io/badge/GoogleAlertManager-2992_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-256_calls-green)
+![](https://img.shields.io/badge/ConceptStocks-30_calls-orange)
 ![](https://img.shields.io/badge/InvestorEvents-22_calls-red)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-20_calls-purple)
 ![](https://img.shields.io/badge/llm--api-8_calls-yellowgreen)
@@ -78,7 +78,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 183 | 47 | 13 | N/A |
+| `chatgpt-pro` | 196 | 47 | 0 | N/A |
 
 #### Top Applications
 
