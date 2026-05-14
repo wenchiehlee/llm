@@ -181,10 +181,10 @@ jobs:
           ]
 
           # --- Smart Routing Section ---
-          sr_stats = query_grouped(api_key, secret_key, "smart_route_status")
+          sr_stats = query_grouped(api_key, secret_key, "smart_route_status", model_filter=all_models)
           if sr_stats:
-              sr_7d = query_grouped(api_key, secret_key, "smart_route_status", days=7)
-              sr_24h = query_grouped(api_key, secret_key, "smart_route_status", days=1)
+              sr_7d = query_grouped(api_key, secret_key, "smart_route_status", model_filter=all_models, days=7)
+              sr_24h = query_grouped(api_key, secret_key, "smart_route_status", model_filter=all_models, days=1)
               lines += ["### Smart Routing (Efficiency)", "", "| Status | Total | Last 7D | Last 24H | Description |", "|--------|-------|---------|----------|-------------|"]
               status_map = {
                   "judged_passed": "Draft Passed",
@@ -202,7 +202,7 @@ jobs:
                   if k in sr_stats:
                       lines.append(f"| {label} | {sr_stats[k]} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
               
-              sr_tasks = query_grouped(api_key, secret_key, "routing_task")
+              sr_tasks = query_grouped(api_key, secret_key, "routing_task", model_filter=all_models)
               if sr_tasks:
                   lines += ["", "#### Active Routing Tasks", ""]
                   sorted_tasks = sorted(sr_tasks.items(), key=lambda x: -x[1])
