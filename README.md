@@ -18,17 +18,29 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-14 13:33 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-14 19:03 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4908-black)
-![](https://img.shields.io/badge/Last_7_Days-396-blue)
-![](https://img.shields.io/badge/Last_24_Hours-41-green)
+![](https://img.shields.io/badge/Last_7_Days-400-blue)
+![](https://img.shields.io/badge/Last_24_Hours-45-green)
+
+### Smart Routing (Efficiency)
+
+| Status | Total | Last 7D | Last 24H | Description |
+|--------|-------|---------|----------|-------------|
+| Fallback (Error) | 4 | 4 | 4 | Automatic fallback to Gemini. |
+
+#### Active Routing Tasks
+
+![](https://img.shields.io/badge/(none)-4949_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo_ConceptStock-4_calls-green)
+
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3241 | 358 | 37 | N/A |
+| `gemini-2.5-flash` | 3241 | 362 | 41 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -37,7 +49,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 2919 | 310 | 37 |
-| CompanyInfo | 252 | 24 | 0 |
+| CompanyInfo | 252 | 28 | 4 |
 | ConceptStocks | 27 | 18 | 0 |
 | InvestorEvents | 22 | 0 | 0 |
 | TAIEX_Finguider_Pro | 20 | 5 | 0 |
