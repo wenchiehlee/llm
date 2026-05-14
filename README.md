@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-14 21:19 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-14 23:59 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-4908-black)
-![](https://img.shields.io/badge/Last_7_Days-403-blue)
-![](https://img.shields.io/badge/Last_24_Hours-48-green)
+![](https://img.shields.io/badge/Last_7_Days-412-blue)
+![](https://img.shields.io/badge/Last_24_Hours-57-green)
 
 ### Smart Routing (Efficiency)
 
@@ -78,34 +78,34 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 183 | 38 | 4 | N/A |
+| `chatgpt-pro` | 183 | 47 | 13 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 69 | 19 | 2 |
+| TAIEX_Finguider_Pro | 71 | 19 | 0 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
-| TAIEX_Revenue_History | 17 | 19 | 2 |
+| TAIEX_Revenue_History | 19 | 19 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
 | InvestorEvents | 11 | 0 | 0 |
+| TAIEX_Compare | 10 | 9 | 0 |
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
 | TAIEX_Visualizer | 7 | 0 | 0 |
-| SmartTest | 6 | 0 | 0 |
 
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-69_calls-green)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-71_calls-green)
 ![](https://img.shields.io/badge/GoogleAlertManager-27_calls-orange)
 ![](https://img.shields.io/badge/llm--api-22_calls-red)
-![](https://img.shields.io/badge/TAIEX_Revenue_History-17_calls-purple)
+![](https://img.shields.io/badge/TAIEX_Revenue_History-19_calls-purple)
 ![](https://img.shields.io/badge/ServerSmartTest-14_calls-yellowgreen)
 ![](https://img.shields.io/badge/InvestorEvents-11_calls-cyan)
-![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-teal)
-![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-pink)
-![](https://img.shields.io/badge/SmartTest-6_calls-indigo)
-![](https://img.shields.io/badge/TAIEX_Compare-1_calls-blue)
+![](https://img.shields.io/badge/TAIEX_Compare-10_calls-teal)
+![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-pink)
+![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-indigo)
+![](https://img.shields.io/badge/SmartTest-6_calls-blue)
 ![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-green)
 ![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-orange)
 
