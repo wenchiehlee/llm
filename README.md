@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:22 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:31 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
 ![](https://img.shields.io/badge/Last_7_Days-436-blue)
@@ -30,14 +30,17 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 0 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 0 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 7 | 18 | 11 | Automatic fallback to Gemini. |
-| NAS Reflection | 0 | 0 | 0 | Executed zero-latency on NAS. |
+| Fallback (Error) | 18 | 18 | 11 | Automatic fallback to Gemini. |
+| NAS Reflection | 5 | 5 | 5 | Executed zero-latency on NAS. |
 
 #### Active Routing Tasks
 
-![](https://img.shields.io/badge/(none)-4994_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo_ConceptStock-4_calls-green)
-![](https://img.shields.io/badge/ConceptStocks_Metadata-3_calls-orange)
+![](https://img.shields.io/badge/(none)-5006_calls-blue)
+![](https://img.shields.io/badge/InvestorEvents_FetchHistoricalCrashes-11_calls-green)
+![](https://img.shields.io/badge/CompanyInfo_ConceptStock-8_calls-orange)
+![](https://img.shields.io/badge/ConceptStocks_Metadata-6_calls-red)
+![](https://img.shields.io/badge/InvestorEvents_FetchHistoricalCrashes_1995_2010-2_calls-purple)
+![](https://img.shields.io/badge/InvestorEvents_FetchHistoricalCrashes_2010_2026-2_calls-yellowgreen)
 
 
 ### Gemini API (Direct)
