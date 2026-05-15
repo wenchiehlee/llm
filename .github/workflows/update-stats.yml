@@ -223,13 +223,12 @@ jobs:
               svc_apps_24h = query_grouped(api_key, secret_key, "app_name", model_filter=list(models), days=1)
               
               if svc_apps:
-                  lines += ["", "#### Top Applications", "", "| Application | Total Calls | Last 7D | Last 24H |", "|-------------|-------------|---------|----------|"]
+                  lines += ["", "#### All Applications", "", "| Application | Total Calls | Last 7D | Last 24H |", "|-------------|-------------|---------|----------|"]
                   sorted_apps = sorted(svc_apps.items(), key=lambda x: -x[1])
-                  for app, count in sorted_apps[:10]:
+                  for app, count in sorted_apps:
                       c7d = svc_apps_7d.get(app, 0); c24h = svc_apps_24h.get(app, 0)
                       lines.append(f"| {app} | {count} | {c7d} | {c24h} |")
                   lines.append("")
-                  for i, (app, count) in enumerate(sorted_apps[:15]): lines.append(badge(app, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
               
               svgs = SERVICE_SVG.get(svc, [])
               if len(svgs) >= 1:

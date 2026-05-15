@@ -45,7 +45,7 @@
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
-#### Top Applications
+#### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
@@ -59,16 +59,6 @@
 | TestSmartRouting | 2 | 0 | 0 |
 | TAIEX_Revenue_History | 1 | 1 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-2992_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-256_calls-green)
-![](https://img.shields.io/badge/ConceptStocks-30_calls-orange)
-![](https://img.shields.io/badge/InvestorEvents-22_calls-red)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-20_calls-purple)
-![](https://img.shields.io/badge/llm--api-8_calls-yellowgreen)
-![](https://img.shields.io/badge/TravelAPP-3_calls-cyan)
-![](https://img.shields.io/badge/TestSmartRouting-2_calls-teal)
-![](https://img.shields.io/badge/TAIEX_Revenue_History-1_calls-pink)
-
 ![](./assets/chart_gemini_7d.svg)
 
 ![](./assets/chart_gemini_models_7d.svg)
@@ -80,7 +70,7 @@
 | `codex` | 616 | 0 | 0 | N/A |
 | `chatgpt-pro` | 196 | 68 | 21 | N/A |
 
-#### Top Applications
+#### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
@@ -95,20 +85,6 @@
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
 | TAIEX_Visualizer | 7 | 0 | 0 |
 
-![](https://img.shields.io/badge/whisper--merge--review-616_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-71_calls-green)
-![](https://img.shields.io/badge/GoogleAlertManager-27_calls-orange)
-![](https://img.shields.io/badge/llm--api-22_calls-red)
-![](https://img.shields.io/badge/TAIEX_Revenue_History-19_calls-purple)
-![](https://img.shields.io/badge/ServerSmartTest-14_calls-yellowgreen)
-![](https://img.shields.io/badge/InvestorEvents-11_calls-cyan)
-![](https://img.shields.io/badge/TAIEX_Compare-10_calls-teal)
-![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-pink)
-![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-indigo)
-![](https://img.shields.io/badge/SmartTest-6_calls-blue)
-![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-green)
-![](https://img.shields.io/badge/TAIEX_Google_Visualizer-1_calls-orange)
-
 ![](./assets/chart_nas_7d.svg)
 
 ### Local Inference (MLX/Whisper)
@@ -122,7 +98,7 @@
 | `whisper-large-v3-turbo` | 6 | 0 | 0 | N/A |
 | `distil-whisper-large-v3` | 1 | 0 | 0 | N/A |
 
-#### Top Applications
+#### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
