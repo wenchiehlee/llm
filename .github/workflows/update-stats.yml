@@ -88,11 +88,14 @@ jobs:
                   return data.get("data", {}).get("series", [[]])[0]
               except: return [0] * days
 
-          def query_grouped(api_key, secret_key, group_prop, model_filter=None, days=None):
+          def query_grouped(api_key, secret_key, group_prop, model_filter=None, days=None, extra_filters=None):
               end_dt = datetime.now(TW_TZ)
               start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else AMP_START
               event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": group_prop}]}
-              if model_filter: event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
+              filters = []
+              if model_filter: filters.append({"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter})
+              if extra_filters: filters.extend(extra_filters)
+              if filters: event_def["filters"] = filters
               params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
               data = amp_get(api_key, secret_key, params)
               series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
@@ -201,14 +204,15 @@ jobs:
               for k, label in status_map.items():
                   lines.append(f"| {label} | {sr_stats.get(k, 0)} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
               
-              sr_tasks = query_grouped(api_key, secret_key, "routing_task")
-              if sr_tasks:
-                  sr_tasks_7d = query_grouped(api_key, secret_key, "routing_task", days=7)
-                  sr_tasks_24h = query_grouped(api_key, secret_key, "routing_task", days=1)
-                  lines += ["", "#### Active Routing Tasks", "", "| Task | Total Calls | Last 7D | Last 24H |", "|------|-------------|---------|----------|"]
-                  for task, count in sorted(sr_tasks.items(), key=lambda x: -x[1]):
-                      c7d = sr_tasks_7d.get(task, 0); c24h = sr_tasks_24h.get(task, 0)
-                      lines.append(f"| {task} | {count} | {c7d} | {c24h} |")
+              sr_filter = [{"subprop_type": "event", "subprop_key": "smart_route_status", "subprop_op": "is set"}]
+              sr_apps = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter)
+              if sr_apps:
+                  sr_apps_7d = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter, days=7)
+                  sr_apps_24h = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter, days=1)
+                  lines += ["", "#### Smart Routing by Application", "", "| App | Total | Last 7D | Last 24H |", "|-----|-------|---------|----------|"]
+                  for app, count in sorted(sr_apps.items(), key=lambda x: -x[1]):
+                      c7d = sr_apps_7d.get(app, 0); c24h = sr_apps_24h.get(app, 0)
+                      lines.append(f"| {app} | {count} | {c7d} | {c24h} |")
               lines += ["", ""]
           
           for svc, models in SERVICE_MODELS.items():

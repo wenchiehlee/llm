@@ -33,16 +33,10 @@
 | Fallback (Error) | 18 | 18 | 11 | Automatic fallback to Gemini. |
 | NAS Reflection | 5 | 5 | 5 | Executed zero-latency on NAS. |
 
-#### Active Routing Tasks
+#### Smart Routing by Application
 
-| Task | Total Calls | Last 7D | Last 24H |
-|------|-------------|---------|----------|
-| (none) | 5006 | 412 | 48 |
-| InvestorEvents_FetchHistoricalCrashes | 11 | 11 | 11 |
-| CompanyInfo_ConceptStock | 8 | 8 | 4 |
-| ConceptStocks_Metadata | 6 | 6 | 3 |
-| InvestorEvents_FetchHistoricalCrashes_1995_2010 | 2 | 2 | 2 |
-| InvestorEvents_FetchHistoricalCrashes_2010_2026 | 2 | 2 | 2 |
+| App | Total | Last 7D | Last 24H |
+|-----|-------|---------|----------|
 
 
 ### Gemini API (Direct)
