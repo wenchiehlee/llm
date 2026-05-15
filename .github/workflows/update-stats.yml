@@ -204,7 +204,7 @@ jobs:
               for k, label in status_map.items():
                   lines.append(f"| {label} | {sr_stats.get(k, 0)} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
               
-              sr_filter = [{"subprop_type": "event", "subprop_key": "smart_route_status", "subprop_op": "is set"}]
+              sr_filter = [{"subprop_type": "event", "subprop_key": "smart_route_status", "subprop_op": "is", "subprop_value": list(status_map.keys())}]
               sr_apps = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter)
               if sr_apps:
                   sr_apps_7d = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter, days=7)
