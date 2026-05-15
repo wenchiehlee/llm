@@ -31,7 +31,7 @@
 | Draft Passed | 0 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 0 | 0 | 0 | Corrected by powerful model. |
 | Fallback (Error) | 18 | 18 | 11 | Automatic fallback to Gemini. |
-| NAS Reflection | 5 | 5 | 5 | Executed zero-latency on NAS. |
+| NAS Reflection | 5 | 5 | 5 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 

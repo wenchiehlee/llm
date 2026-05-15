@@ -199,7 +199,7 @@ jobs:
                   "judged_passed": "Saved powerful model cost.",
                   "judged_failed": "Corrected by powerful model.",
                   "draft_failed": "Automatic fallback to Gemini.",
-                  "server_side_executed": "Executed zero-latency on NAS."
+                  "server_side_executed": "App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli."
               }
               for k, label in status_map.items():
                   lines.append(f"| {label} | {sr_stats.get(k, 0)} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
