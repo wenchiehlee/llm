@@ -25,10 +25,10 @@ def main():
     print("=== Gemini via Codex provider test ===\n")
 
     url = os.getenv("CODEX_API_URL")
-    key = os.getenv("SERVER_API_KEY")
+    key = os.getenv("CODEX_API_KEY")
 
     if not url or not key:
-        print("[SKIP] Missing env vars: CODEX_API_URL or SERVER_API_KEY")
+        print("[SKIP] Missing env vars: CODEX_API_URL or CODEX_API_KEY")
         sys.exit(0)
 
     # 1. init with gemini model

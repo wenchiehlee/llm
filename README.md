@@ -185,7 +185,7 @@ dependencies = [
 
 ### 2. LLM CLI API Server (遠端 CLI 橋接)
 - `CODEX_API_URL`: 伺服器網址 (例如 `https://api.wenchiehlee.synology.me:8443`)。
-- `SERVER_API_KEY`: 存取伺服器的驗證金鑰。
+- `CODEX_API_KEY`: 存取伺服器的驗證金鑰。
 - *註：伺服器需預先安裝 `codex-cli` 與 `gemini-cli`。*
 
 ### 3. MLX API Server (本地推論)

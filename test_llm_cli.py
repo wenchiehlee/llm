@@ -24,7 +24,7 @@ def check(label: str, passed: bool, detail: str = "") -> None:
 def _detect_provider() -> tuple[str, dict]:
     """回傳 (provider_name, extra_env_info)，依序偵測可用的 provider。"""
     codex_url = os.getenv("CODEX_API_URL")
-    codex_key = os.getenv("SERVER_API_KEY")
+    codex_key = os.getenv("CODEX_API_KEY")
     if codex_url and codex_key:
         return "codex", {"url": codex_url, "key_len": len(codex_key)}
 
@@ -43,7 +43,7 @@ def main():
     provider, env_info = _detect_provider()
 
     if not provider:
-        print("[SKIP] 未偵測到任何可用的 provider 環境變數（CODEX_API_URL/SERVER_API_KEY、GEMINI_API_KEY、MLX_API_URL）")
+        print("[SKIP] 未偵測到任何可用的 provider 環境變數（CODEX_API_URL/CODEX_API_KEY、GEMINI_API_KEY、MLX_API_URL）")
         sys.exit(0)
 
     print(f"=== LLM CLI test（provider: {provider}）===\n")

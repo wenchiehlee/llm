@@ -1,3 +1,8 @@
 .env
 __pycache__/
 *.pyc
+
+.env*
+
+# Gemini CLI safety audit
+.claude/

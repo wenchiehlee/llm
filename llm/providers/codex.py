@@ -20,12 +20,12 @@ class CodexProvider(BaseProvider):
 
     def __init__(self, url: str | None = None, api_key: str | None = None, model: str | None = None):
         self.url = (url or os.getenv("CODEX_API_URL", "")).rstrip("/")
-        self.api_key = api_key or os.getenv("SERVER_API_KEY", "")
+        self.api_key = api_key or os.getenv("CODEX_API_KEY", "")
         self.model = model or "chatgpt-pro"
         if not self.url:
             raise RuntimeError("Missing env var: CODEX_API_URL")
         if not self.api_key:
-            raise RuntimeError("Missing env var: SERVER_API_KEY")
+            raise RuntimeError("Missing env var: CODEX_API_KEY")
 
     def generate(self, prompt: str, *, json_mode: bool = False, max_tokens: int = 8192) -> str:
         if len(prompt) > MAX_PROMPT_LENGTH:
