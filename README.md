@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:31 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:37 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
 ![](https://img.shields.io/badge/Last_7_Days-436-blue)
@@ -37,12 +37,12 @@
 
 | Task | Total Calls | Last 7D | Last 24H |
 |------|-------------|---------|----------|
-| (none) | 5006 | 0 | 0 |
-| InvestorEvents_FetchHistoricalCrashes | 11 | 0 | 0 |
-| CompanyInfo_ConceptStock | 8 | 0 | 0 |
-| ConceptStocks_Metadata | 6 | 0 | 0 |
-| InvestorEvents_FetchHistoricalCrashes_1995_2010 | 2 | 0 | 0 |
-| InvestorEvents_FetchHistoricalCrashes_2010_2026 | 2 | 0 | 0 |
+| (none) | 5006 | 412 | 48 |
+| InvestorEvents_FetchHistoricalCrashes | 11 | 11 | 11 |
+| CompanyInfo_ConceptStock | 8 | 8 | 4 |
+| ConceptStocks_Metadata | 6 | 6 | 3 |
+| InvestorEvents_FetchHistoricalCrashes_1995_2010 | 2 | 2 | 2 |
+| InvestorEvents_FetchHistoricalCrashes_2010_2026 | 2 | 2 | 2 |
 
 
 ### Gemini API (Direct)
