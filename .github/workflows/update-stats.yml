@@ -199,8 +199,7 @@ jobs:
                   "server_side_executed": "Executed zero-latency on NAS."
               }
               for k, label in status_map.items():
-                  if k in sr_stats:
-                      lines.append(f"| {label} | {sr_stats[k]} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
+                  lines.append(f"| {label} | {sr_stats.get(k, 0)} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
               
               sr_tasks = query_grouped(api_key, secret_key, "routing_task", model_filter=all_models)
               if sr_tasks:

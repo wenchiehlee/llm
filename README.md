@@ -28,7 +28,10 @@
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
+| Draft Passed | 0 | 0 | 0 | Saved powerful model cost. |
+| Judge Replaced | 0 | 0 | 0 | Corrected by powerful model. |
 | Fallback (Error) | 7 | 18 | 11 | Automatic fallback to Gemini. |
+| NAS Reflection | 0 | 0 | 0 | Executed zero-latency on NAS. |
 
 #### Active Routing Tasks
 
