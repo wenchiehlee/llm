@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:37 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:57 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
 ![](https://img.shields.io/badge/Last_7_Days-436-blue)
@@ -37,6 +37,9 @@
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
+| InvestorEvents | 12 | 12 | 12 |
+| CompanyInfo | 8 | 8 | 4 |
+| ConceptStocks | 3 | 3 | 0 |
 
 
 ### Gemini API (Direct)
