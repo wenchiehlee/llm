@@ -35,12 +35,14 @@
 
 #### Active Routing Tasks
 
-![](https://img.shields.io/badge/(none)-5006_calls-blue)
-![](https://img.shields.io/badge/InvestorEvents_FetchHistoricalCrashes-11_calls-green)
-![](https://img.shields.io/badge/CompanyInfo_ConceptStock-8_calls-orange)
-![](https://img.shields.io/badge/ConceptStocks_Metadata-6_calls-red)
-![](https://img.shields.io/badge/InvestorEvents_FetchHistoricalCrashes_1995_2010-2_calls-purple)
-![](https://img.shields.io/badge/InvestorEvents_FetchHistoricalCrashes_2010_2026-2_calls-yellowgreen)
+| Task | Total Calls | Last 7D | Last 24H |
+|------|-------------|---------|----------|
+| (none) | 5006 | 0 | 0 |
+| InvestorEvents_FetchHistoricalCrashes | 11 | 0 | 0 |
+| CompanyInfo_ConceptStock | 8 | 0 | 0 |
+| ConceptStocks_Metadata | 6 | 0 | 0 |
+| InvestorEvents_FetchHistoricalCrashes_1995_2010 | 2 | 0 | 0 |
+| InvestorEvents_FetchHistoricalCrashes_2010_2026 | 2 | 0 | 0 |
 
 
 ### Gemini API (Direct)

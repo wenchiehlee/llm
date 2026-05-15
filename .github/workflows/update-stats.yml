@@ -203,10 +203,12 @@ jobs:
               
               sr_tasks = query_grouped(api_key, secret_key, "routing_task")
               if sr_tasks:
-                  lines += ["", "#### Active Routing Tasks", ""]
-                  sorted_tasks = sorted(sr_tasks.items(), key=lambda x: -x[1])
-                  for i, (task, count) in enumerate(sorted_tasks[:10]):
-                      lines.append(badge(task, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
+                  sr_tasks_7d = query_grouped(api_key, secret_key, "routing_task", days=7)
+                  sr_tasks_24h = query_grouped(api_key, secret_key, "routing_task", days=1)
+                  lines += ["", "#### Active Routing Tasks", "", "| Task | Total Calls | Last 7D | Last 24H |", "|------|-------------|---------|----------|"]
+                  for task, count in sorted(sr_tasks.items(), key=lambda x: -x[1]):
+                      c7d = sr_tasks_7d.get(task, 0); c24h = sr_tasks_24h.get(task, 0)
+                      lines.append(f"| {task} | {count} | {c7d} | {c24h} |")
               lines += ["", ""]
           
           for svc, models in SERVICE_MODELS.items():
