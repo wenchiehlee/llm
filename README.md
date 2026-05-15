@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 21:18 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 23:17 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
 ![](https://img.shields.io/badge/Last_7_Days-436-blue)
@@ -59,6 +59,7 @@
 | TestSmartRouting | 2 | 0 | 0 |
 | TAIEX_Revenue_History | 1 | 1 | 0 |
 
+
 ![](./assets/chart_gemini_7d.svg)
 
 ![](./assets/chart_gemini_models_7d.svg)
@@ -84,6 +85,10 @@
 | TAIEX_Compare | 10 | 9 | 0 |
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
 | TAIEX_Visualizer | 7 | 0 | 0 |
+| SmartTest | 6 | 0 | 0 |
+| TAIEX_Finguider_HighQual | 1 | 0 | 0 |
+| TAIEX_Google_Visualizer | 1 | 0 | 0 |
+
 
 ![](./assets/chart_nas_7d.svg)
 
@@ -111,14 +116,6 @@
 | test-mlx-gemma4 | 5 | 0 | 0 |
 | TAIEX_Finguider_Pro | 4 | 0 | 0 |
 
-![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-blue)
-![](https://img.shields.io/badge/whisper--transcription-180_calls-green)
-![](https://img.shields.io/badge/whisper--poc--sample-33_calls-orange)
-![](https://img.shields.io/badge/eval--gemma4-26_calls-red)
-![](https://img.shields.io/badge/test--mlx-20_calls-purple)
-![](https://img.shields.io/badge/SmartTest-8_calls-yellowgreen)
-![](https://img.shields.io/badge/test--mlx--gemma4-5_calls-cyan)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-teal)
 
 ![](./assets/chart_mlx_7d.svg)
 
