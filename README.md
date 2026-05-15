@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 13:39 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 16:30 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
-![](https://img.shields.io/badge/Last_7_Days-421-blue)
-![](https://img.shields.io/badge/Last_24_Hours-50-green)
+![](https://img.shields.io/badge/Last_7_Days-422-blue)
+![](https://img.shields.io/badge/Last_24_Hours-51-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Fallback (Error) | 7 | 9 | 2 | Automatic fallback to Gemini. |
+| Fallback (Error) | 7 | 10 | 3 | Automatic fallback to Gemini. |
 
 #### Active Routing Tasks
 
@@ -52,7 +52,7 @@
 | GoogleAlertManager | 2992 | 312 | 36 |
 | CompanyInfo | 256 | 24 | 0 |
 | ConceptStocks | 30 | 18 | 0 |
-| InvestorEvents | 22 | 2 | 2 |
+| InvestorEvents | 22 | 3 | 3 |
 | TAIEX_Finguider_Pro | 20 | 5 | 0 |
 | llm-api | 8 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
