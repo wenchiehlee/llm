@@ -18,17 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 09:29 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 13:39 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
-![](https://img.shields.io/badge/Last_7_Days-407-blue)
-![](https://img.shields.io/badge/Last_24_Hours-36-green)
+![](https://img.shields.io/badge/Last_7_Days-421-blue)
+![](https://img.shields.io/badge/Last_24_Hours-50-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Fallback (Error) | 7 | 7 | 0 | Automatic fallback to Gemini. |
+| Fallback (Error) | 7 | 9 | 2 | Automatic fallback to Gemini. |
 
 #### Active Routing Tasks
 
@@ -41,7 +41,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3321 | 360 | 36 | N/A |
+| `gemini-2.5-flash` | 3321 | 362 | 38 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -52,7 +52,7 @@
 | GoogleAlertManager | 2992 | 312 | 36 |
 | CompanyInfo | 256 | 24 | 0 |
 | ConceptStocks | 30 | 18 | 0 |
-| InvestorEvents | 22 | 0 | 0 |
+| InvestorEvents | 22 | 2 | 2 |
 | TAIEX_Finguider_Pro | 20 | 5 | 0 |
 | llm-api | 8 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
@@ -78,17 +78,17 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 196 | 47 | 0 | N/A |
+| `chatgpt-pro` | 196 | 59 | 12 | N/A |
 
 #### Top Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 71 | 19 | 0 |
+| TAIEX_Finguider_Pro | 71 | 24 | 5 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
-| TAIEX_Revenue_History | 19 | 19 | 0 |
+| TAIEX_Revenue_History | 19 | 26 | 7 |
 | ServerSmartTest | 14 | 0 | 0 |
 | InvestorEvents | 11 | 0 | 0 |
 | TAIEX_Compare | 10 | 9 | 0 |
