@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 19:00 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 19:05 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
 ![](https://img.shields.io/badge/Last_7_Days-429-blue)
@@ -28,7 +28,7 @@
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Fallback (Error) | 7 | 14 | 7 | Automatic fallback to Gemini. |
+| Fallback (Error) | 7 | 18 | 11 | Automatic fallback to Gemini. |
 
 #### Active Routing Tasks
 
@@ -50,7 +50,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 2992 | 312 | 36 |
-| CompanyInfo | 256 | 24 | 0 |
+| CompanyInfo | 256 | 28 | 4 |
 | ConceptStocks | 30 | 18 | 0 |
 | InvestorEvents | 22 | 4 | 4 |
 | TAIEX_Finguider_Pro | 20 | 5 | 0 |
