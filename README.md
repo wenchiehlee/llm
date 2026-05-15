@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 19:05 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-15 21:18 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5001-black)
-![](https://img.shields.io/badge/Last_7_Days-429-blue)
-![](https://img.shields.io/badge/Last_24_Hours-58-green)
+![](https://img.shields.io/badge/Last_7_Days-436-blue)
+![](https://img.shields.io/badge/Last_24_Hours-65-green)
 
 ### Smart Routing (Efficiency)
 
@@ -78,7 +78,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 196 | 65 | 18 | N/A |
+| `chatgpt-pro` | 196 | 68 | 21 | N/A |
 
 #### Top Applications
 
