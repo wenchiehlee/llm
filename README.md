@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-16 23:42 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-17 00:38 CST*
 
-![](https://img.shields.io/badge/Total_Calls-5030-black)
-![](https://img.shields.io/badge/Last_7_Days-453-blue)
-![](https://img.shields.io/badge/Last_24_Hours-59-green)
+![](https://img.shields.io/badge/Total_Calls-5089-black)
+![](https://img.shields.io/badge/Last_7_Days-376-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0-green)
 
 ### Smart Routing (Efficiency)
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3329 | 385 | 59 | N/A |
+| `gemini-2.5-flash` | 3388 | 309 | 0 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,11 +54,11 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 2992 | 336 | 59 |
-| CompanyInfo | 260 | 24 | 0 |
-| ConceptStocks | 30 | 15 | 0 |
+| GoogleAlertManager | 3051 | 268 | 0 |
+| CompanyInfo | 260 | 20 | 0 |
+| ConceptStocks | 30 | 12 | 0 |
 | InvestorEvents | 26 | 4 | 0 |
-| TAIEX_Finguider_Pro | 20 | 5 | 0 |
+| TAIEX_Finguider_Pro | 20 | 4 | 0 |
 | llm-api | 8 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
 | TestSmartRouting | 2 | 0 | 0 |
@@ -74,14 +74,14 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 217 | 68 | 0 | N/A |
+| `chatgpt-pro` | 217 | 67 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 76 | 24 | 0 |
+| TAIEX_Finguider_Pro | 76 | 23 | 0 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | TAIEX_Revenue_History | 26 | 26 | 0 |
 | llm-api | 22 | 0 | 0 |

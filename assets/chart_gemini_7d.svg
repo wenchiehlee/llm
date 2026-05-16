@@ -16,34 +16,30 @@
 <rect x="88.3" y="123.4" width="69.9" height="211.6" fill="#1A6CF7"/>
 <rect x="88.3" y="111.0" width="69.9" height="12.4" fill="#00C2A0"/>
 <rect x="88.3" y="101.7" width="69.9" height="9.3" fill="#F7931A"/>
-<rect x="88.3" y="98.6" width="69.9" height="3.1" fill="#A456F0"/>
-<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/10</text>
-<rect x="204.7" y="123.4" width="69.9" height="211.6" fill="#1A6CF7"/>
-<rect x="204.7" y="111.0" width="69.9" height="12.4" fill="#00C2A0"/>
-<rect x="204.7" y="101.7" width="69.9" height="9.3" fill="#F7931A"/>
-<rect x="204.7" y="98.6" width="69.9" height="3.1" fill="#A456F0"/>
-<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/11</text>
-<rect x="321.1" y="232.3" width="69.9" height="102.7" fill="#1A6CF7"/>
-<rect x="321.1" y="219.9" width="69.9" height="12.4" fill="#00C2A0"/>
-<rect x="321.1" y="210.6" width="69.9" height="9.3" fill="#F7931A"/>
-<rect x="321.1" y="204.3" width="69.9" height="6.2" fill="#A456F0"/>
-<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/12</text>
-<rect x="437.6" y="226.1" width="69.9" height="108.9" fill="#1A6CF7"/>
-<rect x="437.6" y="213.7" width="69.9" height="12.4" fill="#00C2A0"/>
-<rect x="437.6" y="204.3" width="69.9" height="9.3" fill="#F7931A"/>
-<rect x="437.6" y="201.2" width="69.9" height="3.1" fill="#A456F0"/>
-<rect x="437.6" y="198.1" width="69.9" height="3.1" fill="#20B2AA"/>
-<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/13</text>
-<rect x="554.0" y="219.9" width="69.9" height="115.1" fill="#1A6CF7"/>
-<rect x="554.0" y="207.4" width="69.9" height="12.4" fill="#00C2A0"/>
-<rect x="554.0" y="198.1" width="69.9" height="9.3" fill="#F7931A"/>
-<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/14</text>
-<rect x="670.4" y="223.0" width="69.9" height="112.0" fill="#1A6CF7"/>
-<rect x="670.4" y="210.6" width="69.9" height="12.4" fill="#00C2A0"/>
-<rect x="670.4" y="198.1" width="69.9" height="12.4" fill="#FF5733"/>
-<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/15</text>
-<rect x="786.9" y="151.4" width="69.9" height="183.6" fill="#1A6CF7"/>
-<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/16</text>
+<rect x="88.3" y="98.6" width="69.9" height="3.1" fill="#FF5733"/>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/11</text>
+<rect x="204.7" y="232.3" width="69.9" height="102.7" fill="#1A6CF7"/>
+<rect x="204.7" y="219.9" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="204.7" y="210.6" width="69.9" height="9.3" fill="#F7931A"/>
+<rect x="204.7" y="204.3" width="69.9" height="6.2" fill="#FF5733"/>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/12</text>
+<rect x="321.1" y="226.1" width="69.9" height="108.9" fill="#1A6CF7"/>
+<rect x="321.1" y="213.7" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="321.1" y="204.3" width="69.9" height="9.3" fill="#F7931A"/>
+<rect x="321.1" y="201.2" width="69.9" height="3.1" fill="#FF5733"/>
+<rect x="321.1" y="198.1" width="69.9" height="3.1" fill="#20B2AA"/>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/13</text>
+<rect x="437.6" y="219.9" width="69.9" height="115.1" fill="#1A6CF7"/>
+<rect x="437.6" y="207.4" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="437.6" y="198.1" width="69.9" height="9.3" fill="#F7931A"/>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/14</text>
+<rect x="554.0" y="223.0" width="69.9" height="112.0" fill="#1A6CF7"/>
+<rect x="554.0" y="210.6" width="69.9" height="12.4" fill="#00C2A0"/>
+<rect x="554.0" y="198.1" width="69.9" height="12.4" fill="#A456F0"/>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/15</text>
+<rect x="670.4" y="151.4" width="69.9" height="183.6" fill="#1A6CF7"/>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/16</text>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">05/17</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">GoogleAlertManager</text>
 <rect x="216" y="370" width="10" height="10" rx="2" fill="#00C2A0"/>
@@ -51,9 +47,9 @@
 <rect x="318" y="370" width="10" height="10" rx="2" fill="#F7931A"/>
 <text x="334" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">ConceptStocks</text>
 <rect x="434" y="370" width="10" height="10" rx="2" fill="#A456F0"/>
-<text x="450" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">TAIEX_Finguider_Pro</text>
-<rect x="592" y="370" width="10" height="10" rx="2" fill="#FF5733"/>
-<text x="608" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">InvestorEvents</text>
+<text x="450" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">InvestorEvents</text>
+<rect x="557" y="370" width="10" height="10" rx="2" fill="#FF5733"/>
+<text x="573" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">TAIEX_Finguider_Pro</text>
 <rect x="65" y="388" width="10" height="10" rx="2" fill="#20B2AA"/>
 <text x="81" y="397" font-size="11" font-family="Arial,sans-serif" fill="#444">TAIEX_Revenue_History</text>
 </svg>
