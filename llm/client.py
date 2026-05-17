@@ -20,7 +20,7 @@ def _build_provider(name: str, model: str | None = None) -> BaseProvider:
     if name == "gemini":
         from .providers.gemini import GeminiProvider
         return GeminiProvider(model=model)
-    if name == "codex":
+    if name in ("codex", "llm-cli"):
         from .providers.codex import CodexProvider
         return CodexProvider(model=model)
     if name == "mlx":
