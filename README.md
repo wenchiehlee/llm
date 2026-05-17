@@ -18,18 +18,18 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-17 14:45 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-17 16:00 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5089-black)
-![](https://img.shields.io/badge/Last_7_Days-436-blue)
-![](https://img.shields.io/badge/Last_24_Hours-60-green)
+![](https://img.shields.io/badge/Last_7_Days-452-blue)
+![](https://img.shields.io/badge/Last_24_Hours-76-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Draft Passed | 0 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 0 | 0 | 0 | Corrected by powerful model. |
+| Draft Passed | 0 | 4 | 4 | Saved powerful model cost. |
+| Judge Replaced | 0 | 2 | 2 | Corrected by powerful model. |
 | Fallback (Error) | 18 | 18 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 5 | 5 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
@@ -39,7 +39,7 @@
 |-----|-------|---------|----------|
 | InvestorEvents | 12 | 12 | 0 |
 | CompanyInfo | 8 | 8 | 0 |
-| ConceptStocks | 3 | 3 | 0 |
+| ConceptStocks | 3 | 9 | 6 |
 
 
 ### Gemini API (Direct)
@@ -74,14 +74,14 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 217 | 67 | 0 | N/A |
+| `chatgpt-pro` | 217 | 82 | 15 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 76 | 23 | 0 |
+| TAIEX_Finguider_Pro | 76 | 24 | 1 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | TAIEX_Revenue_History | 26 | 26 | 0 |
 | llm-api | 22 | 0 | 0 |
@@ -91,7 +91,7 @@
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
 | TAIEX_Visualizer | 7 | 0 | 0 |
 | SmartTest | 6 | 0 | 0 |
-| ConceptStocks | 3 | 3 | 0 |
+| ConceptStocks | 3 | 17 | 14 |
 | TAIEX_Finguider_HighQual | 1 | 0 | 0 |
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
 
