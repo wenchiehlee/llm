@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-20 02:26 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-20 04:19 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5331-black)
 ![](https://img.shields.io/badge/Last_7_Days-458-blue)
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3599 | 386 | 28 | N/A |
+| `gemini-2.5-flash` | 3599 | 393 | 35 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
