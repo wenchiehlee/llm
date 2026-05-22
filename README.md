@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-23 05:47 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-23 07:46 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5458-black)
-![](https://img.shields.io/badge/Last_7_Days-403-blue)
-![](https://img.shields.io/badge/Last_24_Hours-34-green)
+![](https://img.shields.io/badge/Last_7_Days-407-blue)
+![](https://img.shields.io/badge/Last_24_Hours-38-green)
 
 ### Smart Routing (Efficiency)
 
@@ -103,7 +103,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 774 | 0 | 0 | N/A |
+| `whisper-large-v3` | 774 | 4 | 4 | N/A |
 | `mlx-qwen3` | 43 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
@@ -115,7 +115,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-transcription-stage | 579 | 0 | 0 |
-| whisper-transcription | 180 | 0 | 0 |
+| whisper-transcription | 180 | 4 | 4 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
