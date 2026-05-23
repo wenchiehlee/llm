@@ -18,35 +18,35 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-23 23:46 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-24 01:43 CST*
 
-![](https://img.shields.io/badge/Total_Calls-5458-black)
-![](https://img.shields.io/badge/Last_7_Days-470-blue)
-![](https://img.shields.io/badge/Last_24_Hours-101-green)
+![](https://img.shields.io/badge/Total_Calls-5600-black)
+![](https://img.shields.io/badge/Last_7_Days-422-blue)
+![](https://img.shields.io/badge/Last_24_Hours-41-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Draft Passed | 4 | 4 | 0 | Saved powerful model cost. |
-| Judge Replaced | 4 | 4 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 39 | 29 | 8 | Automatic fallback to Gemini. |
-| NAS Reflection | 16 | 16 | 5 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| Draft Passed | 4 | 0 | 0 | Saved powerful model cost. |
+| Judge Replaced | 4 | 2 | 0 | Corrected by powerful model. |
+| Fallback (Error) | 47 | 27 | 0 | Automatic fallback to Gemini. |
+| NAS Reflection | 21 | 13 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 42 | 40 | 6 |
-| InvestorEvents | 12 | 7 | 7 |
-| ConceptStocks | 9 | 6 | 0 |
+| CompanyInfo | 48 | 35 | 0 |
+| InvestorEvents | 19 | 7 | 0 |
+| ConceptStocks | 9 | 0 | 0 |
 
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 3708 | 359 | 39 | N/A |
+| `gemini-2.5-flash` | 3783 | 329 | 36 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,13 +54,13 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 3356 | 340 | 35 |
-| CompanyInfo | 270 | 12 | 2 |
+| GoogleAlertManager | 3427 | 316 | 36 |
+| CompanyInfo | 272 | 11 | 0 |
 | ConceptStocks | 30 | 0 | 0 |
-| InvestorEvents | 26 | 2 | 2 |
-| TAIEX_Finguider_Pro | 22 | 2 | 0 |
+| InvestorEvents | 28 | 2 | 0 |
+| TAIEX_Finguider_Pro | 22 | 0 | 0 |
 | llm-api | 8 | 0 | 0 |
-| TAIEX_Revenue_History | 4 | 3 | 0 |
+| TAIEX_Revenue_History | 4 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
 | TestSmartRouting | 2 | 0 | 0 |
 
@@ -74,20 +74,20 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 266 | 57 | 8 | N/A |
+| `chatgpt-pro` | 274 | 34 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| TAIEX_Finguider_Pro | 78 | 2 | 0 |
-| TAIEX_Revenue_History | 31 | 5 | 0 |
-| CompanyInfo | 28 | 32 | 4 |
+| TAIEX_Finguider_Pro | 78 | 0 | 0 |
+| CompanyInfo | 32 | 30 | 0 |
+| TAIEX_Revenue_History | 31 | 0 | 0 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
-| ConceptStocks | 17 | 14 | 0 |
-| InvestorEvents | 17 | 4 | 4 |
+| InvestorEvents | 21 | 4 | 0 |
+| ConceptStocks | 17 | 0 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
 | TAIEX_Compare | 10 | 0 | 0 |
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
@@ -103,7 +103,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 774 | 54 | 54 | N/A |
+| `whisper-large-v3` | 831 | 59 | 5 | N/A |
 | `mlx-qwen3` | 43 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
@@ -115,7 +115,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-transcription-stage | 579 | 0 | 0 |
-| whisper-transcription | 180 | 54 | 54 |
+| whisper-transcription | 239 | 59 | 5 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
