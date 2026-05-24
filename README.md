@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-24 17:08 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-24 19:02 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5600-black)
 ![](https://img.shields.io/badge/Last_7_Days-462-blue)
@@ -29,15 +29,15 @@
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 4 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 4 | 2 | 0 | Corrected by powerful model. |
+| Judge Replaced | 4 | 3 | 1 | Corrected by powerful model. |
 | Fallback (Error) | 47 | 27 | 0 | Automatic fallback to Gemini. |
-| NAS Reflection | 21 | 13 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| NAS Reflection | 21 | 15 | 2 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 48 | 35 | 0 |
+| CompanyInfo | 48 | 38 | 3 |
 | InvestorEvents | 19 | 7 | 0 |
 | ConceptStocks | 9 | 0 | 0 |
 
@@ -74,7 +74,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 274 | 34 | 0 | N/A |
+| `chatgpt-pro` | 274 | 39 | 5 | N/A |
 
 #### All Applications
 
@@ -82,7 +82,7 @@
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 78 | 0 | 0 |
-| CompanyInfo | 32 | 30 | 0 |
+| CompanyInfo | 32 | 35 | 5 |
 | TAIEX_Revenue_History | 31 | 0 | 0 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
@@ -103,7 +103,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 831 | 99 | 45 | N/A |
+| `whisper-large-v3` | 831 | 100 | 46 | N/A |
 | `mlx-qwen3` | 43 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
@@ -115,7 +115,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-transcription-stage | 579 | 0 | 0 |
-| whisper-transcription | 239 | 99 | 45 |
+| whisper-transcription | 239 | 100 | 46 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
