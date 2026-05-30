@@ -18,26 +18,26 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-30 13:33 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-30 18:28 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5855-black)
-![](https://img.shields.io/badge/Last_7_Days-332-blue)
-![](https://img.shields.io/badge/Last_24_Hours-36-green)
+![](https://img.shields.io/badge/Last_7_Days-340-blue)
+![](https://img.shields.io/badge/Last_24_Hours-44-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 5 | 1 | 0 | Saved powerful model cost. |
-| Judge Replaced | 5 | 1 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 67 | 20 | 0 | Automatic fallback to Gemini. |
-| NAS Reflection | 33 | 12 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| Judge Replaced | 5 | 2 | 1 | Corrected by powerful model. |
+| Fallback (Error) | 67 | 21 | 1 | Automatic fallback to Gemini. |
+| NAS Reflection | 33 | 13 | 1 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 80 | 32 | 0 |
+| CompanyInfo | 80 | 35 | 3 |
 | InvestorEvents | 21 | 2 | 0 |
 | ConceptStocks | 9 | 0 | 0 |
 
@@ -74,7 +74,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 303 | 29 | 0 | N/A |
+| `chatgpt-pro` | 303 | 37 | 8 | N/A |
 
 #### All Applications
 
@@ -82,7 +82,7 @@
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 78 | 0 | 0 |
-| CompanyInfo | 61 | 29 | 0 |
+| CompanyInfo | 61 | 37 | 8 |
 | TAIEX_Revenue_History | 31 | 0 | 0 |
 | GoogleAlertManager | 27 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
