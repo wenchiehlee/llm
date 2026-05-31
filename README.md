@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-31 21:01 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-05-31 23:04 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-5935-black)
 ![](https://img.shields.io/badge/Last_7_Days-295-blue)
@@ -31,14 +31,14 @@
 | Draft Passed | 5 | 1 | 0 | Saved powerful model cost. |
 | Judge Replaced | 7 | 3 | 1 | Corrected by powerful model. |
 | Fallback (Error) | 68 | 23 | 2 | Automatic fallback to Gemini. |
-| NAS Reflection | 34 | 13 | 2 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| NAS Reflection | 34 | 15 | 4 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
 | CompanyInfo | 84 | 38 | 5 |
-| InvestorEvents | 21 | 2 | 0 |
+| InvestorEvents | 21 | 4 | 2 |
 | ConceptStocks | 9 | 0 | 0 |
 
 
