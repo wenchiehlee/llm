@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-08 15:16 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-08 20:17 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-6323-black)
-![](https://img.shields.io/badge/Last_7_Days-347-blue)
-![](https://img.shields.io/badge/Last_24_Hours-45-green)
+![](https://img.shields.io/badge/Last_7_Days-375-blue)
+![](https://img.shields.io/badge/Last_24_Hours-73-green)
 
 ### Smart Routing (Efficiency)
 
@@ -74,7 +74,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 362 | 55 | 10 | N/A |
+| `chatgpt-pro` | 362 | 77 | 38 | N/A |
 
 #### All Applications
 
@@ -84,7 +84,7 @@
 | CompanyInfo | 120 | 39 | 0 |
 | TAIEX_Finguider_Pro | 78 | 0 | 0 |
 | TAIEX_Revenue_History | 31 | 0 | 0 |
-| GoogleAlertManager | 27 | 18 | 18 |
+| GoogleAlertManager | 27 | 38 | 38 |
 | llm-api | 22 | 0 | 0 |
 | InvestorEvents | 21 | 0 | 0 |
 | ConceptStocks | 17 | 0 | 0 |
