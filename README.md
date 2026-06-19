@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-19 20:35 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-19 23:53 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-6819-black)
 ![](https://img.shields.io/badge/Last_7_Days-300-blue)
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 4749 | 258 | 36 | N/A |
+| `gemini-2.5-flash` | 4749 | 259 | 37 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -74,14 +74,14 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 466 | 32 | 1 | N/A |
+| `chatgpt-pro` | 466 | 41 | 10 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| CompanyInfo | 186 | 32 | 1 |
+| CompanyInfo | 186 | 41 | 10 |
 | TAIEX_Finguider_Pro | 78 | 0 | 0 |
 | GoogleAlertManager | 65 | 0 | 0 |
 | TAIEX_Revenue_History | 31 | 0 | 0 |
