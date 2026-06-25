@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-25 17:57 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-25 21:05 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-7145-black)
-![](https://img.shields.io/badge/Last_7_Days-362-blue)
-![](https://img.shields.io/badge/Last_24_Hours-36-green)
+![](https://img.shields.io/badge/Last_7_Days-370-blue)
+![](https://img.shields.io/badge/Last_24_Hours-44-green)
 
 ### Smart Routing (Efficiency)
 
@@ -30,14 +30,14 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 7 | 1 | 0 | Saved powerful model cost. |
 | Judge Replaced | 24 | 4 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 169 | 33 | 0 | Automatic fallback to Gemini. |
+| Fallback (Error) | 169 | 36 | 3 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 224 | 38 | 0 |
+| CompanyInfo | 224 | 41 | 3 |
 | InvestorEvents | 27 | 0 | 0 |
 | ConceptStocks | 9 | 0 | 0 |
 
@@ -74,14 +74,14 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 518 | 52 | 0 | N/A |
+| `chatgpt-pro` | 518 | 60 | 8 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| CompanyInfo | 238 | 52 | 0 |
+| CompanyInfo | 238 | 60 | 8 |
 | TAIEX_Finguider_Pro | 78 | 0 | 0 |
 | GoogleAlertManager | 65 | 0 | 0 |
 | TAIEX_Revenue_History | 31 | 0 | 0 |
