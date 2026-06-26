@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-26 20:33 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-06-26 23:16 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-7189-black)
 ![](https://img.shields.io/badge/Last_7_Days-370-blue)
@@ -37,7 +37,7 @@
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 227 | 41 | 0 |
+| CompanyInfo | 227 | 41 | 5 |
 | InvestorEvents | 27 | 0 | 0 |
 | ConceptStocks | 9 | 0 | 0 |
 
@@ -55,7 +55,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 4638 | 286 | 36 |
-| CompanyInfo | 326 | 13 | 0 |
+| CompanyInfo | 326 | 15 | 2 |
 | ConceptStocks | 30 | 0 | 0 |
 | InvestorEvents | 28 | 0 | 0 |
 | TAIEX_Finguider_Pro | 23 | 0 | 0 |
