@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-04 18:36 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-04 19:55 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-7538-black)
 ![](https://img.shields.io/badge/Last_7_Days-312-blue)
@@ -29,7 +29,7 @@
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 7 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 30 | 6 | 1 | Corrected by powerful model. |
+| Judge Replaced | 30 | 7 | 2 | Corrected by powerful model. |
 | Fallback (Error) | 202 | 30 | 4 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
@@ -37,7 +37,7 @@
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 261 | 34 | 5 |
+| CompanyInfo | 261 | 35 | 6 |
 | InvestorEvents | 29 | 2 | 0 |
 | ConceptStocks | 9 | 0 | 0 |
 
@@ -74,7 +74,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `codex` | 616 | 0 | 0 | N/A |
-| `chatgpt-pro` | 582 | 55 | 8 | N/A |
+| `chatgpt-pro` | 582 | 57 | 10 | N/A |
 
 #### All Applications
 
