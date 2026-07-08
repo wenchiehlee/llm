@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-08 21:15 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-08 23:53 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-7756-black)
-![](https://img.shields.io/badge/Last_7_Days-382-blue)
-![](https://img.shields.io/badge/Last_24_Hours-78-green)
+![](https://img.shields.io/badge/Last_7_Days-386-blue)
+![](https://img.shields.io/badge/Last_24_Hours-82-green)
 
 ### Smart Routing (Efficiency)
 
@@ -73,7 +73,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 623 | 62 | 9 | N/A |
+| `chatgpt-pro` | 623 | 66 | 13 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -82,7 +82,7 @@
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
 | CompanyInfo | 339 | 58 | 9 |
-| TAIEX_Finguider_Pro | 78 | 0 | 0 |
+| TAIEX_Finguider_Pro | 78 | 4 | 4 |
 | GoogleAlertManager | 65 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 2 | 0 |
 | InvestorEvents | 23 | 2 | 0 |
