@@ -18,18 +18,18 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-09 19:38 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-09 22:15 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-7871-black)
-![](https://img.shields.io/badge/Last_7_Days-389-blue)
-![](https://img.shields.io/badge/Last_24_Hours-42-green)
+![](https://img.shields.io/badge/Last_7_Days-391-blue)
+![](https://img.shields.io/badge/Last_24_Hours-44-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 7 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 38 | 10 | 0 | Corrected by powerful model. |
+| Judge Replaced | 38 | 11 | 1 | Corrected by powerful model. |
 | Fallback (Error) | 220 | 25 | 3 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
@@ -37,7 +37,7 @@
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 287 | 35 | 3 |
+| CompanyInfo | 287 | 36 | 4 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 9 | 0 | 0 |
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 5523 | 252 | 34 | N/A |
+| `gemini-2.5-flash` | 5523 | 253 | 35 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -73,7 +73,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 636 | 64 | 0 | N/A |
+| `chatgpt-pro` | 636 | 73 | 9 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -81,7 +81,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| CompanyInfo | 348 | 58 | 0 |
+| CompanyInfo | 348 | 67 | 9 |
 | TAIEX_Finguider_Pro | 82 | 4 | 0 |
 | GoogleAlertManager | 65 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 2 | 0 |
