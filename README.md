@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-18 18:03 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-18 19:36 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-8403-black)
 ![](https://img.shields.io/badge/Last_7_Days-535-blue)
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 5882 | 286 | 36 | N/A |
+| `gemini-2.5-flash` | 5882 | 289 | 39 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -73,7 +73,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 713 | 53 | 5 | N/A |
+| `chatgpt-pro` | 713 | 57 | 9 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -81,7 +81,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| CompanyInfo | 425 | 53 | 5 |
+| CompanyInfo | 425 | 57 | 9 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 65 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
@@ -103,7 +103,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1097 | 189 | 65 | N/A |
+| `whisper-large-v3` | 1097 | 194 | 70 | N/A |
 | `mlx-qwen3` | 43 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
@@ -115,7 +115,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-transcription-stage | 579 | 0 | 0 |
-| whisper-transcription | 504 | 189 | 65 |
+| whisper-transcription | 504 | 195 | 71 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
