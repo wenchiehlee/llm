@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-25 03:03 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-25 04:49 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-8878-black)
-![](https://img.shields.io/badge/Last_7_Days-345-blue)
-![](https://img.shields.io/badge/Last_24_Hours-0-green)
+![](https://img.shields.io/badge/Last_7_Days-379-blue)
+![](https://img.shields.io/badge/Last_24_Hours-34-green)
 
 ### Smart Routing (Efficiency)
 
