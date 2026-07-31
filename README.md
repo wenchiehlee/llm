@@ -18,35 +18,35 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-07-31 23:48 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-01 02:09 CST*
 
-![](https://img.shields.io/badge/Total_Calls-9149-black)
-![](https://img.shields.io/badge/Last_7_Days-320-blue)
-![](https://img.shields.io/badge/Last_24_Hours-49-green)
+![](https://img.shields.io/badge/Total_Calls-9233-black)
+![](https://img.shields.io/badge/Last_7_Days-310-blue)
+![](https://img.shields.io/badge/Last_24_Hours-35-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
-| Draft Passed | 7 | 2 | 2 | Saved powerful model cost. |
-| Judge Replaced | 56 | 3 | 1 | Corrected by powerful model. |
-| Fallback (Error) | 332 | 44 | 5 | Automatic fallback to Gemini. |
+| Draft Passed | 9 | 2 | 0 | Saved powerful model cost. |
+| Judge Replaced | 57 | 3 | 0 | Corrected by powerful model. |
+| Fallback (Error) | 337 | 38 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 417 | 47 | 6 |
+| CompanyInfo | 423 | 41 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
-| ConceptStocks | 9 | 2 | 2 |
+| ConceptStocks | 11 | 2 | 0 |
 
 
 ### Gemini API (Direct)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 6403 | 257 | 36 | N/A |
+| `gemini-2.5-flash` | 6439 | 255 | 35 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,8 +54,8 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 5916 | 236 | 34 |
-| CompanyInfo | 398 | 21 | 2 |
+| GoogleAlertManager | 5985 | 237 | 35 |
+| CompanyInfo | 400 | 18 | 0 |
 | ConceptStocks | 30 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -73,7 +73,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 822 | 63 | 13 | N/A |
+| `chatgpt-pro` | 835 | 55 | 0 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -81,13 +81,13 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| CompanyInfo | 534 | 59 | 9 |
+| CompanyInfo | 543 | 51 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 65 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | InvestorEvents | 23 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
-| ConceptStocks | 17 | 4 | 4 |
+| ConceptStocks | 21 | 4 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
 | TAIEX_Compare | 10 | 0 | 0 |
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
