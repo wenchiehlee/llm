@@ -3,24 +3,24 @@
 <text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events of Local Inference (MLX/Whisper) by App (Last 7 Days)</text>
 <line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
 <text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
-<line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">2</text>
-<line x1="65" y1="223" x2="880" y2="223" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">4</text>
+<line x1="65" y1="280" x2="880" y2="280" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="284" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">1</text>
+<line x1="65" y1="224" x2="880" y2="224" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="228" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">2</text>
 <line x1="65" y1="167" x2="880" y2="167" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">6</text>
-<line x1="65" y1="111" x2="880" y2="111" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">8</text>
+<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">3</text>
+<line x1="65" y1="112" x2="880" y2="112" stroke="#EEEEEE" stroke-width="1"/>
+<text x="59" y="116" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">4</text>
 <line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">10</text>
-<rect x="88.3" y="111.0" width="69.9" height="224.0" fill="#1A6CF7"/>
-<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/23</text>
-<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/24</text>
-<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/25</text>
-<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/26</text>
-<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/27</text>
-<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/28</text>
-<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/29</text>
+<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">6</text>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/27</text>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/28</text>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/29</text>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/30</text>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">07/31</text>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">08/01</text>
+<rect x="786.9" y="101.7" width="69.9" height="233.3" fill="#1A6CF7"/>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">08/02</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">whisper-transcription</text>
 </svg>
