@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-08 16:20 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-08 17:20 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-9549-black)
 ![](https://img.shields.io/badge/Last_7_Days-332-blue)
@@ -29,15 +29,15 @@
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 57 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 388 | 44 | 0 | Automatic fallback to Gemini. |
+| Judge Replaced | 57 | 1 | 1 | Corrected by powerful model. |
+| Fallback (Error) | 388 | 48 | 4 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 470 | 40 | 0 |
+| CompanyInfo | 470 | 45 | 5 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 4 | 0 |
 
@@ -55,7 +55,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 6185 | 224 | 38 |
-| CompanyInfo | 423 | 20 | 0 |
+| CompanyInfo | 423 | 22 | 2 |
 | ConceptStocks | 32 | 2 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -103,7 +103,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1244 | 37 | 7 | N/A |
+| `whisper-large-v3` | 1244 | 39 | 9 | N/A |
 | `mlx-qwen3` | 44 | 1 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
@@ -114,7 +114,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 650 | 37 | 7 |
+| whisper-transcription | 650 | 40 | 10 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
