@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-08 08:04 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-08 10:34 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-9549-black)
-![](https://img.shields.io/badge/Last_7_Days-302-blue)
-![](https://img.shields.io/badge/Last_24_Hours-13-green)
+![](https://img.shields.io/badge/Last_7_Days-327-blue)
+![](https://img.shields.io/badge/Last_24_Hours-38-green)
 
 ### Smart Routing (Efficiency)
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 6686 | 221 | 13 | N/A |
+| `gemini-2.5-flash` | 6686 | 246 | 38 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,7 +54,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 6185 | 199 | 13 |
+| GoogleAlertManager | 6185 | 224 | 38 |
 | CompanyInfo | 423 | 20 | 0 |
 | ConceptStocks | 32 | 2 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
