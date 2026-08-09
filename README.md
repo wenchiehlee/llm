@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-09 17:22 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-09 18:15 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-9613-black)
 ![](https://img.shields.io/badge/Last_7_Days-404-blue)
@@ -30,14 +30,14 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 58 | 2 | 1 | Corrected by powerful model. |
-| Fallback (Error) | 394 | 46 | 4 | Automatic fallback to Gemini. |
+| Fallback (Error) | 394 | 48 | 6 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 477 | 44 | 6 |
+| CompanyInfo | 477 | 46 | 7 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 4 | 0 |
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 6727 | 282 | 73 | N/A |
+| `gemini-2.5-flash` | 6727 | 285 | 76 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -55,7 +55,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 6210 | 261 | 73 |
-| CompanyInfo | 426 | 21 | 2 |
+| CompanyInfo | 426 | 22 | 3 |
 | ConceptStocks | 32 | 2 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -73,7 +73,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 904 | 51 | 0 | N/A |
+| `chatgpt-pro` | 904 | 60 | 9 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -81,7 +81,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | whisper-merge-review | 616 | 0 | 0 |
-| CompanyInfo | 600 | 41 | 0 |
+| CompanyInfo | 600 | 50 | 9 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 71 | 6 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
