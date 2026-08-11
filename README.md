@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-11 10:50 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-11 14:34 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-9789-black)
 ![](https://img.shields.io/badge/Last_7_Days-418-blue)
@@ -103,7 +103,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1279 | 60 | 0 | N/A |
+| `whisper-large-v3` | 1279 | 64 | 4 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 11 | 0 | 0 | N/A |
@@ -114,7 +114,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 685 | 60 | 0 |
+| whisper-transcription | 685 | 64 | 4 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
