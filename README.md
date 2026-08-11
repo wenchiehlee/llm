@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-11 17:39 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-11 18:33 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-9789-black)
-![](https://img.shields.io/badge/Last_7_Days-423-blue)
-![](https://img.shields.io/badge/Last_24_Hours-42-green)
+![](https://img.shields.io/badge/Last_7_Days-434-blue)
+![](https://img.shields.io/badge/Last_24_Hours-53-green)
 
 ### Smart Routing (Efficiency)
 
@@ -73,14 +73,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 922 | 53 | 6 | N/A |
+| `chatgpt-pro` | 922 | 55 | 8 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 618 | 50 | 7 |
+| CompanyInfo | 618 | 51 | 8 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 71 | 0 | 0 |
