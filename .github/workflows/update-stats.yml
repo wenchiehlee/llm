@@ -17,7 +17,7 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Update README with Amplitude stats
         env:
@@ -96,7 +96,7 @@ jobs:
               if model_filter: filters.append({"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter})
               if extra_filters: filters.extend(extra_filters)
               if filters: event_def["filters"] = filters
-              params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
+              params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "50"}
               data = amp_get(api_key, secret_key, params)
               series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
               for i, label in enumerate(labels):
@@ -122,7 +122,7 @@ jobs:
           def query_last7days(api_key, secret_key, model_names, group_by="app_name"):
               end_dt = datetime.now(TW_TZ); start_dt = end_dt - timedelta(days=6)
               event_def = {"event_type": "llm_call", "filters": [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_names}], "group_by": [{"type": "event", "value": group_by}]}
-              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "20"}
+              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "50"}
               data = amp_get(api_key, secret_key, params)
               series, labels, xvals, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), data.get("data", {}).get("xValues", []), {}
               for i, label in enumerate(labels):
