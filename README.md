@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-13 18:15 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-13 18:43 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-9909-black)
 ![](https://img.shields.io/badge/Last_7_Days-427-blue)
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 6954 | 314 | 46 | N/A |
+| `gemini-2.5-flash` | 6954 | 316 | 48 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -73,7 +73,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 939 | 59 | 15 | N/A |
+| `chatgpt-pro` | 939 | 60 | 16 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
