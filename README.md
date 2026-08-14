@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-15 00:30 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-15 01:36 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-10052-black)
 ![](https://img.shields.io/badge/Last_7_Days-439-blue)
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 7040 | 313 | 0 | N/A |
+| `gemini-2.5-flash` | 7040 | 351 | 38 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,7 +54,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 6500 | 290 | 0 |
+| GoogleAlertManager | 6500 | 328 | 38 |
 | CompanyInfo | 440 | 14 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -107,7 +107,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1324 | 53 | 0 | N/A |
+| `whisper-large-v3` | 1324 | 56 | 3 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 12 | 1 | 0 | N/A |
@@ -118,7 +118,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 731 | 54 | 0 |
+| whisper-transcription | 731 | 57 | 3 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
