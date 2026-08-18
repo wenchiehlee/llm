@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-18 16:06 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-18 17:14 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-10344-black)
 ![](https://img.shields.io/badge/Last_7_Days-543-blue)
@@ -29,15 +29,15 @@
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 66 | 6 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 435 | 25 | 0 | Automatic fallback to Gemini. |
+| Judge Replaced | 66 | 7 | 1 | Corrected by powerful model. |
+| Fallback (Error) | 435 | 29 | 4 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 526 | 31 | 0 |
+| CompanyInfo | 526 | 36 | 5 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 7272 | 391 | 36 | N/A |
+| `gemini-2.5-flash` | 7272 | 393 | 38 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -55,7 +55,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 6727 | 371 | 36 |
-| CompanyInfo | 445 | 11 | 0 |
+| CompanyInfo | 445 | 13 | 2 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -75,14 +75,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1009 | 80 | 1 | N/A |
+| `chatgpt-pro` | 1009 | 87 | 8 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 680 | 54 | 0 |
+| CompanyInfo | 680 | 61 | 7 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 71 | 0 | 0 |
@@ -107,7 +107,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1351 | 72 | 5 | N/A |
+| `whisper-large-v3` | 1351 | 73 | 6 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 12 | 1 | 0 | N/A |
@@ -118,7 +118,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 758 | 73 | 5 |
+| whisper-transcription | 758 | 74 | 6 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
