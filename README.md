@@ -18,26 +18,26 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-19 23:06 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-20 01:01 CST*
 
-![](https://img.shields.io/badge/Total_Calls-10398-black)
-![](https://img.shields.io/badge/Last_7_Days-571-blue)
-![](https://img.shields.io/badge/Last_24_Hours-82-green)
+![](https://img.shields.io/badge/Total_Calls-10480-black)
+![](https://img.shields.io/badge/Last_7_Days-502-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 67 | 7 | 1 | Corrected by powerful model. |
-| Fallback (Error) | 439 | 30 | 6 | Automatic fallback to Gemini. |
+| Judge Replaced | 68 | 7 | 0 | Corrected by powerful model. |
+| Fallback (Error) | 445 | 23 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 60 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 531 | 37 | 7 |
+| CompanyInfo | 538 | 30 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 7310 | 429 | 73 | N/A |
+| `gemini-2.5-flash` | 7383 | 416 | 35 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,17 +54,17 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 6763 | 406 | 70 |
-| CompanyInfo | 447 | 14 | 3 |
+| GoogleAlertManager | 6833 | 405 | 35 |
+| CompanyInfo | 450 | 11 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
 | llm-api | 8 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 8 | 8 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 8 | 0 | 0 |
 | TAIEX_Revenue_History | 5 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
 | TestSmartRouting | 2 | 0 | 0 |
-| debug-probe-app | 1 | 1 | 0 |
+| debug-probe-app | 1 | 0 | 0 |
 
 
 ![](./assets/chart_gemini_7d.svg)
@@ -75,20 +75,20 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1019 | 89 | 9 | N/A |
+| `chatgpt-pro` | 1028 | 73 | 0 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 689 | 63 | 9 |
+| CompanyInfo | 698 | 55 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 71 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | ConceptStocks | 27 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 25 | 25 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 25 | 18 | 0 |
 | InvestorEvents | 23 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
@@ -98,7 +98,7 @@
 | SmartTest | 6 | 0 | 0 |
 | TAIEX_Finguider_HighQual | 1 | 0 | 0 |
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
-| debug-probe-app | 1 | 1 | 0 |
+| debug-probe-app | 1 | 0 | 0 |
 
 
 ![](./assets/chart_nas_7d.svg)
@@ -107,7 +107,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1357 | 52 | 0 | N/A |
+| `whisper-large-v3` | 1357 | 47 | 0 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 12 | 1 | 0 | N/A |
@@ -118,7 +118,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 764 | 53 | 0 |
+| whisper-transcription | 764 | 48 | 0 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
