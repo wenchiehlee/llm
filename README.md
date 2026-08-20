@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-21 00:03 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-21 01:05 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-10574-black)
 ![](https://img.shields.io/badge/Last_7_Days-522-blue)
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 7455 | 415 | 0 | N/A |
+| `gemini-2.5-flash` | 7455 | 454 | 39 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,7 +54,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 6903 | 403 | 0 |
+| GoogleAlertManager | 6903 | 442 | 39 |
 | CompanyInfo | 452 | 12 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
