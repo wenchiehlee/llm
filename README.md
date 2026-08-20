@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-20 12:20 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-20 13:14 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-10480-black)
 ![](https://img.shields.io/badge/Last_7_Days-578-blue)
@@ -75,7 +75,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1028 | 73 | 0 | N/A |
+| `chatgpt-pro` | 1028 | 79 | 6 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -88,7 +88,7 @@
 | GoogleAlertManager | 71 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | ConceptStocks | 27 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 25 | 18 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 25 | 24 | 6 |
 | InvestorEvents | 23 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
 | ServerSmartTest | 14 | 0 | 0 |
