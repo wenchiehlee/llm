@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-25 12:22 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-25 13:16 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-10928-black)
 ![](https://img.shields.io/badge/Last_7_Days-606-blue)
@@ -75,7 +75,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1079 | 60 | 0 | N/A |
+| `chatgpt-pro` | 1079 | 61 | 1 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -85,7 +85,7 @@
 | CompanyInfo | 743 | 54 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
-| GoogleAlertManager | 71 | 0 | 0 |
+| GoogleAlertManager | 71 | 1 | 1 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | skill-youtube-channel-srt-keyframe-extract | 31 | 6 | 0 |
 | ConceptStocks | 27 | 0 | 0 |
@@ -107,7 +107,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1381 | 25 | 1 | N/A |
+| `whisper-large-v3` | 1381 | 27 | 3 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 12 | 0 | 0 | N/A |
@@ -118,7 +118,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 788 | 25 | 1 |
+| whisper-transcription | 788 | 27 | 3 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
