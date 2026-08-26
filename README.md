@@ -18,9 +18,9 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-26 19:06 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-26 20:02 CST*
 
-![](https://img.shields.io/badge/Total_Calls-0-black)
+![](https://img.shields.io/badge/Total_Calls-11019-black)
 ![](https://img.shields.io/badge/Last_7_Days-625-blue)
 ![](https://img.shields.io/badge/Last_24_Hours-86-green)
 
