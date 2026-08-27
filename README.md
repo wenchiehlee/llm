@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-27 09:03 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-08-27 20:01 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-11105-black)
-![](https://img.shields.io/badge/Last_7_Days-566-blue)
-![](https://img.shields.io/badge/Last_24_Hours-35-green)
+![](https://img.shields.io/badge/Last_7_Days-573-blue)
+![](https://img.shields.io/badge/Last_24_Hours-42-green)
 
 ### Smart Routing (Efficiency)
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 7912 | 492 | 35 | N/A |
+| `gemini-2.5-flash` | 7912 | 493 | 36 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,7 +54,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 7343 | 475 | 35 |
+| GoogleAlertManager | 7343 | 476 | 36 |
 | CompanyInfo | 469 | 17 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -75,7 +75,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1097 | 53 | 0 | N/A |
+| `chatgpt-pro` | 1097 | 59 | 6 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -87,7 +87,7 @@
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 1 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 31 | 0 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 31 | 6 | 6 |
 | ConceptStocks | 27 | 0 | 0 |
 | InvestorEvents | 23 | 0 | 0 |
 | llm-api | 22 | 0 | 0 |
