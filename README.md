@@ -4,7 +4,7 @@
 
 ## 🌟 核心特色
 
-- **自動備援鏈 (Fallback Chain)**：預設路徑為 `codex` → `gemini` → `mlx`。當高優先級的 CLI 橋接或 API 失敗時，自動切換至備援方案。
+- **自動備援鏈 (Fallback Chain)**：預設路徑為 `gemini` → `codex` → `mlx`。當高優先級的 CLI 橋接或 API 失敗時，自動切換至備援方案。
 - **Gemini 金鑰輪轉**：支援多達 20 把 API Key (`GEMINI_API_KEY` + `_1` 到 `_19`)，具備每日配額偵測與 Round-robin 輪轉機制。
 - **CLI 橋接功能 (LLM-CLI-API-Server)**：
     - **ChatGPT Pro**：透過伺服器端的 `codex-cli` 調用具備訂閱權限的 ChatGPT。
@@ -227,10 +227,10 @@ dependencies = [
 ```python
 from llm import LLMClient
 
-# 初始化 (自動偵測可用 Provider：codex → gemini → mlx)
+# 初始化 (自動偵測可用 Provider：gemini → codex → mlx)
 client = LLMClient(app_name="NewsAnalyzer")
 
-# 普通文本生成 (預設會先嘗試透過 codex-cli 使用 ChatGPT Pro)
+# 普通文本生成 (預設會先嘗試透過 Gemini API)
 text = client.generate("請簡述台積電在 2024 年的營收表現。")
 
 # JSON 模式 (回傳 dict 或 list)
