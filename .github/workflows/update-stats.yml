@@ -137,7 +137,7 @@ jobs:
               short_dates = [d[5:].replace("-", "/") if len(d) >= 10 else d for d in xdates]; n = len(short_dates)
               if n == 0 or not series: return
               group_names = list(series.keys()); data = [[int(series[a][i]) if i < len(series[a]) else 0 for i in range(n)] for a in group_names]
-              max_val = max([sum(data[j][i] for j in range(len(group_names))) for i in range(n)]) if n > 0 else 1
+              max_val = max(1, max([sum(data[j][i] for j in range(len(group_names))) for i in range(n)]) if n > 0 else 1)
               mag = 10 ** max(0, math.floor(math.log10(max_val))); y_ceil = math.ceil(max_val * 1.15 / mag) * mag
               TICKS = 5; step = y_ceil / TICKS; esc = lambda s: s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
               sv = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}">', f'<rect width="{W}" height="{H}" fill="white"/>', f'<text x="{W//2}" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">{esc(title)}</text>']
@@ -233,6 +233,8 @@ jobs:
                   for app, count in sorted_apps:
                       c7d = svc_apps_7d.get(app, 0); c24h = svc_apps_24h.get(app, 0)
                       lines.append(f"| {app} | {count} | {c7d} | {c24h} |")
+                  lines.append("")
+                  for i, (app, count) in enumerate(sorted_apps[:15]): lines.append(badge(app, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
                   lines.append("")
               
               svgs = SERVICE_SVG.get(svc, [])
