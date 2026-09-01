@@ -18,26 +18,26 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-01 23:11 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-02 02:49 CST*
 
-![](https://img.shields.io/badge/Total_Calls-11440-black)
-![](https://img.shields.io/badge/Last_7_Days-466-blue)
-![](https://img.shields.io/badge/Last_24_Hours-60-green)
+![](https://img.shields.io/badge/Total_Calls-11485-black)
+![](https://img.shields.io/badge/Last_7_Days-380-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0-green)
 
 ### Smart Routing (Efficiency)
 
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 78 | 4 | 2 | Corrected by powerful model. |
-| Fallback (Error) | 505 | 28 | 3 | Automatic fallback to Gemini. |
-| NAS Reflection | 63 | 5 | 3 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| Judge Replaced | 78 | 4 | 0 | Corrected by powerful model. |
+| Fallback (Error) | 507 | 21 | 0 | Automatic fallback to Gemini. |
+| NAS Reflection | 65 | 5 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 611 | 37 | 8 |
+| CompanyInfo | 615 | 30 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 8138 | 347 | 44 | N/A |
+| `gemini-2.5-flash` | 8181 | 269 | 0 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -54,8 +54,8 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 7555 | 328 | 41 |
-| CompanyInfo | 480 | 16 | 3 |
+| GoogleAlertManager | 7596 | 253 | 0 |
+| CompanyInfo | 482 | 13 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -66,8 +66,8 @@
 | TestSmartRouting | 2 | 0 | 0 |
 | debug-probe-app | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-7555_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-480_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-7596_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-482_calls-green)
 ![](https://img.shields.io/badge/ConceptStocks-32_calls-orange)
 ![](https://img.shields.io/badge/InvestorEvents-29_calls-red)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-25_calls-purple)
@@ -87,14 +87,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1140 | 53 | 9 | N/A |
+| `chatgpt-pro` | 1142 | 45 | 0 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 795 | 45 | 9 |
+| CompanyInfo | 797 | 37 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
@@ -112,7 +112,7 @@
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
 | debug-probe-app | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/CompanyInfo-795_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-797_calls-blue)
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-green)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-82_calls-orange)
 ![](https://img.shields.io/badge/GoogleAlertManager-72_calls-red)
@@ -135,7 +135,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1449 | 65 | 7 | N/A |
+| `whisper-large-v3` | 1449 | 65 | 0 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 1 | 0 | N/A |
@@ -146,7 +146,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 857 | 66 | 7 |
+| whisper-transcription | 857 | 66 | 0 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
