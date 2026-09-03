@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-03 19:43 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-03 23:14 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-11554-black)
-![](https://img.shields.io/badge/Last_7_Days-464-blue)
-![](https://img.shields.io/badge/Last_24_Hours-67-green)
+![](https://img.shields.io/badge/Last_7_Days-470-blue)
+![](https://img.shields.io/badge/Last_24_Hours-73-green)
 
 ### Smart Routing (Efficiency)
 
@@ -30,14 +30,14 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 78 | 4 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 509 | 23 | 0 | Automatic fallback to Gemini. |
-| NAS Reflection | 67 | 7 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| Fallback (Error) | 509 | 26 | 3 | Automatic fallback to Gemini. |
+| NAS Reflection | 67 | 8 | 1 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 619 | 34 | 0 |
+| CompanyInfo | 619 | 38 | 4 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -46,7 +46,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 8248 | 365 | 67 | N/A |
+| `gemini-2.5-flash` | 8248 | 368 | 70 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -55,7 +55,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 7661 | 349 | 67 |
-| CompanyInfo | 484 | 15 | 0 |
+| CompanyInfo | 484 | 18 | 3 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -87,14 +87,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1144 | 39 | 0 | N/A |
+| `chatgpt-pro` | 1144 | 42 | 3 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 799 | 39 | 0 |
+| CompanyInfo | 799 | 42 | 3 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
