@@ -32,6 +32,18 @@ _AGY_MODEL_ALIASES = {
 }
 _AGY_NATIVE_NAME_RE = re.compile(r"^Gemini \d")  # 已經是 agy 格式（如 "Gemini 3.6 Flash (Medium)"）
 
+# agy（Antigravity CLI）現在是多 provider 聚合介面，/gemini/exec 底下除了 Gemini
+# 系列，也能選 Claude（Sonnet/Opus）與 GPT-OSS 這些非 "gemini" 開頭的顯示名稱
+# （例如 "Claude Sonnet 4.6 (Thinking)"、"GPT-OSS 120B (Medium)"）。只用
+# `model.startswith("gemini")` 判斷「要不要走 agy」已經不夠用，會把這些名字誤判
+# 成 codex/ChatGPT 路徑（/exec）。改用前綴白名單涵蓋 agy 目前已知的三個 family。
+_AGY_MODEL_PREFIXES = ("gemini", "claude", "gpt-oss")
+
+
+def _wants_agy(model: str) -> bool:
+    m = (model or "").lower()
+    return any(m.startswith(p) for p in _AGY_MODEL_PREFIXES)
+
 
 def _resolve_agy_model(model: str) -> str:
     if not model or _AGY_NATIVE_NAME_RE.match(model):
@@ -55,8 +67,8 @@ class CodexProvider(BaseProvider):
         if len(prompt) > MAX_PROMPT_LENGTH:
             raise ValueError(f"Prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
 
-        # 若模型為 gemini 開頭，則走 /gemini/exec 端點
-        if self.model.startswith("gemini"):
+        # 若模型屬於 agy 目前已知的 family（Gemini/Claude/GPT-OSS），走 /gemini/exec 端點
+        if _wants_agy(self.model):
             endpoint = "/gemini/exec"
             payload = {"prompt": prompt, "model": _resolve_agy_model(self.model), "json_mode": json_mode}
         else:
@@ -88,7 +100,8 @@ class CodexProvider(BaseProvider):
         if len(prompt) > MAX_PROMPT_LENGTH:
             raise ValueError(f"Prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
 
-        resolved_model = model or (self.model if self.model.startswith("gemini") else "")
+        candidate_model = model or self.model
+        resolved_model = candidate_model if _wants_agy(candidate_model) else ""
         if "gemini" in (draft_cli, judge_cli):
             resolved_model = _resolve_agy_model(resolved_model)
 
