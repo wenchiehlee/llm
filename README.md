@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-05 22:00 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-05 22:25 CST*
 
-![](https://img.shields.io/badge/Total_Calls-11670-black)
-![](https://img.shields.io/badge/Last_7_Days-467-blue)
-![](https://img.shields.io/badge/Last_24_Hours-69-green)
+![](https://img.shields.io/badge/Total_Calls-14539-black)
+![](https://img.shields.io/badge/Last_7_Days-1697-blue)
+![](https://img.shields.io/badge/Last_24_Hours-354-green)
 
 ### Smart Routing (Efficiency)
 
@@ -131,11 +131,12 @@
 
 ![](./assets/chart_nas_7d.svg)
 
-### Local Inference (MLX/Whisper)
+### Local Inference (MLX/Whisper/OCR)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `whisper-large-v3` | 1454 | 74 | 19 | N/A |
+| `baidu/Unlimited-OCR` | 2568 | 1229 | 284 | N/A |
+| `whisper-large-v3` | 1454 | 75 | 20 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 1 | 0 | N/A |
@@ -146,7 +147,8 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| whisper-transcription | 862 | 75 | 19 |
+| Baidu-OCR | 2802 | 1229 | 284 |
+| whisper-transcription | 879 | 76 | 20 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
@@ -156,15 +158,16 @@
 | TAIEX_Finguider_Pro | 4 | 0 | 0 |
 | GoogleAlertManager | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/whisper--transcription-862_calls-blue)
-![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-green)
-![](https://img.shields.io/badge/whisper--poc--sample-33_calls-orange)
-![](https://img.shields.io/badge/eval--gemma4-26_calls-red)
-![](https://img.shields.io/badge/test--mlx-20_calls-purple)
-![](https://img.shields.io/badge/SmartTest-8_calls-yellowgreen)
-![](https://img.shields.io/badge/test--mlx--gemma4-5_calls-cyan)
-![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-teal)
-![](https://img.shields.io/badge/GoogleAlertManager-1_calls-pink)
+![](https://img.shields.io/badge/Baidu--OCR-2802_calls-blue)
+![](https://img.shields.io/badge/whisper--transcription-879_calls-green)
+![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-orange)
+![](https://img.shields.io/badge/whisper--poc--sample-33_calls-red)
+![](https://img.shields.io/badge/eval--gemma4-26_calls-purple)
+![](https://img.shields.io/badge/test--mlx-20_calls-yellowgreen)
+![](https://img.shields.io/badge/SmartTest-8_calls-cyan)
+![](https://img.shields.io/badge/test--mlx--gemma4-5_calls-teal)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-pink)
+![](https://img.shields.io/badge/GoogleAlertManager-1_calls-indigo)
 
 
 ![](./assets/chart_mlx_7d.svg)
