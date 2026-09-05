@@ -47,11 +47,8 @@ jobs:
                   "mlx-community/whisper-large-v3-turbo", "whisper-large-v3-turbo", "distil-whisper-large-v3"
               ]
           }
-          SERVICE_SVG = {
-              "Gemini API (Direct)": ["assets/chart_gemini_7d.svg", "assets/chart_gemini_models_7d.svg"],
-              "Llm-Cli-APIServer": ["assets/chart_nas_7d.svg"],
-              "Local Inference (MLX/Whisper/OCR)": ["assets/chart_mlx_7d.svg"]
-          }
+          OVERVIEW_SVG_BY_APP   = "assets/chart_overview_by_app_7d.svg"
+          OVERVIEW_SVG_BY_MODEL = "assets/chart_overview_by_model_7d.svg"
 
           def amp_get(api_key, secret_key, params):
               url = "https://amplitude.com/api/2/events/segmentation?" + urlencode(params)
@@ -183,6 +180,17 @@ jobs:
               ""
           ]
 
+          # --- Overview charts (combined across all services, replaces one per-service pair) ---
+          ov_app_xdates, ov_app = query_last7days(api_key, secret_key, all_models, group_by="app_name")
+          if ov_app_xdates and ov_app:
+              generate_stacked_bar_svg("Total events by App (Last 7 Days)", ov_app_xdates, ov_app, OVERVIEW_SVG_BY_APP)
+              lines += ["", f"![](./{OVERVIEW_SVG_BY_APP})"]
+          ov_model_xdates, ov_model = query_last7days(api_key, secret_key, all_models, group_by="model")
+          if ov_model_xdates and ov_model:
+              generate_stacked_bar_svg("Total events by Model (Last 7 Days)", ov_model_xdates, ov_model, OVERVIEW_SVG_BY_MODEL)
+              lines += ["", f"![](./{OVERVIEW_SVG_BY_MODEL})"]
+          lines += ["", ""]
+
           # --- Smart Routing Section ---
           sr_stats = query_grouped(api_key, secret_key, "smart_route_status")
           if sr_stats:
@@ -236,16 +244,6 @@ jobs:
                   lines.append("")
                   for i, (app, count) in enumerate(sorted_apps[:15]): lines.append(badge(app, f"{count}_calls", APP_COLORS[i % len(APP_COLORS)]))
                   lines.append("")
-              
-              svgs = SERVICE_SVG.get(svc, [])
-              if len(svgs) >= 1:
-                  xdates, daily_app = query_last7days(api_key, secret_key, models, group_by="app_name")
-                  if xdates and daily_app: generate_stacked_bar_svg(f"Total events of {svc} by App (Last 7 Days)", xdates, daily_app, svgs[0])
-              if len(svgs) >= 2:
-                  xdates, daily_mod = query_last7days(api_key, secret_key, models, group_by="model")
-                  if xdates and daily_mod: generate_stacked_bar_svg(f"Total events of {svc} by Model (Last 7 Days)", xdates, daily_mod, svgs[1])
-              
-              for p in svgs: lines += ["", f"![](./{p})"]
               lines.append("")
 
           content = README.read_text(encoding="utf-8")
