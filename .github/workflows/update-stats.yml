@@ -42,15 +42,15 @@ jobs:
           SERVICE_MODELS = {
               "Gemini API (Direct)": ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"],
               "Llm-Cli-APIServer": ["codex", "chatgpt-pro"],
-              "Local Inference (MLX/Whisper)": [
-                  "mlx-qwen3", "mlx-gemma4", "whisper-large-v3", 
+              "Local Inference (MLX/Whisper/OCR)": [
+                  "mlx-qwen3", "mlx-gemma4", "whisper-large-v3", "baidu/Unlimited-OCR",
                   "mlx-community/whisper-large-v3-turbo", "whisper-large-v3-turbo", "distil-whisper-large-v3"
               ]
           }
           SERVICE_SVG = {
               "Gemini API (Direct)": ["assets/chart_gemini_7d.svg", "assets/chart_gemini_models_7d.svg"],
               "Llm-Cli-APIServer": ["assets/chart_nas_7d.svg"],
-              "Local Inference (MLX/Whisper)": ["assets/chart_mlx_7d.svg"]
+              "Local Inference (MLX/Whisper/OCR)": ["assets/chart_mlx_7d.svg"]
           }
 
           def amp_get(api_key, secret_key, params):
