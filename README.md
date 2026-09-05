@@ -18,11 +18,17 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-05 22:25 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-05 22:34 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-14539-black)
 ![](https://img.shields.io/badge/Last_7_Days-1697-blue)
 ![](https://img.shields.io/badge/Last_24_Hours-354-green)
+
+
+![](./assets/chart_overview_by_app_7d.svg)
+
+![](./assets/chart_overview_by_model_7d.svg)
+
 
 ### Smart Routing (Efficiency)
 
@@ -79,10 +85,6 @@
 ![](https://img.shields.io/badge/debug--probe--app-1_calls-blue)
 
 
-![](./assets/chart_gemini_7d.svg)
-
-![](./assets/chart_gemini_models_7d.svg)
-
 ### Llm-Cli-APIServer
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
@@ -129,8 +131,6 @@
 ![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-purple)
 
 
-![](./assets/chart_nas_7d.svg)
-
 ### Local Inference (MLX/Whisper/OCR)
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
@@ -169,8 +169,6 @@
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-pink)
 ![](https://img.shields.io/badge/GoogleAlertManager-1_calls-indigo)
 
-
-![](./assets/chart_mlx_7d.svg)
 
 ## 📦 安裝方式
 
