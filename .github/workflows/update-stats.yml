@@ -49,6 +49,8 @@ jobs:
           }
           OVERVIEW_SVG_BY_APP   = "assets/chart_overview_by_app_7d.svg"
           OVERVIEW_SVG_BY_MODEL = "assets/chart_overview_by_model_7d.svg"
+          TOTAL_SVG_BY_APP      = "assets/chart_total_by_app.svg"
+          TOTAL_SVG_BY_MODEL    = "assets/chart_total_by_model.svg"
 
           def amp_get(api_key, secret_key, params):
               url = "https://amplitude.com/api/2/events/segmentation?" + urlencode(params)
@@ -159,6 +161,29 @@ jobs:
               sv.append('</svg>'); os.makedirs(os.path.dirname(filepath) or ".", exist_ok=True)
               with open(filepath, "w", encoding="utf-8") as f: f.write("\n".join(sv))
 
+          def generate_totals_bar_svg(title, data, filepath, top_n=15):
+              esc = lambda s: str(s).replace("&","&amp;").replace("<","&lt;").replace(">","&gt;")
+              items = sorted(data.items(), key=lambda x: -x[1])[:top_n]
+              n = len(items)
+              if n == 0: return
+              W, ML, MR, MT, row_h, gap = 900, 220, 70, 55, 26, 8
+              H = MT + n * (row_h + gap) + 20
+              CW = W - ML - MR
+              max_val = max(v for _, v in items) or 1
+              sv = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}">',
+                    f'<rect width="{W}" height="{H}" fill="white"/>',
+                    f'<text x="{W//2}" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">{esc(title)}</text>']
+              for i, (label, val) in enumerate(items):
+                  y = MT + i * (row_h + gap)
+                  bw = max(2, val / max_val * CW)
+                  color = CHART_COLORS[i % len(CHART_COLORS)]
+                  sv.append(f'<text x="{ML-10}" y="{y+row_h*0.65:.1f}" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">{esc(label)}</text>')
+                  sv.append(f'<rect x="{ML}" y="{y}" width="{bw:.1f}" height="{row_h}" rx="3" fill="{color}"/>')
+                  sv.append(f'<text x="{ML+bw+8:.1f}" y="{y+row_h*0.65:.1f}" font-size="12" font-family="Arial,sans-serif" fill="#444">{val}</text>')
+              sv.append('</svg>')
+              os.makedirs(os.path.dirname(filepath) or ".", exist_ok=True)
+              with open(filepath, "w", encoding="utf-8") as f: f.write("\n".join(sv))
+
           def badge(label, message, color): return f"![](https://img.shields.io/badge/{label.replace('-','--').replace(' ','_')}-{message.replace('-','--').replace(' ','_')}-{color})"
 
           api_key, secret_key = os.environ["AMPLITUDE_API_KEY"], os.environ["AMPLITUDE_QUERY_KEY"]
@@ -189,6 +214,16 @@ jobs:
           if ov_model_xdates and ov_model:
               generate_stacked_bar_svg("Total events by Model (Last 7 Days)", ov_model_xdates, ov_model, OVERVIEW_SVG_BY_MODEL)
               lines += ["", f"![](./{OVERVIEW_SVG_BY_MODEL})"]
+
+          # --- Total (all-time, since AMP_START) charts, by App and by Model ---
+          total_by_app = query_grouped(api_key, secret_key, "app_name", model_filter=all_models)
+          if total_by_app:
+              generate_totals_bar_svg("Total events by App (All Time)", total_by_app, TOTAL_SVG_BY_APP)
+              lines += ["", f"![](./{TOTAL_SVG_BY_APP})"]
+          total_by_model = {m: c for m, c in m_counts.items() if m in all_models}
+          if total_by_model:
+              generate_totals_bar_svg("Total events by Model (All Time)", total_by_model, TOTAL_SVG_BY_MODEL)
+              lines += ["", f"![](./{TOTAL_SVG_BY_MODEL})"]
           lines += ["", ""]
 
           # --- Smart Routing Section ---
