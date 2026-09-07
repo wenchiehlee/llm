@@ -3,34 +3,34 @@
 <text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events by App (All Time)</text>
 <text x="210" y="71.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">GoogleAlertManager</text>
 <rect x="220" y="55" width="610.0" height="26" rx="3" fill="#1A6CF7"/>
-<text x="838.0" y="71.9" font-size="12" font-family="Arial,sans-serif" fill="#444">7906</text>
+<text x="838.0" y="71.9" font-size="12" font-family="Arial,sans-serif" fill="#444">7936</text>
 <text x="210" y="105.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">Baidu-OCR</text>
-<rect x="220" y="89" width="275.1" height="26" rx="3" fill="#00C2A0"/>
-<text x="503.1" y="105.9" font-size="12" font-family="Arial,sans-serif" fill="#444">3566</text>
+<rect x="220" y="89" width="319.1" height="26" rx="3" fill="#00C2A0"/>
+<text x="547.1" y="105.9" font-size="12" font-family="Arial,sans-serif" fill="#444">4152</text>
 <text x="210" y="139.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">CompanyInfo</text>
-<rect x="220" y="123" width="100.8" height="26" rx="3" fill="#F7931A"/>
-<text x="328.8" y="139.9" font-size="12" font-family="Arial,sans-serif" fill="#444">1307</text>
+<rect x="220" y="123" width="101.2" height="26" rx="3" fill="#F7931A"/>
+<text x="329.2" y="139.9" font-size="12" font-family="Arial,sans-serif" fill="#444">1316</text>
 <text x="210" y="173.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-transcription</text>
-<rect x="220" y="157" width="68.4" height="26" rx="3" fill="#A456F0"/>
-<text x="296.4" y="173.9" font-size="12" font-family="Arial,sans-serif" fill="#444">887</text>
+<rect x="220" y="157" width="68.2" height="26" rx="3" fill="#A456F0"/>
+<text x="296.2" y="173.9" font-size="12" font-family="Arial,sans-serif" fill="#444">887</text>
 <text x="210" y="207.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-merge-review</text>
-<rect x="220" y="191" width="47.5" height="26" rx="3" fill="#FF5733"/>
-<text x="275.5" y="207.9" font-size="12" font-family="Arial,sans-serif" fill="#444">616</text>
+<rect x="220" y="191" width="47.3" height="26" rx="3" fill="#FF5733"/>
+<text x="275.3" y="207.9" font-size="12" font-family="Arial,sans-serif" fill="#444">616</text>
 <text x="210" y="241.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-transcription-stage</text>
-<rect x="220" y="225" width="44.7" height="26" rx="3" fill="#20B2AA"/>
-<text x="272.7" y="241.9" font-size="12" font-family="Arial,sans-serif" fill="#444">579</text>
+<rect x="220" y="225" width="44.5" height="26" rx="3" fill="#20B2AA"/>
+<text x="272.5" y="241.9" font-size="12" font-family="Arial,sans-serif" fill="#444">579</text>
 <text x="210" y="275.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">TAIEX_Finguider_Pro</text>
-<rect x="220" y="259" width="8.6" height="26" rx="3" fill="#E91E63"/>
-<text x="236.6" y="275.9" font-size="12" font-family="Arial,sans-serif" fill="#444">111</text>
+<rect x="220" y="259" width="8.5" height="26" rx="3" fill="#E91E63"/>
+<text x="236.5" y="275.9" font-size="12" font-family="Arial,sans-serif" fill="#444">111</text>
 <text x="210" y="309.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">ConceptStocks</text>
-<rect x="220" y="293" width="4.6" height="26" rx="3" fill="#9C27B0"/>
-<text x="232.6" y="309.9" font-size="12" font-family="Arial,sans-serif" fill="#444">59</text>
+<rect x="220" y="293" width="4.5" height="26" rx="3" fill="#9C27B0"/>
+<text x="232.5" y="309.9" font-size="12" font-family="Arial,sans-serif" fill="#444">59</text>
 <text x="210" y="343.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">InvestorEvents</text>
 <rect x="220" y="327" width="4.0" height="26" rx="3" fill="#673AB7"/>
 <text x="232.0" y="343.9" font-size="12" font-family="Arial,sans-serif" fill="#444">52</text>
 <text x="210" y="377.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">skill-youtube-channel-srt-keyframe-extract</text>
-<rect x="220" y="361" width="3.9" height="26" rx="3" fill="#3F51B5"/>
-<text x="231.9" y="377.9" font-size="12" font-family="Arial,sans-serif" fill="#444">50</text>
+<rect x="220" y="361" width="3.8" height="26" rx="3" fill="#3F51B5"/>
+<text x="231.8" y="377.9" font-size="12" font-family="Arial,sans-serif" fill="#444">50</text>
 <text x="210" y="411.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">TAIEX_Revenue_History</text>
 <rect x="220" y="395" width="2.9" height="26" rx="3" fill="#1A6CF7"/>
 <text x="230.9" y="411.9" font-size="12" font-family="Arial,sans-serif" fill="#444">38</text>
