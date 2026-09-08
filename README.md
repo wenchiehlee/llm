@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-08 13:16 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-08 18:05 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-15974-black)
-![](https://img.shields.io/badge/Last_7_Days-3087-blue)
-![](https://img.shields.io/badge/Last_24_Hours-418-green)
+![](https://img.shields.io/badge/Last_7_Days-3353-blue)
+![](https://img.shields.io/badge/Last_24_Hours-684-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -145,7 +145,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `baidu/Unlimited-OCR` | 4152 | 2716 | 384 | N/A |
+| `baidu/Unlimited-OCR` | 4152 | 2982 | 650 | N/A |
 | `whisper-large-v3` | 1479 | 30 | 0 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
@@ -157,7 +157,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| Baidu-OCR | 4154 | 2716 | 384 |
+| Baidu-OCR | 4154 | 2982 | 650 |
 | whisper-transcription | 887 | 30 | 0 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
