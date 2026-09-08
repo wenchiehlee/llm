@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-08 18:05 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-08 22:46 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-15974-black)
-![](https://img.shields.io/badge/Last_7_Days-3353-blue)
-![](https://img.shields.io/badge/Last_24_Hours-684-green)
+![](https://img.shields.io/badge/Last_7_Days-3445-blue)
+![](https://img.shields.io/badge/Last_24_Hours-776-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -39,7 +39,7 @@
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 79 | 1 | 0 | Corrected by powerful model. |
+| Judge Replaced | 79 | 5 | 4 | Corrected by powerful model. |
 | Fallback (Error) | 523 | 16 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 6 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
@@ -47,7 +47,7 @@
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 638 | 23 | 0 |
+| CompanyInfo | 638 | 27 | 4 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -99,14 +99,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1163 | 21 | 0 | N/A |
+| `chatgpt-pro` | 1163 | 33 | 12 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 818 | 21 | 0 |
+| CompanyInfo | 818 | 33 | 12 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
@@ -145,7 +145,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `baidu/Unlimited-OCR` | 4152 | 2982 | 650 | N/A |
+| `baidu/Unlimited-OCR` | 4152 | 3062 | 730 | N/A |
 | `whisper-large-v3` | 1479 | 30 | 0 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
@@ -157,7 +157,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| Baidu-OCR | 4154 | 2982 | 650 |
+| Baidu-OCR | 4154 | 3062 | 730 |
 | whisper-transcription | 887 | 30 | 0 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
