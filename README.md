@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-09 08:37 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-09 13:16 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-16638-black)
-![](https://img.shields.io/badge/Last_7_Days-3561-blue)
-![](https://img.shields.io/badge/Last_24_Hours-140-green)
+![](https://img.shields.io/badge/Last_7_Days-3785-blue)
+![](https://img.shields.io/badge/Last_24_Hours-364-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -56,7 +56,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 8501 | 329 | 76 | N/A |
+| `gemini-2.5-flash` | 8501 | 404 | 151 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -64,12 +64,12 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 7897 | 312 | 76 |
+| GoogleAlertManager | 7897 | 386 | 150 |
 | CompanyInfo | 498 | 14 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 11 | 0 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 11 | 1 | 1 |
 | llm-api | 8 | 0 | 0 |
 | TAIEX_Revenue_History | 5 | 0 | 0 |
 | TravelAPP | 3 | 0 | 0 |
@@ -145,8 +145,8 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `baidu/Unlimited-OCR` | 4770 | 3171 | 64 | N/A |
-| `whisper-large-v3` | 1479 | 30 | 0 | N/A |
+| `baidu/Unlimited-OCR` | 4770 | 3318 | 211 | N/A |
+| `whisper-large-v3` | 1479 | 32 | 2 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -157,8 +157,8 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| Baidu-OCR | 4770 | 3171 | 64 |
-| whisper-transcription | 887 | 30 | 0 |
+| Baidu-OCR | 4770 | 3318 | 211 |
+| whisper-transcription | 887 | 32 | 2 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
