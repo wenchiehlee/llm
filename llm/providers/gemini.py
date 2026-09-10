@@ -98,7 +98,7 @@ class GeminiProvider(BaseProvider):
             cfg_kwargs["response_mime_type"] = "application/json"
 
         for slot, (key_name, api_key) in enumerate(ordered):
-            key_label = f"key#{slot}"  # 不印出 env var 名稱或實際 key
+            key_label = f"{key_name} (slot#{slot})"
             client = genai.Client(api_key=api_key)
             for i, delay in enumerate([0] + _RETRY_DELAYS):
                 if delay:
