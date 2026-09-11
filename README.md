@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-11 07:23 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-11 09:28 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-18178-black)
 ![](https://img.shields.io/badge/Last_7_Days-4049-blue)
@@ -158,7 +158,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 5996 | 3478 | 0 |
-| whisper-transcription | 898 | 39 | 0 |
+| whisper-transcription | 898 | 40 | 1 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
