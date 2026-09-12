@@ -3,22 +3,22 @@
 <text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events by App (All Time)</text>
 <text x="210" y="71.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">GoogleAlertManager</text>
 <rect x="220" y="55" width="610.0" height="26" rx="3" fill="#1A6CF7"/>
-<text x="838.0" y="71.9" font-size="12" font-family="Arial,sans-serif" fill="#444">8324</text>
+<text x="838.0" y="71.9" font-size="12" font-family="Arial,sans-serif" fill="#444">8390</text>
 <text x="210" y="105.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">Baidu-OCR</text>
-<rect x="220" y="89" width="439.4" height="26" rx="3" fill="#00C2A0"/>
-<text x="667.4" y="105.9" font-size="12" font-family="Arial,sans-serif" fill="#444">5996</text>
+<rect x="220" y="89" width="435.9" height="26" rx="3" fill="#00C2A0"/>
+<text x="663.9" y="105.9" font-size="12" font-family="Arial,sans-serif" fill="#444">5996</text>
 <text x="210" y="139.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">CompanyInfo</text>
-<rect x="220" y="123" width="99.1" height="26" rx="3" fill="#F7931A"/>
-<text x="327.1" y="139.9" font-size="12" font-family="Arial,sans-serif" fill="#444">1352</text>
+<rect x="220" y="123" width="98.9" height="26" rx="3" fill="#F7931A"/>
+<text x="326.9" y="139.9" font-size="12" font-family="Arial,sans-serif" fill="#444">1360</text>
 <text x="210" y="173.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-transcription</text>
-<rect x="220" y="157" width="66.0" height="26" rx="3" fill="#A456F0"/>
-<text x="294.0" y="173.9" font-size="12" font-family="Arial,sans-serif" fill="#444">901</text>
+<rect x="220" y="157" width="65.5" height="26" rx="3" fill="#A456F0"/>
+<text x="293.5" y="173.9" font-size="12" font-family="Arial,sans-serif" fill="#444">901</text>
 <text x="210" y="207.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-merge-review</text>
-<rect x="220" y="191" width="45.1" height="26" rx="3" fill="#FF5733"/>
-<text x="273.1" y="207.9" font-size="12" font-family="Arial,sans-serif" fill="#444">616</text>
+<rect x="220" y="191" width="44.8" height="26" rx="3" fill="#FF5733"/>
+<text x="272.8" y="207.9" font-size="12" font-family="Arial,sans-serif" fill="#444">616</text>
 <text x="210" y="241.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-transcription-stage</text>
-<rect x="220" y="225" width="42.4" height="26" rx="3" fill="#20B2AA"/>
-<text x="270.4" y="241.9" font-size="12" font-family="Arial,sans-serif" fill="#444">579</text>
+<rect x="220" y="225" width="42.1" height="26" rx="3" fill="#20B2AA"/>
+<text x="270.1" y="241.9" font-size="12" font-family="Arial,sans-serif" fill="#444">579</text>
 <text x="210" y="275.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">TAIEX_Finguider_Pro</text>
 <rect x="220" y="259" width="8.1" height="26" rx="3" fill="#E91E63"/>
 <text x="236.1" y="275.9" font-size="12" font-family="Arial,sans-serif" fill="#444">111</text>
