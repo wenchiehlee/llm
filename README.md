@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-14 18:58 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-15 01:03 CST*
 
-![](https://img.shields.io/badge/Total_Calls-18406-black)
-![](https://img.shields.io/badge/Last_7_Days-2709-blue)
-![](https://img.shields.io/badge/Last_24_Hours-56-green)
+![](https://img.shields.io/badge/Total_Calls-18470-black)
+![](https://img.shields.io/badge/Last_7_Days-1896-blue)
+![](https://img.shields.io/badge/Last_24_Hours-0-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -39,15 +39,15 @@
 | Status | Total | Last 7D | Last 24H | Description |
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 83 | 4 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 543 | 20 | 0 | Automatic fallback to Gemini. |
+| Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
+| Fallback (Error) | 547 | 24 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 662 | 24 | 0 |
+| CompanyInfo | 666 | 24 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -56,7 +56,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 9006 | 595 | 56 | N/A |
+| `gemini-2.5-flash` | 9066 | 565 | 0 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -64,8 +64,8 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 8381 | 574 | 56 |
-| CompanyInfo | 518 | 20 | 0 |
+| GoogleAlertManager | 8437 | 540 | 0 |
+| CompanyInfo | 522 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -79,8 +79,8 @@
 | debug-probe-app | 1 | 0 | 0 |
 | diagnostic-test | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-8381_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-518_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-8437_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-522_calls-green)
 ![](https://img.shields.io/badge/ConceptStocks-32_calls-orange)
 ![](https://img.shields.io/badge/InvestorEvents-29_calls-red)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-25_calls-purple)
@@ -99,14 +99,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1195 | 32 | 0 | N/A |
+| `chatgpt-pro` | 1199 | 24 | 0 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 850 | 32 | 0 |
+| CompanyInfo | 854 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
@@ -124,7 +124,7 @@
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
 | debug-probe-app | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/CompanyInfo-850_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-854_calls-blue)
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-green)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-82_calls-orange)
 ![](https://img.shields.io/badge/GoogleAlertManager-72_calls-red)
@@ -145,7 +145,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `baidu/Unlimited-OCR` | 5996 | 2065 | 0 | N/A |
+| `baidu/Unlimited-OCR` | 5996 | 1290 | 0 | N/A |
 | `whisper-large-v3` | 1496 | 17 | 0 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
@@ -157,7 +157,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| Baidu-OCR | 5996 | 2065 | 0 |
+| Baidu-OCR | 5996 | 1290 | 0 |
 | whisper-transcription | 904 | 17 | 0 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
