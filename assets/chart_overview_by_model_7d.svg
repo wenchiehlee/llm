@@ -4,42 +4,40 @@
 <line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
 <text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
 <line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">100</text>
+<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">120</text>
 <line x1="65" y1="223" x2="880" y2="223" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">200</text>
+<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">240</text>
 <line x1="65" y1="167" x2="880" y2="167" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">300</text>
+<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">360</text>
 <line x1="65" y1="111" x2="880" y2="111" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">400</text>
+<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">480</text>
 <line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">500</text>
-<rect x="88.3" y="294.7" width="69.9" height="40.3" fill="#1A6CF7"/>
-<rect x="88.3" y="292.4" width="69.9" height="2.2" fill="#F7931A"/>
-<rect x="88.3" y="290.8" width="69.9" height="1.7" fill="#A456F0"/>
-<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/11</text>
-<rect x="204.7" y="295.8" width="69.9" height="39.2" fill="#1A6CF7"/>
-<rect x="204.7" y="293.6" width="69.9" height="2.2" fill="#F7931A"/>
-<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/12</text>
-<rect x="321.1" y="296.9" width="69.9" height="38.1" fill="#1A6CF7"/>
-<rect x="321.1" y="294.7" width="69.9" height="2.2" fill="#F7931A"/>
-<rect x="321.1" y="293.0" width="69.9" height="1.7" fill="#A456F0"/>
-<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/13</text>
-<rect x="437.6" y="301.4" width="69.9" height="33.6" fill="#1A6CF7"/>
-<rect x="437.6" y="299.2" width="69.9" height="2.2" fill="#F7931A"/>
-<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/14</text>
-<rect x="554.0" y="293.6" width="69.9" height="41.4" fill="#1A6CF7"/>
-<rect x="554.0" y="291.3" width="69.9" height="2.2" fill="#F7931A"/>
-<rect x="554.0" y="289.6" width="69.9" height="1.7" fill="#A456F0"/>
-<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/15</text>
-<rect x="670.4" y="248.8" width="69.9" height="86.2" fill="#1A6CF7"/>
-<rect x="670.4" y="246.5" width="69.9" height="2.2" fill="#F7931A"/>
-<rect x="670.4" y="244.8" width="69.9" height="1.7" fill="#A456F0"/>
-<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/16</text>
-<rect x="786.9" y="254.4" width="69.9" height="80.6" fill="#1A6CF7"/>
-<rect x="786.9" y="123.9" width="69.9" height="130.5" fill="#00C2A0"/>
-<rect x="786.9" y="121.6" width="69.9" height="2.2" fill="#F7931A"/>
-<rect x="786.9" y="114.9" width="69.9" height="6.7" fill="#A456F0"/>
-<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/17</text>
+<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">600</text>
+<rect x="88.3" y="302.3" width="69.9" height="32.7" fill="#1A6CF7"/>
+<rect x="88.3" y="300.5" width="69.9" height="1.9" fill="#F7931A"/>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/12</text>
+<rect x="204.7" y="303.3" width="69.9" height="31.7" fill="#1A6CF7"/>
+<rect x="204.7" y="301.4" width="69.9" height="1.9" fill="#F7931A"/>
+<rect x="204.7" y="300.0" width="69.9" height="1.4" fill="#A456F0"/>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/13</text>
+<rect x="321.1" y="307.0" width="69.9" height="28.0" fill="#1A6CF7"/>
+<rect x="321.1" y="305.1" width="69.9" height="1.9" fill="#F7931A"/>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/14</text>
+<rect x="437.6" y="300.5" width="69.9" height="34.5" fill="#1A6CF7"/>
+<rect x="437.6" y="298.6" width="69.9" height="1.9" fill="#F7931A"/>
+<rect x="437.6" y="297.2" width="69.9" height="1.4" fill="#A456F0"/>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/15</text>
+<rect x="554.0" y="263.1" width="69.9" height="71.9" fill="#1A6CF7"/>
+<rect x="554.0" y="261.3" width="69.9" height="1.9" fill="#F7931A"/>
+<rect x="554.0" y="259.9" width="69.9" height="1.4" fill="#A456F0"/>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/16</text>
+<rect x="670.4" y="267.8" width="69.9" height="67.2" fill="#1A6CF7"/>
+<rect x="670.4" y="134.8" width="69.9" height="133.0" fill="#00C2A0"/>
+<rect x="670.4" y="132.9" width="69.9" height="1.9" fill="#F7931A"/>
+<rect x="670.4" y="127.3" width="69.9" height="5.6" fill="#A456F0"/>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/17</text>
+<rect x="786.9" y="233.7" width="69.9" height="101.3" fill="#00C2A0"/>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/18</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">gemini-2.5-flash</text>
 <rect x="202" y="370" width="10" height="10" rx="2" fill="#00C2A0"/>
