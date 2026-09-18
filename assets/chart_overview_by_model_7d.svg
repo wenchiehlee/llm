@@ -4,40 +4,40 @@
 <line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
 <text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
 <line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">140</text>
+<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">160</text>
 <line x1="65" y1="223" x2="880" y2="223" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">280</text>
+<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">320</text>
 <line x1="65" y1="167" x2="880" y2="167" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">420</text>
+<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">480</text>
 <line x1="65" y1="111" x2="880" y2="111" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">560</text>
+<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">640</text>
 <line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">700</text>
-<rect x="88.3" y="307.0" width="69.9" height="28.0" fill="#00C2A0"/>
-<rect x="88.3" y="305.4" width="69.9" height="1.6" fill="#F7931A"/>
+<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">800</text>
+<rect x="88.3" y="310.5" width="69.9" height="24.5" fill="#00C2A0"/>
+<rect x="88.3" y="309.1" width="69.9" height="1.4" fill="#F7931A"/>
 <text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/12</text>
-<rect x="204.7" y="307.8" width="69.9" height="27.2" fill="#00C2A0"/>
-<rect x="204.7" y="306.2" width="69.9" height="1.6" fill="#F7931A"/>
-<rect x="204.7" y="305.0" width="69.9" height="1.2" fill="#A456F0"/>
+<rect x="204.7" y="311.2" width="69.9" height="23.8" fill="#00C2A0"/>
+<rect x="204.7" y="309.8" width="69.9" height="1.4" fill="#F7931A"/>
+<rect x="204.7" y="308.8" width="69.9" height="1.1" fill="#A456F0"/>
 <text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/13</text>
-<rect x="321.1" y="311.0" width="69.9" height="24.0" fill="#00C2A0"/>
-<rect x="321.1" y="309.4" width="69.9" height="1.6" fill="#F7931A"/>
+<rect x="321.1" y="314.0" width="69.9" height="21.0" fill="#00C2A0"/>
+<rect x="321.1" y="312.6" width="69.9" height="1.4" fill="#F7931A"/>
 <text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/14</text>
-<rect x="437.6" y="305.4" width="69.9" height="29.6" fill="#00C2A0"/>
-<rect x="437.6" y="303.8" width="69.9" height="1.6" fill="#F7931A"/>
-<rect x="437.6" y="302.6" width="69.9" height="1.2" fill="#A456F0"/>
+<rect x="437.6" y="309.1" width="69.9" height="25.9" fill="#00C2A0"/>
+<rect x="437.6" y="307.7" width="69.9" height="1.4" fill="#F7931A"/>
+<rect x="437.6" y="306.7" width="69.9" height="1.1" fill="#A456F0"/>
 <text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/15</text>
-<rect x="554.0" y="273.4" width="69.9" height="61.6" fill="#00C2A0"/>
-<rect x="554.0" y="271.8" width="69.9" height="1.6" fill="#F7931A"/>
-<rect x="554.0" y="270.6" width="69.9" height="1.2" fill="#A456F0"/>
+<rect x="554.0" y="281.1" width="69.9" height="53.9" fill="#00C2A0"/>
+<rect x="554.0" y="279.7" width="69.9" height="1.4" fill="#F7931A"/>
+<rect x="554.0" y="278.7" width="69.9" height="1.1" fill="#A456F0"/>
 <text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/16</text>
-<rect x="670.4" y="221.0" width="69.9" height="114.0" fill="#1A6CF7"/>
-<rect x="670.4" y="163.4" width="69.9" height="57.6" fill="#00C2A0"/>
-<rect x="670.4" y="161.8" width="69.9" height="1.6" fill="#F7931A"/>
-<rect x="670.4" y="157.0" width="69.9" height="4.8" fill="#A456F0"/>
+<rect x="670.4" y="235.2" width="69.9" height="99.8" fill="#1A6CF7"/>
+<rect x="670.4" y="184.8" width="69.9" height="50.4" fill="#00C2A0"/>
+<rect x="670.4" y="183.4" width="69.9" height="1.4" fill="#F7931A"/>
+<rect x="670.4" y="179.2" width="69.9" height="4.2" fill="#A456F0"/>
 <text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/17</text>
-<rect x="786.9" y="127.8" width="69.9" height="207.2" fill="#1A6CF7"/>
-<rect x="786.9" y="100.6" width="69.9" height="27.2" fill="#00C2A0"/>
+<rect x="786.9" y="153.7" width="69.9" height="181.3" fill="#1A6CF7"/>
+<rect x="786.9" y="106.1" width="69.9" height="47.6" fill="#00C2A0"/>
 <text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/18</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">baidu/Unlimited-OCR</text>
