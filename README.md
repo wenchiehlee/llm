@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-23 08:55 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-23 14:39 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-20134-black)
-![](https://img.shields.io/badge/Last_7_Days-1492-blue)
-![](https://img.shields.io/badge/Last_24_Hours-70-green)
+![](https://img.shields.io/badge/Last_7_Days-1578-blue)
+![](https://img.shields.io/badge/Last_24_Hours-156-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -56,7 +56,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 9862 | 638 | 70 | N/A |
+| `gemini-2.5-flash` | 9862 | 706 | 138 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -64,7 +64,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 9201 | 614 | 70 |
+| GoogleAlertManager | 9201 | 682 | 138 |
 | CompanyInfo | 554 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -146,7 +146,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6799 | 803 | 0 | N/A |
-| `whisper-large-v3` | 1529 | 27 | 0 | N/A |
+| `whisper-large-v3` | 1529 | 45 | 18 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -158,7 +158,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6799 | 803 | 0 |
-| whisper-transcription | 937 | 27 | 0 |
+| whisper-transcription | 937 | 45 | 18 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
