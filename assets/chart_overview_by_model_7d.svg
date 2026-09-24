@@ -4,44 +4,41 @@
 <line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
 <text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
 <line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">160</text>
+<text x="59" y="283" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">60</text>
 <line x1="65" y1="223" x2="880" y2="223" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">320</text>
+<text x="59" y="227" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">120</text>
 <line x1="65" y1="167" x2="880" y2="167" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">480</text>
+<text x="59" y="171" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">180</text>
 <line x1="65" y1="111" x2="880" y2="111" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">640</text>
+<text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">240</text>
 <line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
-<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">800</text>
-<rect x="88.3" y="286.0" width="69.9" height="49.0" fill="#1A6CF7"/>
-<rect x="88.3" y="104.7" width="69.9" height="181.3" fill="#00C2A0"/>
-<rect x="88.3" y="103.7" width="69.9" height="1.1" fill="#F7931A"/>
-<rect x="88.3" y="102.3" width="69.9" height="1.4" fill="#A456F0"/>
-<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/18</text>
-<rect x="204.7" y="309.8" width="69.9" height="25.2" fill="#1A6CF7"/>
-<rect x="204.7" y="308.8" width="69.9" height="1.1" fill="#F7931A"/>
-<rect x="204.7" y="307.4" width="69.9" height="1.4" fill="#A456F0"/>
-<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/19</text>
-<rect x="321.1" y="310.5" width="69.9" height="24.5" fill="#1A6CF7"/>
-<rect x="321.1" y="309.1" width="69.9" height="1.4" fill="#A456F0"/>
-<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/20</text>
-<rect x="437.6" y="309.8" width="69.9" height="25.2" fill="#1A6CF7"/>
-<rect x="437.6" y="308.8" width="69.9" height="1.1" fill="#F7931A"/>
-<rect x="437.6" y="307.4" width="69.9" height="1.4" fill="#A456F0"/>
-<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/21</text>
-<rect x="554.0" y="310.5" width="69.9" height="24.5" fill="#1A6CF7"/>
-<rect x="554.0" y="308.4" width="69.9" height="2.1" fill="#F7931A"/>
-<rect x="554.0" y="307.0" width="69.9" height="1.4" fill="#A456F0"/>
-<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/22</text>
-<rect x="670.4" y="284.9" width="69.9" height="50.0" fill="#1A6CF7"/>
-<rect x="670.4" y="274.1" width="69.9" height="10.8" fill="#00C2A0"/>
-<rect x="670.4" y="267.8" width="69.9" height="6.3" fill="#F7931A"/>
-<rect x="670.4" y="266.4" width="69.9" height="1.4" fill="#A456F0"/>
-<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/23</text>
-<rect x="786.9" y="285.3" width="69.9" height="49.7" fill="#1A6CF7"/>
-<rect x="786.9" y="275.5" width="69.9" height="9.8" fill="#00C2A0"/>
-<rect x="786.9" y="273.4" width="69.9" height="2.1" fill="#F7931A"/>
-<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/24</text>
+<text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">300</text>
+<rect x="88.3" y="267.8" width="69.9" height="67.2" fill="#1A6CF7"/>
+<rect x="88.3" y="265.0" width="69.9" height="2.8" fill="#F7931A"/>
+<rect x="88.3" y="261.3" width="69.9" height="3.7" fill="#A456F0"/>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/19</text>
+<rect x="204.7" y="269.7" width="69.9" height="65.3" fill="#1A6CF7"/>
+<rect x="204.7" y="265.9" width="69.9" height="3.7" fill="#A456F0"/>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/20</text>
+<rect x="321.1" y="267.8" width="69.9" height="67.2" fill="#1A6CF7"/>
+<rect x="321.1" y="265.0" width="69.9" height="2.8" fill="#F7931A"/>
+<rect x="321.1" y="261.3" width="69.9" height="3.7" fill="#A456F0"/>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/21</text>
+<rect x="437.6" y="269.7" width="69.9" height="65.3" fill="#1A6CF7"/>
+<rect x="437.6" y="264.1" width="69.9" height="5.6" fill="#F7931A"/>
+<rect x="437.6" y="260.3" width="69.9" height="3.7" fill="#A456F0"/>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/22</text>
+<rect x="554.0" y="201.5" width="69.9" height="133.5" fill="#1A6CF7"/>
+<rect x="554.0" y="172.6" width="69.9" height="28.9" fill="#00C2A0"/>
+<rect x="554.0" y="155.8" width="69.9" height="16.8" fill="#F7931A"/>
+<rect x="554.0" y="152.1" width="69.9" height="3.7" fill="#A456F0"/>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/23</text>
+<rect x="670.4" y="198.7" width="69.9" height="136.3" fill="#1A6CF7"/>
+<rect x="670.4" y="172.6" width="69.9" height="26.1" fill="#00C2A0"/>
+<rect x="670.4" y="167.0" width="69.9" height="5.6" fill="#F7931A"/>
+<rect x="670.4" y="163.3" width="69.9" height="3.7" fill="#A456F0"/>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/24</text>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">09/25</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">gemini-2.5-flash</text>
 <rect x="202" y="370" width="10" height="10" rx="2" fill="#00C2A0"/>
