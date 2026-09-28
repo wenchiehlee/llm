@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-28 16:57 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-29 01:48 CST*
 
-![](https://img.shields.io/badge/Total_Calls-20823-black)
-![](https://img.shields.io/badge/Last_7_Days-853-blue)
-![](https://img.shields.io/badge/Last_24_Hours-89-green)
+![](https://img.shields.io/badge/Total_Calls-20926-black)
+![](https://img.shields.io/badge/Last_7_Days-792-blue)
+![](https://img.shields.io/badge/Last_24_Hours-10-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -40,14 +40,14 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 599 | 24 | 0 | Automatic fallback to Gemini. |
+| Fallback (Error) | 603 | 24 | 4 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 718 | 24 | 0 |
+| CompanyInfo | 722 | 24 | 4 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -56,7 +56,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 10419 | 701 | 74 | N/A |
+| `gemini-2.5-flash` | 10497 | 635 | 4 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -64,8 +64,8 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 9716 | 655 | 74 |
-| CompanyInfo | 574 | 24 | 0 |
+| GoogleAlertManager | 9790 | 589 | 0 |
+| CompanyInfo | 578 | 24 | 4 |
 | skill-youtube-channel-srt-keyframe-extract | 34 | 22 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -79,8 +79,8 @@
 | debug-probe-app | 1 | 0 | 0 |
 | diagnostic-test | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-9716_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-574_calls-green)
+![](https://img.shields.io/badge/GoogleAlertManager-9790_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-578_calls-green)
 ![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-34_calls-orange)
 ![](https://img.shields.io/badge/ConceptStocks-32_calls-red)
 ![](https://img.shields.io/badge/InvestorEvents-29_calls-purple)
@@ -99,14 +99,14 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1254 | 27 | 0 | N/A |
+| `chatgpt-pro` | 1258 | 27 | 4 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 906 | 24 | 0 |
+| CompanyInfo | 910 | 24 | 4 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
@@ -124,7 +124,7 @@
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
 | debug-probe-app | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/CompanyInfo-906_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-910_calls-blue)
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-green)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-82_calls-orange)
 ![](https://img.shields.io/badge/GoogleAlertManager-72_calls-red)
@@ -146,7 +146,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6858 | 59 | 0 | N/A |
-| `whisper-large-v3` | 1579 | 66 | 15 | N/A |
+| `whisper-large-v3` | 1600 | 71 | 2 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -158,7 +158,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6858 | 59 | 0 |
-| whisper-transcription | 987 | 66 | 15 |
+| whisper-transcription | 1008 | 71 | 2 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
@@ -169,7 +169,7 @@
 | GoogleAlertManager | 1 | 0 | 0 |
 
 ![](https://img.shields.io/badge/Baidu--OCR-6858_calls-blue)
-![](https://img.shields.io/badge/whisper--transcription-987_calls-green)
+![](https://img.shields.io/badge/whisper--transcription-1008_calls-green)
 ![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-orange)
 ![](https://img.shields.io/badge/whisper--poc--sample-33_calls-red)
 ![](https://img.shields.io/badge/eval--gemma4-26_calls-purple)
