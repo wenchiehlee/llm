@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-30 05:02 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-09-30 08:45 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-21034-black)
-![](https://img.shields.io/badge/Last_7_Days-786-blue)
-![](https://img.shields.io/badge/Last_24_Hours-82-green)
+![](https://img.shields.io/badge/Last_7_Days-789-blue)
+![](https://img.shields.io/badge/Last_24_Hours-85-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -56,7 +56,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 10578 | 646 | 73 | N/A |
+| `gemini-2.5-flash` | 10578 | 649 | 76 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -64,7 +64,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 9867 | 600 | 75 |
+| GoogleAlertManager | 9867 | 603 | 76 |
 | CompanyInfo | 582 | 24 | 0 |
 | skill-youtube-channel-srt-keyframe-extract | 34 | 22 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
