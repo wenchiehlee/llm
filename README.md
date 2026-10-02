@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-03 03:30 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-03 07:16 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-21487-black)
-![](https://img.shields.io/badge/Last_7_Days-791-blue)
-![](https://img.shields.io/badge/Last_24_Hours-0-green)
+![](https://img.shields.io/badge/Last_7_Days-868-blue)
+![](https://img.shields.io/badge/Last_24_Hours-77-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -56,7 +56,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 10816 | 503 | 0 | N/A |
+| `gemini-2.5-flash` | 10816 | 577 | 74 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -64,7 +64,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 10093 | 457 | 0 |
+| GoogleAlertManager | 10093 | 531 | 74 |
 | CompanyInfo | 594 | 24 | 0 |
 | skill-youtube-channel-srt-keyframe-extract | 34 | 22 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
@@ -146,7 +146,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6968 | 110 | 0 | N/A |
-| `whisper-large-v3` | 1716 | 151 | 0 | N/A |
+| `whisper-large-v3` | 1716 | 154 | 3 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -158,7 +158,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6920 | 62 | 0 |
-| whisper-transcription | 1124 | 151 | 0 |
+| whisper-transcription | 1124 | 154 | 3 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 48 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
