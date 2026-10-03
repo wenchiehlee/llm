@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-03 16:33 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-03 18:59 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-21487-black)
-![](https://img.shields.io/badge/Last_7_Days-874-blue)
-![](https://img.shields.io/badge/Last_24_Hours-83-green)
+![](https://img.shields.io/badge/Last_7_Days-879-blue)
+![](https://img.shields.io/badge/Last_24_Hours-88-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -99,7 +99,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1274 | 27 | 0 | N/A |
+| `chatgpt-pro` | 1274 | 28 | 1 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -114,7 +114,7 @@
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | ConceptStocks | 27 | 0 | 0 |
 | InvestorEvents | 23 | 0 | 0 |
-| llm-api | 22 | 0 | 0 |
+| llm-api | 22 | 1 | 1 |
 | ServerSmartTest | 14 | 0 | 0 |
 | TAIEX_Compare | 10 | 0 | 0 |
 | TAIEX_Finguider_Gen | 7 | 0 | 0 |
@@ -146,7 +146,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6968 | 110 | 0 | N/A |
-| `whisper-large-v3` | 1716 | 160 | 9 | N/A |
+| `whisper-large-v3` | 1716 | 164 | 13 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -158,7 +158,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6920 | 62 | 0 |
-| whisper-transcription | 1124 | 161 | 10 |
+| whisper-transcription | 1124 | 164 | 13 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 48 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
