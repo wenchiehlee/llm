@@ -17,10 +17,9 @@ from llm import LLMClient
 
 def main():
     print("=== Server-Side Smart Routing Test (Gemini-CLI Reflection) ===\n")
-    
-    url = os.getenv("CODEX_API_URL")
-    if not url:
-        print("[SKIP] Missing CODEX_API_URL.")
+
+    if not os.getenv("CODEX_API_KEY"):
+        print("[SKIP] Missing CODEX_API_KEY.")
         return
 
     # 初始化客戶端
@@ -38,14 +37,14 @@ def main():
 
     print(f"--- Calling generate_smart with draft_provider='codex' ---")
     print("This should trigger NAS-side gemini-cli -> gemini-cli reflection.")
-    
+
     for i in range(2):
         print(f"\n[Call {i+1}]")
         # 當 draft_provider="codex" 且未指定 judge_provider 時，會走 Server-side 路由
         result = client.generate_smart(task, prompt, draft_provider="codex")
         print(f"Result: {result}")
         print(f"Last Provider: {client.last_provider}")
-        
+
     print("\n--- Test Finished ---")
     print("Check Llm-Cli-APIServer logs to verify it used /smart/exec.")
 

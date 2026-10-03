@@ -24,11 +24,10 @@ def check(label: str, passed: bool, detail: str = "") -> None:
 def main():
     print("=== Gemini via Codex provider test ===\n")
 
-    url = os.getenv("CODEX_API_URL")
     key = os.getenv("CODEX_API_KEY")
 
-    if not url or not key:
-        print("[SKIP] Missing env vars: CODEX_API_URL or CODEX_API_KEY")
+    if not key:
+        print("[SKIP] Missing env var: CODEX_API_KEY")
         sys.exit(0)
 
     # 1. init with gemini model
@@ -39,7 +38,7 @@ def main():
         check("Codex init", False, str(e))
         return
 
-    check("Codex init", True, f"model={client.last_model} url={url}")
+    check("Codex init", True, f"model={client.last_model}")
 
     # 2. plain text
     print("\nTesting generate() via Gemini endpoint...")

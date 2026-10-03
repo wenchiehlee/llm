@@ -220,7 +220,6 @@ dependencies = [
 - `GEMINI_SKIP_KEYS`: 以逗號分隔，指定要手動跳過的金鑰名稱。
 
 ### 2. LLM CLI API Server (遠端 CLI 橋接)
-- `CODEX_API_URL`: 伺服器網址 (例如 `https://api.wenchiehlee.synology.me:8443`)。
 - `CODEX_API_KEY`: 存取伺服器的驗證金鑰。
 - *註：伺服器需預先安裝 `codex-cli` 與 `gemini-cli`。*
 
