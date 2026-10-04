@@ -15,7 +15,15 @@ from . import BaseProvider
 logger = logging.getLogger(__name__)
 
 _RETRY_DELAYS = [5, 15, 30]
-MAX_PROMPT_LENGTH = 50_000
+def _prompt_limit() -> int:
+    raw = os.getenv("GEMINI_MAX_PROMPT_LENGTH", "60000").strip()
+    try:
+        return max(int(raw), 0)
+    except ValueError:
+        return 60_000
+
+
+MAX_PROMPT_LENGTH = _prompt_limit()
 
 
 class GeminiProvider(BaseProvider):
@@ -81,7 +89,7 @@ class GeminiProvider(BaseProvider):
         return "PerDay" in err_str or "per_day" in err_str.lower() or "daily" in err_str.lower()
 
     def generate(self, prompt: str, *, json_mode: bool = False, max_tokens: int = 8192) -> str:
-        if len(prompt) > MAX_PROMPT_LENGTH:
+        if MAX_PROMPT_LENGTH and len(prompt) > MAX_PROMPT_LENGTH:
             raise ValueError(f"Prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
         available = [(n, k) for n, k in self._get_keys() if k not in self._exhausted]
         if not available:

@@ -221,6 +221,9 @@ dependencies = [
 
 ### 2. LLM CLI API Server (遠端 CLI 橋接)
 - `CODEX_API_KEY`: 存取伺服器的驗證金鑰。
+- `LLM_MAX_PROMPT_LENGTH`: 統一 client-level prompt guard；設為 `0`（預設）表示不設全域上限。
+- `CODEX_MAX_PROMPT_LENGTH`: Codex provider 的本地 prompt guard；設為 `0` 可停用，但遠端 bridge 仍可能有自己的限制。
+- `GEMINI_MAX_PROMPT_LENGTH`: Gemini provider 的本地 prompt guard。
 - *註：伺服器需預先安裝 `codex-cli` 與 `gemini-cli`。*
 
 ### 3. MLX API Server (本地推論)

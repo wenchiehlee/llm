@@ -12,7 +12,17 @@ from . import BaseProvider
 
 logger = logging.getLogger(__name__)
 
-MAX_PROMPT_LENGTH = 50_000  # 與 LLM-CLI-APIServer CODEX_MAX_PROMPT_LENGTH 一致
+def _prompt_limit() -> int:
+    raw = os.getenv("CODEX_MAX_PROMPT_LENGTH", "60000").strip()
+    try:
+        return max(int(raw), 0)
+    except ValueError:
+        logger.warning("忽略無效的 CODEX_MAX_PROMPT_LENGTH=%r；使用 60000", raw)
+        return 60_000
+
+
+# 0 表示停用本地 guard；遠端 LLM-CLI-APIServer 仍可能有自己的上限。
+MAX_PROMPT_LENGTH = _prompt_limit()
 _CONNECT_TIMEOUT = 10       # 連線建立上限（秒）
 _READ_TIMEOUT = 180         # codex exec 最長執行時間（秒）
 _PROBE_CONNECT_TIMEOUT = 1.5  # 健康檢查連線上限（秒）
@@ -183,8 +193,11 @@ class CodexProvider(BaseProvider):
         raise RuntimeError("CodexProvider: 無可用的伺服器 URL")
 
     def generate(self, prompt: str, *, json_mode: bool = False, max_tokens: int = 8192) -> str:
-        if len(prompt) > MAX_PROMPT_LENGTH:
-            raise ValueError(f"Prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
+        if MAX_PROMPT_LENGTH and len(prompt) > MAX_PROMPT_LENGTH:
+            raise ValueError(
+                f"Prompt 超過 Codex client 限制（{len(prompt)} > {MAX_PROMPT_LENGTH}）；"
+                "可設定 CODEX_MAX_PROMPT_LENGTH，或設為 0 停用本地 guard。"
+            )
 
         # 若模型屬於 agy 目前已知的 family（Gemini/Claude/GPT-OSS），走 /gemini/exec 端點
         if _wants_agy(self.model):
@@ -215,8 +228,11 @@ class CodexProvider(BaseProvider):
         max_tokens: int = 8192,
     ) -> str:
         """調用伺服器端的智慧路由端點 (消除網路延遲)。"""
-        if len(prompt) > MAX_PROMPT_LENGTH:
-            raise ValueError(f"Prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
+        if MAX_PROMPT_LENGTH and len(prompt) > MAX_PROMPT_LENGTH:
+            raise ValueError(
+                f"Prompt 超過 Codex client 限制（{len(prompt)} > {MAX_PROMPT_LENGTH}）；"
+                "可設定 CODEX_MAX_PROMPT_LENGTH，或設為 0 停用本地 guard。"
+            )
 
         candidate_model = model or self.model
         resolved_model = candidate_model if _wants_agy(candidate_model) else ""

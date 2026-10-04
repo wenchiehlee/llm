@@ -13,7 +13,20 @@ from .analytics.amplitude import LLMCallTracker, configure as amplitude_configur
 logger = logging.getLogger(__name__)
 
 _DEFAULT_CHAIN = ["gemini", "codex", "mlx"]  # 優先順序：gemini → codex → mlx(本機)
-MAX_PROMPT_LENGTH = 50_000
+def _env_limit(name: str, default: int) -> int:
+    raw = os.getenv(name, "").strip()
+    if not raw:
+        return default
+    try:
+        value = int(raw)
+    except ValueError:
+        logger.warning("忽略無效的 %s=%r；使用預設值 %d", name, raw, default)
+        return default
+    return max(value, 0)
+
+
+# 0 表示不做 client-level global guard；各 provider 仍可有自己的限制。
+MAX_PROMPT_LENGTH = _env_limit("LLM_MAX_PROMPT_LENGTH", 60_000)
 
 
 def _build_provider(name: str, model: str | None = None) -> BaseProvider:
@@ -292,14 +305,17 @@ class LLMClient:
             raise ValueError("prompt 不能為空")
 
         providers = self._resolve_providers(provider, model)
-        if len(prompt) > MAX_PROMPT_LENGTH:
+        if MAX_PROMPT_LENGTH and len(prompt) > MAX_PROMPT_LENGTH:
             p = providers[0]
             with LLMCallTracker(
                 p.name, p.model, prompt, model_repo=getattr(p, "model_repo", ""),
                 routing_task=routing_task, draft_provider=draft_provider,
                 smart_route_status=smart_route_status
             ):
-                raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
+                raise ValueError(
+                    f"prompt 超過 client 全域限制（{len(prompt)} > {MAX_PROMPT_LENGTH}）；"
+                    "可設定 LLM_MAX_PROMPT_LENGTH，或設為 0 停用全域 guard。"
+                )
 
         last_exc: Exception | None = None
         for p in providers:
@@ -337,14 +353,17 @@ class LLMClient:
             raise ValueError("prompt 不能為空")
 
         providers = self._resolve_providers(provider, model)
-        if len(prompt) > MAX_PROMPT_LENGTH:
+        if MAX_PROMPT_LENGTH and len(prompt) > MAX_PROMPT_LENGTH:
             p = providers[0]
             with LLMCallTracker(
                 p.name, p.model, prompt, model_repo=getattr(p, "model_repo", ""),
                 routing_task=routing_task, draft_provider=draft_provider,
                 smart_route_status=smart_route_status
             ):
-                raise ValueError(f"prompt 超過長度上限（{len(prompt)} > {MAX_PROMPT_LENGTH}）")
+                raise ValueError(
+                    f"prompt 超過 client 全域限制（{len(prompt)} > {MAX_PROMPT_LENGTH}）；"
+                    "可設定 LLM_MAX_PROMPT_LENGTH，或設為 0 停用全域 guard。"
+                )
 
         last_exc: Exception | None = None
         for p in providers:
