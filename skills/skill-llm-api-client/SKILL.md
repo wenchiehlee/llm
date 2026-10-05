@@ -159,8 +159,6 @@ python skills/skill-llm-api-client/scripts/check_env_consistency.py
 ```
 
 此檢查只比對變數名稱與是否存在，不會讀取或輸出任何 secret 值。它會確認必要的
-Prompt 長度 guard 可用 `LLM_MAX_PROMPT_LENGTH`、`CODEX_MAX_PROMPT_LENGTH` 與 `GEMINI_MAX_PROMPT_LENGTH` 設定；設為 `0` 只會停用本地 guard，遠端 server 的上限仍須另行調整。
-
 `CODEX_API_KEY`、`GEMINI_API_KEY` 在本機 `.env` 存在，且 workflow
 中所有 `secrets.NAME` 都能在 `.env` 找到。`MLX_API_URL`、`MLX_SERVER_API_KEY` 是
 本機 MLX provider 設定，若 workflow 未注入會列為提示而非錯誤。
