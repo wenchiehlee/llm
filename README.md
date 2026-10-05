@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-05 09:16 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-05 15:41 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-21648-black)
-![](https://img.shields.io/badge/Last_7_Days-773-blue)
-![](https://img.shields.io/badge/Last_24_Hours-41-green)
+![](https://img.shields.io/badge/Last_7_Days-806-blue)
+![](https://img.shields.io/badge/Last_24_Hours-74-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -40,7 +40,7 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 663 | 101 | 37 | Automatic fallback to Gemini. |
+| Fallback (Error) | 663 | 134 | 70 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
@@ -48,7 +48,7 @@
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
 | CompanyInfo | 746 | 28 | 0 |
-| GoogleAlertManager | 36 | 73 | 37 |
+| GoogleAlertManager | 36 | 106 | 70 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 10937 | 485 | 41 | N/A |
+| `gemini-2.5-flash` | 10937 | 518 | 74 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -65,7 +65,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 10206 | 457 | 41 |
+| GoogleAlertManager | 10206 | 490 | 74 |
 | CompanyInfo | 602 | 28 | 0 |
 | skill-youtube-channel-srt-keyframe-extract | 34 | 0 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
