@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-07 09:49 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-07 17:15 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-21772-black)
-![](https://img.shields.io/badge/Last_7_Days-565-blue)
-![](https://img.shields.io/badge/Last_24_Hours-31-green)
+![](https://img.shields.io/badge/Last_7_Days-596-blue)
+![](https://img.shields.io/badge/Last_24_Hours-62-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -40,7 +40,7 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 769 | 187 | 29 | Automatic fallback to Gemini. |
+| Fallback (Error) | 769 | 214 | 56 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
@@ -48,7 +48,7 @@
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
 | CompanyInfo | 754 | 24 | 0 |
-| GoogleAlertManager | 134 | 163 | 29 |
+| GoogleAlertManager | 134 | 190 | 56 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 11047 | 420 | 31 | N/A |
+| `gemini-2.5-flash` | 11047 | 448 | 59 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -65,7 +65,7 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 10308 | 396 | 31 |
+| GoogleAlertManager | 10308 | 424 | 59 |
 | CompanyInfo | 610 | 24 | 0 |
 | skill-youtube-channel-srt-keyframe-extract | 34 | 0 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
@@ -147,7 +147,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6968 | 5 | 0 | N/A |
-| `whisper-large-v3` | 1753 | 115 | 0 | N/A |
+| `whisper-large-v3` | 1753 | 118 | 3 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -159,7 +159,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6920 | 5 | 0 |
-| whisper-transcription | 1161 | 115 | 0 |
+| whisper-transcription | 1161 | 118 | 3 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
