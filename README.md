@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-12 07:59 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-12 14:32 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-22162-black)
-![](https://img.shields.io/badge/Last_7_Days-440-blue)
-![](https://img.shields.io/badge/Last_24_Hours-48-green)
+![](https://img.shields.io/badge/Last_7_Days-459-blue)
+![](https://img.shields.io/badge/Last_24_Hours-67-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 11273 | 262 | 37 | N/A |
+| `gemini-2.5-flash` | 11273 | 274 | 49 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -67,7 +67,7 @@
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 10504 | 224 | 27 |
 | CompanyInfo | 630 | 28 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 44 | 10 | 10 |
+| skill-youtube-channel-srt-keyframe-extract | 44 | 22 | 22 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -100,7 +100,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1313 | 30 | 2 | N/A |
+| `chatgpt-pro` | 1313 | 34 | 6 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -111,7 +111,7 @@
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 44 | 2 | 2 |
+| skill-youtube-channel-srt-keyframe-extract | 44 | 6 | 6 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | ConceptStocks | 27 | 0 | 0 |
 | InvestorEvents | 23 | 0 | 0 |
@@ -147,7 +147,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6972 | 4 | 0 | N/A |
-| `whisper-large-v3` | 1891 | 144 | 9 | N/A |
+| `whisper-large-v3` | 1891 | 147 | 12 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -159,7 +159,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6924 | 4 | 0 |
-| whisper-transcription | 1299 | 144 | 9 |
+| whisper-transcription | 1299 | 147 | 12 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
