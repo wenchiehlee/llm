@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-16 09:39 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-16 19:54 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-22596-black)
-![](https://img.shields.io/badge/Last_7_Days-655-blue)
-![](https://img.shields.io/badge/Last_24_Hours-63-green)
+![](https://img.shields.io/badge/Last_7_Days-721-blue)
+![](https://img.shields.io/badge/Last_24_Hours-129-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -40,7 +40,7 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 1148 | 292 | 35 | Automatic fallback to Gemini. |
+| Fallback (Error) | 1148 | 319 | 62 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
@@ -48,7 +48,7 @@
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
 | CompanyInfo | 790 | 24 | 0 |
-| GoogleAlertManager | 477 | 268 | 35 |
+| GoogleAlertManager | 477 | 295 | 62 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 11574 | 454 | 54 | N/A |
+| `gemini-2.5-flash` | 11574 | 503 | 103 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -65,9 +65,9 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 10661 | 274 | 36 |
+| GoogleAlertManager | 10661 | 302 | 64 |
 | CompanyInfo | 646 | 24 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 172 | 156 | 18 |
+| skill-youtube-channel-srt-keyframe-extract | 172 | 177 | 39 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -100,7 +100,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1365 | 67 | 5 | N/A |
+| `chatgpt-pro` | 1365 | 73 | 11 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
@@ -110,7 +110,7 @@
 | CompanyInfo | 978 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 80 | 43 | 5 |
+| skill-youtube-channel-srt-keyframe-extract | 80 | 49 | 11 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
 | ConceptStocks | 27 | 0 | 0 |
@@ -147,7 +147,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6972 | 4 | 0 | N/A |
-| `whisper-large-v3` | 1972 | 130 | 4 | N/A |
+| `whisper-large-v3` | 1972 | 141 | 15 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -159,7 +159,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6924 | 4 | 0 |
-| whisper-transcription | 1380 | 130 | 4 |
+| whisper-transcription | 1380 | 141 | 15 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
