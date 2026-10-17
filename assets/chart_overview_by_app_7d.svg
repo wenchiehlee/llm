@@ -43,8 +43,9 @@
 <rect x="670.4" y="194.1" width="69.9" height="7.5" fill="#A456F0"/>
 <rect x="670.4" y="192.2" width="69.9" height="1.9" fill="#FF5733"/>
 <text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">10/16</text>
-<rect x="786.9" y="302.3" width="69.9" height="32.7" fill="#1A6CF7"/>
-<rect x="786.9" y="283.7" width="69.9" height="18.7" fill="#00C2A0"/>
+<rect x="786.9" y="276.2" width="69.9" height="58.8" fill="#1A6CF7"/>
+<rect x="786.9" y="246.3" width="69.9" height="29.9" fill="#00C2A0"/>
+<rect x="786.9" y="243.5" width="69.9" height="2.8" fill="#F7931A"/>
 <text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">10/17</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">GoogleAlertManager</text>
