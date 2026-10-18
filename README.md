@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-18 17:53 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-19 01:33 CST*
 
-![](https://img.shields.io/badge/Total_Calls-22894-black)
-![](https://img.shields.io/badge/Last_7_Days-872-blue)
-![](https://img.shields.io/badge/Last_24_Hours-93-green)
+![](https://img.shields.io/badge/Total_Calls-23011-black)
+![](https://img.shields.io/badge/Last_7_Days-826-blue)
+![](https://img.shields.io/badge/Last_24_Hours-2-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -40,15 +40,15 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 1278 | 349 | 24 | Automatic fallback to Gemini. |
+| Fallback (Error) | 1306 | 326 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| CompanyInfo | 798 | 24 | 0 |
-| GoogleAlertManager | 599 | 325 | 24 |
+| CompanyInfo | 802 | 28 | 0 |
+| GoogleAlertManager | 623 | 298 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 11803 | 633 | 66 | N/A |
+| `gemini-2.5-flash` | 11882 | 597 | 1 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -65,9 +65,9 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 10788 | 335 | 24 |
-| CompanyInfo | 654 | 24 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 266 | 274 | 42 |
+| GoogleAlertManager | 10812 | 308 | 0 |
+| CompanyInfo | 658 | 28 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 317 | 261 | 1 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -80,9 +80,9 @@
 | debug-probe-app | 1 | 0 | 0 |
 | diagnostic-test | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-10788_calls-blue)
-![](https://img.shields.io/badge/CompanyInfo-654_calls-green)
-![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-266_calls-orange)
+![](https://img.shields.io/badge/GoogleAlertManager-10812_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-658_calls-green)
+![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-317_calls-orange)
 ![](https://img.shields.io/badge/ConceptStocks-32_calls-red)
 ![](https://img.shields.io/badge/InvestorEvents-29_calls-purple)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-25_calls-yellowgreen)
@@ -100,16 +100,16 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `chatgpt-pro` | 1398 | 99 | 12 | N/A |
+| `chatgpt-pro` | 1417 | 100 | 0 | N/A |
 | `codex` | 616 | 0 | 0 | N/A |
 
 #### All Applications
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| CompanyInfo | 986 | 24 | 0 |
+| CompanyInfo | 990 | 28 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 105 | 75 | 12 |
+| skill-youtube-channel-srt-keyframe-extract | 120 | 72 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
@@ -125,9 +125,9 @@
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
 | debug-probe-app | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/CompanyInfo-986_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-990_calls-blue)
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-green)
-![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-105_calls-orange)
+![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-120_calls-orange)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-82_calls-red)
 ![](https://img.shields.io/badge/GoogleAlertManager-72_calls-purple)
 ![](https://img.shields.io/badge/TAIEX_Revenue_History-33_calls-yellowgreen)
@@ -147,7 +147,7 @@
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
 | `baidu/Unlimited-OCR` | 6974 | 2 | 0 | N/A |
-| `whisper-large-v3` | 2006 | 138 | 15 | N/A |
+| `whisper-large-v3` | 2024 | 127 | 1 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
 | `mlx-gemma4` | 20 | 0 | 0 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
@@ -159,7 +159,7 @@
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
 | Baidu-OCR | 6926 | 2 | 0 |
-| whisper-transcription | 1414 | 138 | 15 |
+| whisper-transcription | 1433 | 128 | 2 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
@@ -171,7 +171,7 @@
 | GoogleAlertManager | 1 | 0 | 0 |
 
 ![](https://img.shields.io/badge/Baidu--OCR-6926_calls-blue)
-![](https://img.shields.io/badge/whisper--transcription-1414_calls-green)
+![](https://img.shields.io/badge/whisper--transcription-1433_calls-green)
 ![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-orange)
 ![](https://img.shields.io/badge/ocr--engine--benchmark-48_calls-red)
 ![](https://img.shields.io/badge/whisper--poc--sample-33_calls-purple)
