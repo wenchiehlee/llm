@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 01:13 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 03:57 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-24049-black)
-![](https://img.shields.io/badge/Last_7_Days-941-blue)
-![](https://img.shields.io/badge/Last_24_Hours-0-green)
+![](https://img.shields.io/badge/Last_7_Days-963-blue)
+![](https://img.shields.io/badge/Last_24_Hours-22-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -40,14 +40,14 @@
 |--------|-------|---------|----------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 1664 | 324 | 0 | Automatic fallback to Gemini. |
+| Fallback (Error) | 1664 | 331 | 7 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Total | Last 7D | Last 24H |
 |-----|-------|---------|----------|
-| GoogleAlertManager | 953 | 300 | 0 |
+| GoogleAlertManager | 953 | 307 | 7 |
 | CompanyInfo | 830 | 24 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 12611 | 664 | 0 | N/A |
+| `gemini-2.5-flash` | 12611 | 685 | 21 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -65,9 +65,9 @@
 
 | Application | Total Calls | Last 7D | Last 24H |
 |-------------|-------------|---------|----------|
-| GoogleAlertManager | 11159 | 317 | 0 |
+| GoogleAlertManager | 11159 | 325 | 8 |
 | CompanyInfo | 686 | 24 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 671 | 323 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 671 | 336 | 13 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -149,7 +149,7 @@
 | `baidu/Unlimited-OCR` | 6974 | 0 | 0 | N/A |
 | `whisper-large-v3` | 2209 | 168 | 0 | N/A |
 | `mlx-qwen3` | 44 | 0 | 0 | N/A |
-| `mlx-gemma4` | 20 | 0 | 0 | N/A |
+| `mlx-gemma4` | 20 | 1 | 1 | N/A |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 | N/A |
 | `whisper-large-v3-turbo` | 6 | 0 | 0 | N/A |
 | `distil-whisper-large-v3` | 1 | 0 | 0 | N/A |
