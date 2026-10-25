@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-25 06:43 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-25 09:38 CST*
 
 ![](https://img.shields.io/badge/Total_Calls-23946-black)
-![](https://img.shields.io/badge/Last_7_Days-973-blue)
-![](https://img.shields.io/badge/Last_24_Hours-35-green)
+![](https://img.shields.io/badge/Last_7_Days-975-blue)
+![](https://img.shields.io/badge/Last_24_Hours-37-green)
 
 
 ![](./assets/chart_overview_by_app_7d.svg)
@@ -57,7 +57,7 @@
 
 | Model | Total Calls | Last 7D | Last 24H | Avg Duration |
 |-------|-------------|---------|----------|--------------|
-| `gemini-2.5-flash` | 12524 | 673 | 30 | N/A |
+| `gemini-2.5-flash` | 12524 | 675 | 32 | N/A |
 | `gemini-2.0-flash` | 10 | 0 | 0 | N/A |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 | N/A |
 
@@ -67,7 +67,7 @@
 |-------------|-------------|---------|----------|
 | GoogleAlertManager | 11137 | 330 | 5 |
 | CompanyInfo | 682 | 24 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 610 | 319 | 25 |
+| skill-youtube-channel-srt-keyframe-extract | 610 | 322 | 28 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
