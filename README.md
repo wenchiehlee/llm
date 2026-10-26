@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 14:02 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 15:01 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24125-black)
 ![](https://img.shields.io/badge/Last_7_Calendar_Days-1017-blue)
@@ -148,10 +148,10 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `baidu/Unlimited-OCR` | 6978 | 4 | 4 |
+| `baidu/Unlimited-OCR` | 6978 | 6 | 6 |
 | `whisper-large-v3` | 2209 | 168 | 0 |
 | `mlx-qwen3` | 44 | 0 | 0 |
-| `mlx-gemma4` | 29 | 9 | 9 |
+| `mlx-gemma4` | 29 | 11 | 11 |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
 | `whisper-large-v3-turbo` | 6 | 0 | 0 |
 | `distil-whisper-large-v3` | 1 | 0 | 0 |
@@ -167,7 +167,7 @@
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
-| Synology-Photo-Tagger | 13 | 13 | 13 |
+| Synology-Photo-Tagger | 13 | 17 | 17 |
 | SmartTest | 8 | 0 | 0 |
 | test-mlx-gemma4 | 5 | 0 | 0 |
 | TAIEX_Finguider_Pro | 4 | 0 | 0 |
@@ -186,11 +186,11 @@
 | eval-gemma4 | mlx-gemma4 | 13 | 0 | 0 |
 | eval-gemma4 | mlx-qwen3 | 13 | 0 | 0 |
 | whisper-transcription | mlx-community/whisper-large-v3-turbo | 13 | 0 | 0 |
-| Synology-Photo-Tagger | mlx-gemma4 | 9 | 9 | 9 |
+| Synology-Photo-Tagger | mlx-gemma4 | 9 | 11 | 11 |
 | SmartTest | mlx-qwen3 | 8 | 0 | 0 |
 | whisper-transcription | whisper-large-v3-turbo | 6 | 0 | 0 |
 | test-mlx-gemma4 | mlx-gemma4 | 5 | 0 | 0 |
-| Synology-Photo-Tagger | Baidu OCR | 4 | 4 | 4 |
+| Synology-Photo-Tagger | Baidu OCR | 4 | 6 | 6 |
 | TAIEX_Finguider_Pro | mlx-gemma4 | 2 | 0 | 0 |
 | TAIEX_Finguider_Pro | mlx-qwen3 | 2 | 0 | 0 |
 | GoogleAlertManager | mlx-qwen3 | 1 | 0 | 0 |
