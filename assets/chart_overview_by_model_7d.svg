@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420">
 <rect width="900" height="420" fill="white"/>
-<text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events by Model (Last 7 Days)</text>
+<text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Total events by Model (Last 7 Calendar Days)</text>
 <line x1="65" y1="335" x2="880" y2="335" stroke="#EEEEEE" stroke-width="1"/>
 <text x="59" y="339" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">0</text>
 <line x1="65" y1="279" x2="880" y2="279" stroke="#EEEEEE" stroke-width="1"/>
