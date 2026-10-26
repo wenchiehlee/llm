@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 13:59 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 14:02 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24125-black)
 ![](https://img.shields.io/badge/Last_7_Calendar_Days-1017-blue)
@@ -177,24 +177,24 @@
 
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
-| Baidu-OCR; baidu/Unlimited-OCR | (unknown) | 6926 | 0 | 0 |
-| whisper-transcription; whisper-large-v3 | (unknown) | 1598 | 168 | 0 |
-| whisper-transcription-stage; whisper-large-v3 | (unknown) | 578 | 0 | 0 |
-| ocr-engine-benchmark; baidu/Unlimited-OCR | (unknown) | 48 | 0 | 0 |
-| whisper-poc-sample; whisper-large-v3 | (unknown) | 33 | 0 | 0 |
-| test-mlx; mlx-qwen3 | (unknown) | 20 | 0 | 0 |
-| eval-gemma4; mlx-gemma4 | (unknown) | 13 | 0 | 0 |
-| eval-gemma4; mlx-qwen3 | (unknown) | 13 | 0 | 0 |
-| whisper-transcription; mlx-community/whisper-large-v3-turbo | (unknown) | 13 | 0 | 0 |
-| Synology-Photo-Tagger; mlx-gemma4 | (unknown) | 9 | 9 | 9 |
-| SmartTest; mlx-qwen3 | (unknown) | 8 | 0 | 0 |
-| whisper-transcription; whisper-large-v3-turbo | (unknown) | 6 | 0 | 0 |
-| test-mlx-gemma4; mlx-gemma4 | (unknown) | 5 | 0 | 0 |
-| Synology-Photo-Tagger; baidu/Unlimited-OCR | (unknown) | 4 | 4 | 4 |
-| TAIEX_Finguider_Pro; mlx-gemma4 | (unknown) | 2 | 0 | 0 |
-| TAIEX_Finguider_Pro; mlx-qwen3 | (unknown) | 2 | 0 | 0 |
-| GoogleAlertManager; mlx-qwen3 | (unknown) | 1 | 0 | 0 |
-| whisper-transcription-stage; distil-whisper-large-v3 | (unknown) | 1 | 0 | 0 |
+| Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
+| whisper-transcription | whisper-large-v3 | 1598 | 168 | 0 |
+| whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
+| ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
+| whisper-poc-sample | whisper-large-v3 | 33 | 0 | 0 |
+| test-mlx | mlx-qwen3 | 20 | 0 | 0 |
+| eval-gemma4 | mlx-gemma4 | 13 | 0 | 0 |
+| eval-gemma4 | mlx-qwen3 | 13 | 0 | 0 |
+| whisper-transcription | mlx-community/whisper-large-v3-turbo | 13 | 0 | 0 |
+| Synology-Photo-Tagger | mlx-gemma4 | 9 | 9 | 9 |
+| SmartTest | mlx-qwen3 | 8 | 0 | 0 |
+| whisper-transcription | whisper-large-v3-turbo | 6 | 0 | 0 |
+| test-mlx-gemma4 | mlx-gemma4 | 5 | 0 | 0 |
+| Synology-Photo-Tagger | Baidu OCR | 4 | 4 | 4 |
+| TAIEX_Finguider_Pro | mlx-gemma4 | 2 | 0 | 0 |
+| TAIEX_Finguider_Pro | mlx-qwen3 | 2 | 0 | 0 |
+| GoogleAlertManager | mlx-qwen3 | 1 | 0 | 0 |
+| whisper-transcription-stage | distil-whisper-large-v3 | 1 | 0 | 0 |
 
 ![](https://img.shields.io/badge/Baidu--OCR-6926_calls-blue)
 ![](https://img.shields.io/badge/whisper--transcription-1617_calls-green)
