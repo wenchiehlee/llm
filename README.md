@@ -18,7 +18,7 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 13:55 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 13:59 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24125-black)
 ![](https://img.shields.io/badge/Last_7_Calendar_Days-1017-blue)
@@ -33,21 +33,181 @@
 
 ![](./assets/chart_total_by_app.svg)
 
+![](./assets/chart_total_by_model.svg)
+
 
 ### Smart Routing (Efficiency)
 
 | Status | Past 365 Calendar Days | Last 7 Calendar Days | Today | Description |
 |--------|------------------------|--------------------|-------|-------------|
-| Draft Passed | 0 | 0 | 0 | Saved powerful model cost. |
-| Judge Replaced | 0 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 0 | 0 | 0 | Automatic fallback to Gemini. |
-| NAS Reflection | 0 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
+| Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
+| Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
+| Fallback (Error) | 1686 | 346 | 22 | Automatic fallback to Gemini. |
+| NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-----|------------------------|--------------------|-------|
-| (missing app_name) | 16 | 24 | 22 |
+| GoogleAlertManager | 975 | 322 | 22 |
+| CompanyInfo | 830 | 24 | 0 |
+| InvestorEvents | 29 | 0 | 0 |
+| ConceptStocks | 16 | 0 | 0 |
+
+
+### Gemini API (Direct)
+
+| Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------|------------------------|--------------------|-------|
+| `gemini-2.5-flash` | 12671 | 724 | 60 |
+| `gemini-2.0-flash` | 10 | 0 | 0 |
+| `gemini-2.5-flash-lite` | 3 | 0 | 0 |
+
+#### All Applications
+
+| Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------------|------------------------|--------------------|-------|
+| GoogleAlertManager | 11182 | 340 | 23 |
+| skill-youtube-channel-srt-keyframe-extract | 708 | 360 | 37 |
+| CompanyInfo | 686 | 24 | 0 |
+| ConceptStocks | 32 | 0 | 0 |
+| InvestorEvents | 29 | 0 | 0 |
+| TAIEX_Finguider_Pro | 25 | 0 | 0 |
+| llm-api | 8 | 0 | 0 |
+| TAIEX_Revenue_History | 5 | 0 | 0 |
+| TravelAPP | 3 | 0 | 0 |
+| TestSmartRouting | 2 | 0 | 0 |
+| TW-institutional-investment-theses | 1 | 0 | 0 |
+| TW-institutional-research | 1 | 0 | 0 |
+| debug-probe-app | 1 | 0 | 0 |
+| diagnostic-test | 1 | 0 | 0 |
+
+![](https://img.shields.io/badge/GoogleAlertManager-11182_calls-blue)
+![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-708_calls-green)
+![](https://img.shields.io/badge/CompanyInfo-686_calls-orange)
+![](https://img.shields.io/badge/ConceptStocks-32_calls-red)
+![](https://img.shields.io/badge/InvestorEvents-29_calls-purple)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-25_calls-yellowgreen)
+![](https://img.shields.io/badge/llm--api-8_calls-cyan)
+![](https://img.shields.io/badge/TAIEX_Revenue_History-5_calls-teal)
+![](https://img.shields.io/badge/TravelAPP-3_calls-pink)
+![](https://img.shields.io/badge/TestSmartRouting-2_calls-indigo)
+![](https://img.shields.io/badge/TW--institutional--investment--theses-1_calls-blue)
+![](https://img.shields.io/badge/TW--institutional--research-1_calls-green)
+![](https://img.shields.io/badge/debug--probe--app-1_calls-orange)
+![](https://img.shields.io/badge/diagnostic--test-1_calls-red)
+
+
+### Llm-Cli-APIServer
+
+| Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------|------------------------|--------------------|-------|
+| `chatgpt-pro` | 1545 | 112 | 3 |
+| `codex` | 616 | 0 | 0 |
+
+#### All Applications
+
+| Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------------|------------------------|--------------------|-------|
+| CompanyInfo | 1018 | 24 | 0 |
+| whisper-merge-review | 616 | 0 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 220 | 88 | 3 |
+| TAIEX_Finguider_Pro | 82 | 0 | 0 |
+| GoogleAlertManager | 72 | 0 | 0 |
+| TAIEX_Revenue_History | 33 | 0 | 0 |
+| ConceptStocks | 27 | 0 | 0 |
+| InvestorEvents | 23 | 0 | 0 |
+| llm-api | 23 | 0 | 0 |
+| ServerSmartTest | 14 | 0 | 0 |
+| TAIEX_Compare | 10 | 0 | 0 |
+| TAIEX_Finguider_Gen | 7 | 0 | 0 |
+| TAIEX_Visualizer | 7 | 0 | 0 |
+| SmartTest | 6 | 0 | 0 |
+| TAIEX_Finguider_HighQual | 1 | 0 | 0 |
+| TAIEX_Google_Visualizer | 1 | 0 | 0 |
+| debug-probe-app | 1 | 0 | 0 |
+
+![](https://img.shields.io/badge/CompanyInfo-1018_calls-blue)
+![](https://img.shields.io/badge/whisper--merge--review-616_calls-green)
+![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-220_calls-orange)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-82_calls-red)
+![](https://img.shields.io/badge/GoogleAlertManager-72_calls-purple)
+![](https://img.shields.io/badge/TAIEX_Revenue_History-33_calls-yellowgreen)
+![](https://img.shields.io/badge/ConceptStocks-27_calls-cyan)
+![](https://img.shields.io/badge/InvestorEvents-23_calls-teal)
+![](https://img.shields.io/badge/llm--api-23_calls-pink)
+![](https://img.shields.io/badge/ServerSmartTest-14_calls-indigo)
+![](https://img.shields.io/badge/TAIEX_Compare-10_calls-blue)
+![](https://img.shields.io/badge/TAIEX_Finguider_Gen-7_calls-green)
+![](https://img.shields.io/badge/TAIEX_Visualizer-7_calls-orange)
+![](https://img.shields.io/badge/SmartTest-6_calls-red)
+![](https://img.shields.io/badge/TAIEX_Finguider_HighQual-1_calls-purple)
+
+
+### Local Inference (MLX/Whisper/OCR)
+
+| Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------|------------------------|--------------------|-------|
+| `baidu/Unlimited-OCR` | 6978 | 4 | 4 |
+| `whisper-large-v3` | 2209 | 168 | 0 |
+| `mlx-qwen3` | 44 | 0 | 0 |
+| `mlx-gemma4` | 29 | 9 | 9 |
+| `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
+| `whisper-large-v3-turbo` | 6 | 0 | 0 |
+| `distil-whisper-large-v3` | 1 | 0 | 0 |
+
+#### All Applications
+
+| Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------------|------------------------|--------------------|-------|
+| Baidu-OCR | 6926 | 0 | 0 |
+| whisper-transcription | 1617 | 168 | 0 |
+| whisper-transcription-stage | 579 | 0 | 0 |
+| ocr-engine-benchmark | 48 | 0 | 0 |
+| whisper-poc-sample | 33 | 0 | 0 |
+| eval-gemma4 | 26 | 0 | 0 |
+| test-mlx | 20 | 0 | 0 |
+| Synology-Photo-Tagger | 13 | 13 | 13 |
+| SmartTest | 8 | 0 | 0 |
+| test-mlx-gemma4 | 5 | 0 | 0 |
+| TAIEX_Finguider_Pro | 4 | 0 | 0 |
+| GoogleAlertManager | 1 | 0 | 0 |
+
+#### Application by Model
+
+| Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
+|-------------|----------------|------------------------|--------------------|-------|
+| Baidu-OCR; baidu/Unlimited-OCR | (unknown) | 6926 | 0 | 0 |
+| whisper-transcription; whisper-large-v3 | (unknown) | 1598 | 168 | 0 |
+| whisper-transcription-stage; whisper-large-v3 | (unknown) | 578 | 0 | 0 |
+| ocr-engine-benchmark; baidu/Unlimited-OCR | (unknown) | 48 | 0 | 0 |
+| whisper-poc-sample; whisper-large-v3 | (unknown) | 33 | 0 | 0 |
+| test-mlx; mlx-qwen3 | (unknown) | 20 | 0 | 0 |
+| eval-gemma4; mlx-gemma4 | (unknown) | 13 | 0 | 0 |
+| eval-gemma4; mlx-qwen3 | (unknown) | 13 | 0 | 0 |
+| whisper-transcription; mlx-community/whisper-large-v3-turbo | (unknown) | 13 | 0 | 0 |
+| Synology-Photo-Tagger; mlx-gemma4 | (unknown) | 9 | 9 | 9 |
+| SmartTest; mlx-qwen3 | (unknown) | 8 | 0 | 0 |
+| whisper-transcription; whisper-large-v3-turbo | (unknown) | 6 | 0 | 0 |
+| test-mlx-gemma4; mlx-gemma4 | (unknown) | 5 | 0 | 0 |
+| Synology-Photo-Tagger; baidu/Unlimited-OCR | (unknown) | 4 | 4 | 4 |
+| TAIEX_Finguider_Pro; mlx-gemma4 | (unknown) | 2 | 0 | 0 |
+| TAIEX_Finguider_Pro; mlx-qwen3 | (unknown) | 2 | 0 | 0 |
+| GoogleAlertManager; mlx-qwen3 | (unknown) | 1 | 0 | 0 |
+| whisper-transcription-stage; distil-whisper-large-v3 | (unknown) | 1 | 0 | 0 |
+
+![](https://img.shields.io/badge/Baidu--OCR-6926_calls-blue)
+![](https://img.shields.io/badge/whisper--transcription-1617_calls-green)
+![](https://img.shields.io/badge/whisper--transcription--stage-579_calls-orange)
+![](https://img.shields.io/badge/ocr--engine--benchmark-48_calls-red)
+![](https://img.shields.io/badge/whisper--poc--sample-33_calls-purple)
+![](https://img.shields.io/badge/eval--gemma4-26_calls-yellowgreen)
+![](https://img.shields.io/badge/test--mlx-20_calls-cyan)
+![](https://img.shields.io/badge/Synology--Photo--Tagger-13_calls-teal)
+![](https://img.shields.io/badge/SmartTest-8_calls-pink)
+![](https://img.shields.io/badge/test--mlx--gemma4-5_calls-indigo)
+![](https://img.shields.io/badge/TAIEX_Finguider_Pro-4_calls-blue)
+![](https://img.shields.io/badge/GoogleAlertManager-1_calls-green)
 
 
 ## 📦 安裝方式
