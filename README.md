@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 15:01 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-26 22:33 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24125-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-1017-blue)
-![](https://img.shields.io/badge/Today-76-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-1065-blue)
+![](https://img.shields.io/badge/Today-124-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 12671 | 724 | 60 |
+| `gemini-2.5-flash` | 12671 | 736 | 72 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -68,7 +68,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | GoogleAlertManager | 11182 | 340 | 23 |
-| skill-youtube-channel-srt-keyframe-extract | 708 | 360 | 37 |
+| skill-youtube-channel-srt-keyframe-extract | 708 | 372 | 49 |
 | CompanyInfo | 686 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -102,7 +102,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `chatgpt-pro` | 1545 | 112 | 3 |
+| `chatgpt-pro` | 1545 | 115 | 6 |
 | `codex` | 616 | 0 | 0 |
 
 #### All Applications
@@ -111,7 +111,7 @@
 |-------------|------------------------|--------------------|-------|
 | CompanyInfo | 1018 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 220 | 88 | 3 |
+| skill-youtube-channel-srt-keyframe-extract | 220 | 91 | 6 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
@@ -148,10 +148,10 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `baidu/Unlimited-OCR` | 6978 | 6 | 6 |
-| `whisper-large-v3` | 2209 | 168 | 0 |
+| `baidu/Unlimited-OCR` | 6978 | 9 | 9 |
+| `whisper-large-v3` | 2209 | 171 | 3 |
 | `mlx-qwen3` | 44 | 0 | 0 |
-| `mlx-gemma4` | 29 | 11 | 11 |
+| `mlx-gemma4` | 29 | 34 | 34 |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
 | `whisper-large-v3-turbo` | 6 | 0 | 0 |
 | `distil-whisper-large-v3` | 1 | 0 | 0 |
@@ -161,13 +161,13 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1617 | 168 | 0 |
+| whisper-transcription | 1617 | 171 | 3 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
 | test-mlx | 20 | 0 | 0 |
-| Synology-Photo-Tagger | 13 | 17 | 17 |
+| Synology-Photo-Tagger | 13 | 43 | 43 |
 | SmartTest | 8 | 0 | 0 |
 | test-mlx-gemma4 | 5 | 0 | 0 |
 | TAIEX_Finguider_Pro | 4 | 0 | 0 |
@@ -178,7 +178,7 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1598 | 168 | 0 |
+| whisper-transcription | whisper-large-v3 | 1598 | 171 | 3 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
 | whisper-poc-sample | whisper-large-v3 | 33 | 0 | 0 |
@@ -186,11 +186,11 @@
 | eval-gemma4 | mlx-gemma4 | 13 | 0 | 0 |
 | eval-gemma4 | mlx-qwen3 | 13 | 0 | 0 |
 | whisper-transcription | mlx-community/whisper-large-v3-turbo | 13 | 0 | 0 |
-| Synology-Photo-Tagger | mlx-gemma4 | 9 | 11 | 11 |
+| Synology-Photo-Tagger | mlx-gemma4 | 9 | 34 | 34 |
 | SmartTest | mlx-qwen3 | 8 | 0 | 0 |
 | whisper-transcription | whisper-large-v3-turbo | 6 | 0 | 0 |
 | test-mlx-gemma4 | mlx-gemma4 | 5 | 0 | 0 |
-| Synology-Photo-Tagger | Baidu OCR | 4 | 6 | 6 |
+| Synology-Photo-Tagger | Baidu OCR | 4 | 9 | 9 |
 | TAIEX_Finguider_Pro | mlx-gemma4 | 2 | 0 | 0 |
 | TAIEX_Finguider_Pro | mlx-qwen3 | 2 | 0 | 0 |
 | GoogleAlertManager | mlx-qwen3 | 1 | 0 | 0 |
