@@ -97,6 +97,8 @@ jobs:
                   elif isinstance(value, str) and value.strip() and value.strip().lower() not in {"(none)", "(not set)", "none"}:
                       values.append(value.strip())
               collect_strings(label)
+              if len(group_props) > 1 and len(values) == 1 and ";" in values[0]:
+                  values = [part.strip() for part in values[0].split(";", len(group_props) - 1)]
               parts = []
               for index, prop in enumerate(group_props):
                   if index < len(values):
