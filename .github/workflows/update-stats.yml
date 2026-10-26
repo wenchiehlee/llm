@@ -35,7 +35,8 @@ jobs:
           README    = Path("README.md")
           HEADER    = "## API Usage Statistics"
           TW_TZ     = timezone(timedelta(hours=8))
-          AMP_START = (datetime.now(TW_TZ) - timedelta(days=365)).strftime("%Y%m%d")
+          AS_OF = datetime.now(TW_TZ)
+          PERIOD_START = (AS_OF - timedelta(days=364)).strftime("%Y%m%d")  # 365 calendar dates, inclusive of today
           APP_COLORS = ["blue", "green", "orange", "red", "purple", "yellowgreen", "cyan", "teal", "pink", "indigo"]
           CHART_COLORS = ["#1A6CF7", "#00C2A0", "#F7931A", "#A456F0", "#FF5733", "#20B2AA", "#E91E63", "#9C27B0", "#673AB7", "#3F51B5"]
 
@@ -67,8 +68,8 @@ jobs:
               raise Exception("Amplitude API failed")
 
           def query_total_calls(api_key, secret_key, days=None, offset_days=0, model_filter=None):
-              end_dt = datetime.now(TW_TZ) - timedelta(days=offset_days)
-              start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else AMP_START
+              end_dt = AS_OF - timedelta(days=offset_days)
+              start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else PERIOD_START
               event_def = {"event_type": "llm_call"}
               if model_filter: event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
               params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1"}
@@ -78,7 +79,7 @@ jobs:
               except: return 0
 
           def query_daily_series(api_key, secret_key, days, model_filter=None):
-              end_dt = datetime.now(TW_TZ); start_dt = end_dt - timedelta(days=days-1)
+              end_dt = AS_OF; start_dt = end_dt - timedelta(days=days-1)
               event_def = {"event_type": "llm_call"}
               if model_filter: event_def["filters"] = [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter}]
               params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1"}
@@ -87,47 +88,41 @@ jobs:
                   return data.get("data", {}).get("series", [[]])[0]
               except: return [0] * days
 
+          def normalize_group_label(label, group_prop):
+              if isinstance(label, list):
+                  label = next((x for x in label if isinstance(x, str) and x.strip()), "")
+              if not isinstance(label, str) or not label.strip() or label.strip().lower() in {"(none)", "(not set)", "none"}:
+                  return "(missing app_name)" if group_prop == "app_name" else "(unknown)"
+              return label.strip()
+
           def query_grouped(api_key, secret_key, group_prop, model_filter=None, days=None, extra_filters=None):
-              end_dt = datetime.now(TW_TZ)
-              start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else AMP_START
+              end_dt = AS_OF
+              start = (end_dt - timedelta(days=days-1)).strftime("%Y%m%d") if days else PERIOD_START
               event_def = {"event_type": "llm_call", "group_by": [{"type": "event", "value": group_prop}]}
               filters = []
               if model_filter: filters.append({"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_filter})
               if extra_filters: filters.extend(extra_filters)
               if filters: event_def["filters"] = filters
-              params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "50"}
+              params = {"e": json.dumps(event_def), "start": start, "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "1000"}
               data = amp_get(api_key, secret_key, params)
               series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
               for i, label in enumerate(labels):
                   if i < len(series):
-                      if isinstance(label, list): label = [x for x in label if isinstance(x, str)][0] if any(isinstance(x, str) for x in label) else ""
+                      label = normalize_group_label(label, group_prop)
                       total = sum(v for v in series[i] if v is not None)
-                      if total > 0 and label: result[label] = int(total)
+                      if total > 0: result[label] = int(total)
               return result
 
-          def query_avg_duration_all(api_key, secret_key):
-              params = {"e": json.dumps({"event_type": "llm_call", "group_by": [{"type": "event", "value": "model"}]}), "start": AMP_START, "end": datetime.now(TW_TZ).strftime("%Y%m%d"), "m": "avg_prop", "prop_key": "duration_sec", "prop_type": "event", "i": "1"}
-              try:
-                  data = amp_get(api_key, secret_key, params)
-                  series, labels, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), {}
-                  for i, label in enumerate(labels):
-                      if i < len(series):
-                          if isinstance(label, list): label = [x for x in label if isinstance(x, str)][0] if any(isinstance(x, str) for x in label) else ""
-                          vals = [v for v in series[i] if v is not None and v > 0]
-                          if vals: result[label] = sum(vals) / len(vals)
-                  return result
-              except: return {}
-
           def query_last7days(api_key, secret_key, model_names, group_by="app_name"):
-              end_dt = datetime.now(TW_TZ); start_dt = end_dt - timedelta(days=6)
+              end_dt = AS_OF; start_dt = end_dt - timedelta(days=6)
               event_def = {"event_type": "llm_call", "filters": [{"subprop_type": "event", "subprop_key": "model", "subprop_op": "is", "subprop_value": model_names}], "group_by": [{"type": "event", "value": group_by}]}
-              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "50"}
+              params = {"e": json.dumps(event_def), "start": start_dt.strftime("%Y%m%d"), "end": end_dt.strftime("%Y%m%d"), "m": "totals", "i": "1", "limit": "1000"}
               data = amp_get(api_key, secret_key, params)
               series, labels, xvals, result = data.get("data", {}).get("series", []), data.get("data", {}).get("seriesLabels", []), data.get("data", {}).get("xValues", []), {}
               for i, label in enumerate(labels):
                   if i < len(series):
-                      if isinstance(label, list): label = [x for x in label if isinstance(x, str)][0] if any(isinstance(x, str) for x in label) else ""
-                      if label: result[label] = [v if v is not None else 0 for v in series[i]]
+                      label = normalize_group_label(label, group_by)
+                      result[label] = [v if v is not None else 0 for v in series[i]]
               return xvals, result
 
           def generate_stacked_bar_svg(title, xdates, series, filepath):
@@ -191,38 +186,39 @@ jobs:
           m_counts = query_grouped(api_key, secret_key, "model")
           m_counts_7d = query_grouped(api_key, secret_key, "model", days=7)
           m_counts_24h = query_grouped(api_key, secret_key, "model", days=1)
-          m_avg_dur = query_avg_duration_all(api_key, secret_key)
           daily = query_daily_series(api_key, secret_key, days=14, model_filter=all_models)
           recent = {"total": query_total_calls(api_key, secret_key, model_filter=all_models), "24h": daily[-1], "prev_24h": daily[-2], "7d": sum(daily[-7:]), "prev_7d": sum(daily[-14:-7])}
-          
-          now_tw = datetime.now(TW_TZ).strftime('%Y-%m-%d %H:%M CST')
+
+          now_tw = AS_OF.strftime('%Y-%m-%d %H:%M CST')
           lines = [HEADER, "", f"*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: {now_tw}*", ""]
           # Badges on separate lines as requested
           lines += [
-              badge("Total_Calls", f"{recent['total']}", "black"),
-              badge("Last_7_Days", f"{recent['7d']}", "blue"),
-              badge("Last_24_Hours", f"{recent['24h']}", "green"),
+              badge("Past_365_Calendar_Days", f"{recent['total']}", "black"),
+              badge("Last_7_Calendar_Days", f"{recent['7d']}", "blue"),
+              badge("Today", f"{recent['24h']}", "green"),
+              "",
+              "*Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*",
               ""
           ]
 
           # --- Overview charts (combined across all services, replaces one per-service pair) ---
           ov_app_xdates, ov_app = query_last7days(api_key, secret_key, all_models, group_by="app_name")
           if ov_app_xdates and ov_app:
-              generate_stacked_bar_svg("Total events by App (Last 7 Days)", ov_app_xdates, ov_app, OVERVIEW_SVG_BY_APP)
+              generate_stacked_bar_svg("Total events by App (Last 7 Calendar Days)", ov_app_xdates, ov_app, OVERVIEW_SVG_BY_APP)
               lines += ["", f"![](./{OVERVIEW_SVG_BY_APP})"]
           ov_model_xdates, ov_model = query_last7days(api_key, secret_key, all_models, group_by="model")
           if ov_model_xdates and ov_model:
-              generate_stacked_bar_svg("Total events by Model (Last 7 Days)", ov_model_xdates, ov_model, OVERVIEW_SVG_BY_MODEL)
+              generate_stacked_bar_svg("Total events by Model (Last 7 Calendar Days)", ov_model_xdates, ov_model, OVERVIEW_SVG_BY_MODEL)
               lines += ["", f"![](./{OVERVIEW_SVG_BY_MODEL})"]
 
-          # --- Total (all-time, since AMP_START) charts, by App and by Model ---
+          # --- Total (past 365 calendar days) charts, by App and by Model ---
           total_by_app = query_grouped(api_key, secret_key, "app_name", model_filter=all_models)
           if total_by_app:
-              generate_totals_bar_svg("Total events by App (All Time)", total_by_app, TOTAL_SVG_BY_APP)
+              generate_totals_bar_svg("Events by App (Past 365 Calendar Days)", total_by_app, TOTAL_SVG_BY_APP)
               lines += ["", f"![](./{TOTAL_SVG_BY_APP})"]
           total_by_model = {m: c for m, c in m_counts.items() if m in all_models}
           if total_by_model:
-              generate_totals_bar_svg("Total events by Model (All Time)", total_by_model, TOTAL_SVG_BY_MODEL)
+              generate_totals_bar_svg("Events by Model (Past 365 Calendar Days)", total_by_model, TOTAL_SVG_BY_MODEL)
               lines += ["", f"![](./{TOTAL_SVG_BY_MODEL})"]
           lines += ["", ""]
 
@@ -231,7 +227,7 @@ jobs:
           if sr_stats:
               sr_7d = query_grouped(api_key, secret_key, "smart_route_status", days=7)
               sr_24h = query_grouped(api_key, secret_key, "smart_route_status", days=1)
-              lines += ["### Smart Routing (Efficiency)", "", "| Status | Total | Last 7D | Last 24H | Description |", "|--------|-------|---------|----------|-------------|"]
+              lines += ["### Smart Routing (Efficiency)", "", "| Status | Past 365 Calendar Days | Last 7 Calendar Days | Today | Description |", "|--------|------------------------|--------------------|-------|-------------|"]
               status_map = {
                   "judged_passed": "Draft Passed",
                   "judged_failed": "Judge Replaced",
@@ -246,32 +242,32 @@ jobs:
               }
               for k, label in status_map.items():
                   lines.append(f"| {label} | {sr_stats.get(k, 0)} | {sr_7d.get(k, 0)} | {sr_24h.get(k, 0)} | {desc_map.get(k, '')} |")
-              
+
               sr_filter = [{"subprop_type": "event", "subprop_key": "smart_route_status", "subprop_op": "is", "subprop_value": list(status_map.keys())}]
               sr_apps = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter)
               if sr_apps:
                   sr_apps_7d = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter, days=7)
                   sr_apps_24h = query_grouped(api_key, secret_key, "app_name", extra_filters=sr_filter, days=1)
-                  lines += ["", "#### Smart Routing by Application", "", "| App | Total | Last 7D | Last 24H |", "|-----|-------|---------|----------|"]
+                  lines += ["", "#### Smart Routing by Application", "", "| App | Past 365 Calendar Days | Last 7 Calendar Days | Today |", "|-----|------------------------|--------------------|-------|"]
                   for app, count in sorted(sr_apps.items(), key=lambda x: -x[1]):
                       c7d = sr_apps_7d.get(app, 0); c24h = sr_apps_24h.get(app, 0)
                       lines.append(f"| {app} | {count} | {c7d} | {c24h} |")
               lines += ["", ""]
-          
+
           for svc, models in SERVICE_MODELS.items():
               svc_m = {m: m_counts[m] for m in models if m in m_counts}
               if not svc_m: continue
-              lines += [f"### {svc}", "", "| Model | Total Calls | Last 7D | Last 24H | Avg Duration |", "|-------|-------------|---------|----------|--------------|"]
+              lines += [f"### {svc}", "", "| Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |", "|-------|------------------------|--------------------|-------|"]
               for m, count in sorted(svc_m.items(), key=lambda x: -x[1]):
                   c7d = m_counts_7d.get(m, 0); c24h = m_counts_24h.get(m, 0)
-                  avg = m_avg_dur.get(m); lines.append(f"| `{m}` | {count} | {c7d} | {c24h} | {f'{avg:.1f}s' if avg else 'N/A'} |")
-              
+                  lines.append(f"| `{m}` | {count} | {c7d} | {c24h} |")
+
               svc_apps = query_grouped(api_key, secret_key, "app_name", model_filter=list(models))
               svc_apps_7d = query_grouped(api_key, secret_key, "app_name", model_filter=list(models), days=7)
               svc_apps_24h = query_grouped(api_key, secret_key, "app_name", model_filter=list(models), days=1)
-              
+
               if svc_apps:
-                  lines += ["", "#### All Applications", "", "| Application | Total Calls | Last 7D | Last 24H |", "|-------------|-------------|---------|----------|"]
+                  lines += ["", "#### All Applications", "", "| Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |", "|-------------|------------------------|--------------------|-------|"]
                   sorted_apps = sorted(svc_apps.items(), key=lambda x: -x[1])
                   for app, count in sorted_apps:
                       c7d = svc_apps_7d.get(app, 0); c24h = svc_apps_24h.get(app, 0)
