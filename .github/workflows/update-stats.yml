@@ -90,13 +90,19 @@ jobs:
 
           def normalize_group_label(label, group_props):
               if isinstance(group_props, str): group_props = [group_props]
-              labels = label if isinstance(label, list) else [label]
+              values = []
+              def collect_strings(value):
+                  if isinstance(value, (list, tuple)):
+                      for item in value: collect_strings(item)
+                  elif isinstance(value, str) and value.strip() and value.strip().lower() not in {"(none)", "(not set)", "none"}:
+                      values.append(value.strip())
+              collect_strings(label)
               parts = []
               for index, prop in enumerate(group_props):
-                  value = labels[index] if index < len(labels) else ""
-                  if not isinstance(value, str) or not value.strip() or value.strip().lower() in {"(none)", "(not set)", "none"}:
-                      value = "(missing app_name)" if prop == "app_name" else "(unknown)"
-                  parts.append(value.strip())
+                  if index < len(values):
+                      parts.append(values[index])
+                  else:
+                      parts.append("(missing app_name)" if prop == "app_name" else "(unknown)")
               return tuple(parts) if len(parts) > 1 else parts[0]
 
           def query_grouped(api_key, secret_key, group_prop, model_filter=None, days=None, extra_filters=None, second_group_prop=None):
