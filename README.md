@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-27 13:35 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-27 18:59 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24221-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-1051-blue)
-![](https://img.shields.io/badge/Today-95-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-1069-blue)
+![](https://img.shields.io/badge/Today-113-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 12701 | 725 | 74 |
+| `gemini-2.5-flash` | 12701 | 737 | 86 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -68,7 +68,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | GoogleAlertManager | 11182 | 336 | 23 |
-| skill-youtube-channel-srt-keyframe-extract | 734 | 365 | 51 |
+| skill-youtube-channel-srt-keyframe-extract | 734 | 377 | 63 |
 | CompanyInfo | 690 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -102,7 +102,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `chatgpt-pro` | 1553 | 104 | 9 |
+| `chatgpt-pro` | 1553 | 105 | 10 |
 | `codex` | 616 | 0 | 0 |
 
 #### All Applications
@@ -111,7 +111,7 @@
 |-------------|------------------------|--------------------|-------|
 | CompanyInfo | 1022 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 224 | 80 | 9 |
+| skill-youtube-channel-srt-keyframe-extract | 224 | 81 | 10 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
@@ -149,7 +149,7 @@
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
 | `baidu/Unlimited-OCR` | 6983 | 9 | 0 |
-| `whisper-large-v3` | 2212 | 154 | 0 |
+| `whisper-large-v3` | 2212 | 159 | 5 |
 | `mlx-gemma4` | 79 | 59 | 12 |
 | `mlx-qwen3` | 44 | 0 | 0 |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
@@ -161,7 +161,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1620 | 154 | 0 |
+| whisper-transcription | 1620 | 159 | 5 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | Synology-Photo-Tagger | 68 | 68 | 12 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
@@ -178,7 +178,7 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1601 | 154 | 0 |
+| whisper-transcription | whisper-large-v3 | 1601 | 159 | 5 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
 | Synology-Photo-Tagger | mlx-gemma4 | 59 | 59 | 12 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
