@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-28 08:43 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-28 15:24 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24334-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-987-blue)
-![](https://img.shields.io/badge/Today-58-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-1047-blue)
+![](https://img.shields.io/badge/Today-118-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -42,14 +42,14 @@
 |--------|------------------------|--------------------|-------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 1715 | 313 | 34 | Automatic fallback to Gemini. |
+| Fallback (Error) | 1715 | 339 | 60 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-----|------------------------|--------------------|-------|
-| GoogleAlertManager | 996 | 289 | 34 |
+| GoogleAlertManager | 996 | 315 | 60 |
 | CompanyInfo | 838 | 24 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 12791 | 685 | 54 |
+| `gemini-2.5-flash` | 12791 | 740 | 109 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -67,8 +67,8 @@
 
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
-| GoogleAlertManager | 11205 | 308 | 38 |
-| skill-youtube-channel-srt-keyframe-extract | 797 | 353 | 16 |
+| GoogleAlertManager | 11205 | 337 | 67 |
+| skill-youtube-channel-srt-keyframe-extract | 797 | 379 | 42 |
 | CompanyInfo | 694 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -102,7 +102,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `chatgpt-pro` | 1568 | 88 | 2 |
+| `chatgpt-pro` | 1568 | 90 | 4 |
 | `codex` | 616 | 0 | 0 |
 
 #### All Applications
@@ -111,7 +111,7 @@
 |-------------|------------------------|--------------------|-------|
 | CompanyInfo | 1026 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 235 | 64 | 2 |
+| skill-youtube-channel-srt-keyframe-extract | 235 | 66 | 4 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
@@ -149,7 +149,7 @@
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
 | `baidu/Unlimited-OCR` | 6983 | 9 | 0 |
-| `whisper-large-v3` | 2220 | 146 | 2 |
+| `whisper-large-v3` | 2220 | 149 | 5 |
 | `mlx-gemma4` | 79 | 59 | 0 |
 | `mlx-qwen3` | 44 | 0 | 0 |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
@@ -161,7 +161,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1628 | 146 | 2 |
+| whisper-transcription | 1628 | 149 | 5 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | Synology-Photo-Tagger | 68 | 68 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
@@ -178,7 +178,7 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1609 | 146 | 2 |
+| whisper-transcription | whisper-large-v3 | 1609 | 149 | 5 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
 | Synology-Photo-Tagger | mlx-gemma4 | 59 | 59 | 0 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
