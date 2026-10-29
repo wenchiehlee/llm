@@ -3,19 +3,19 @@
 <text x="450" y="34" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial,sans-serif" fill="#1a1a2e">Events by Model (Past 365 Calendar Days)</text>
 <text x="210" y="71.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">gemini-2.5-flash</text>
 <rect x="220" y="55" width="610.0" height="26" rx="3" fill="#1A6CF7"/>
-<text x="838.0" y="71.9" font-size="12" font-family="Arial,sans-serif" fill="#444">12935</text>
+<text x="838.0" y="71.9" font-size="12" font-family="Arial,sans-serif" fill="#444">13016</text>
 <text x="210" y="105.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">baidu/Unlimited-OCR</text>
-<rect x="220" y="89" width="329.3" height="26" rx="3" fill="#00C2A0"/>
-<text x="557.3" y="105.9" font-size="12" font-family="Arial,sans-serif" fill="#444">6983</text>
+<rect x="220" y="89" width="327.3" height="26" rx="3" fill="#00C2A0"/>
+<text x="555.3" y="105.9" font-size="12" font-family="Arial,sans-serif" fill="#444">6983</text>
 <text x="210" y="139.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">whisper-large-v3</text>
-<rect x="220" y="123" width="105.9" height="26" rx="3" fill="#F7931A"/>
-<text x="333.9" y="139.9" font-size="12" font-family="Arial,sans-serif" fill="#444">2245</text>
+<rect x="220" y="123" width="106.1" height="26" rx="3" fill="#F7931A"/>
+<text x="334.1" y="139.9" font-size="12" font-family="Arial,sans-serif" fill="#444">2263</text>
 <text x="210" y="173.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">chatgpt-pro</text>
-<rect x="220" y="157" width="74.4" height="26" rx="3" fill="#A456F0"/>
-<text x="302.4" y="173.9" font-size="12" font-family="Arial,sans-serif" fill="#444">1578</text>
+<rect x="220" y="157" width="74.5" height="26" rx="3" fill="#A456F0"/>
+<text x="302.5" y="173.9" font-size="12" font-family="Arial,sans-serif" fill="#444">1589</text>
 <text x="210" y="207.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">codex</text>
-<rect x="220" y="191" width="29.0" height="26" rx="3" fill="#FF5733"/>
-<text x="257.0" y="207.9" font-size="12" font-family="Arial,sans-serif" fill="#444">616</text>
+<rect x="220" y="191" width="28.9" height="26" rx="3" fill="#FF5733"/>
+<text x="256.9" y="207.9" font-size="12" font-family="Arial,sans-serif" fill="#444">616</text>
 <text x="210" y="241.9" text-anchor="end" font-size="12" font-family="Arial,sans-serif" fill="#333">mlx-gemma4</text>
 <rect x="220" y="225" width="3.7" height="26" rx="3" fill="#20B2AA"/>
 <text x="231.7" y="241.9" font-size="12" font-family="Arial,sans-serif" fill="#444">79</text>
