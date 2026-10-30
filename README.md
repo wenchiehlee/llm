@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-30 03:51 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-10-30 08:21 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-24623-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-857-blue)
-![](https://img.shields.io/badge/Today-15-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-893-blue)
+![](https://img.shields.io/badge/Today-51-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -42,14 +42,14 @@
 |--------|------------------------|--------------------|-------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 1809 | 237 | 0 | Automatic fallback to Gemini. |
+| Fallback (Error) | 1809 | 245 | 8 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-----|------------------------|--------------------|-------|
-| GoogleAlertManager | 1082 | 213 | 0 |
+| GoogleAlertManager | 1082 | 221 | 8 |
 | CompanyInfo | 846 | 24 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 13016 | 629 | 13 |
+| `gemini-2.5-flash` | 13016 | 661 | 45 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -67,8 +67,8 @@
 
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
-| GoogleAlertManager | 11299 | 228 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 920 | 377 | 13 |
+| GoogleAlertManager | 11299 | 236 | 8 |
+| skill-youtube-channel-srt-keyframe-extract | 920 | 401 | 37 |
 | CompanyInfo | 702 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -102,7 +102,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `chatgpt-pro` | 1589 | 77 | 2 |
+| `chatgpt-pro` | 1589 | 81 | 6 |
 | `codex` | 616 | 0 | 0 |
 
 #### All Applications
@@ -111,7 +111,7 @@
 |-------------|------------------------|--------------------|-------|
 | CompanyInfo | 1034 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 248 | 53 | 2 |
+| skill-youtube-channel-srt-keyframe-extract | 248 | 57 | 6 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
