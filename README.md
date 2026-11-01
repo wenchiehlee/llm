@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-01 17:42 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-02 00:26 CST*
 
-![](https://img.shields.io/badge/Past_365_Calendar_Days-24824-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-849-blue)
-![](https://img.shields.io/badge/Today-82-green)
+![](https://img.shields.io/badge/Past_365_Calendar_Days-24919-black)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-725-blue)
+![](https://img.shields.io/badge/Today-4-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -42,15 +42,15 @@
 |--------|------------------------|--------------------|-------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 1864 | 256 | 56 | Automatic fallback to Gemini. |
+| Fallback (Error) | 1924 | 234 | 0 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-----|------------------------|--------------------|-------|
-| GoogleAlertManager | 1129 | 232 | 56 |
-| CompanyInfo | 854 | 24 | 0 |
+| GoogleAlertManager | 1185 | 210 | 0 |
+| CompanyInfo | 858 | 24 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
 
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 13182 | 645 | 82 |
+| `gemini-2.5-flash` | 13273 | 586 | 4 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -67,9 +67,9 @@
 
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
-| GoogleAlertManager | 11347 | 245 | 57 |
-| skill-youtube-channel-srt-keyframe-extract | 1030 | 376 | 25 |
-| CompanyInfo | 710 | 24 | 0 |
+| GoogleAlertManager | 11404 | 222 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 1061 | 341 | 6 |
+| CompanyInfo | 714 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | TAIEX_Finguider_Pro | 25 | 0 | 0 |
@@ -82,9 +82,9 @@
 | debug-probe-app | 1 | 0 | 0 |
 | diagnostic-test | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/GoogleAlertManager-11347_calls-blue)
-![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-1030_calls-green)
-![](https://img.shields.io/badge/CompanyInfo-710_calls-orange)
+![](https://img.shields.io/badge/GoogleAlertManager-11404_calls-blue)
+![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-1061_calls-green)
+![](https://img.shields.io/badge/CompanyInfo-714_calls-orange)
 ![](https://img.shields.io/badge/ConceptStocks-32_calls-red)
 ![](https://img.shields.io/badge/InvestorEvents-29_calls-purple)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-25_calls-yellowgreen)
@@ -102,16 +102,16 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `chatgpt-pro` | 1601 | 59 | 0 |
+| `chatgpt-pro` | 1605 | 53 | 0 |
 | `codex` | 616 | 0 | 0 |
 
 #### All Applications
 
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
-| CompanyInfo | 1042 | 24 | 0 |
+| CompanyInfo | 1046 | 24 | 0 |
 | whisper-merge-review | 616 | 0 | 0 |
-| skill-youtube-channel-srt-keyframe-extract | 252 | 35 | 0 |
+| skill-youtube-channel-srt-keyframe-extract | 252 | 29 | 0 |
 | TAIEX_Finguider_Pro | 82 | 0 | 0 |
 | GoogleAlertManager | 72 | 0 | 0 |
 | TAIEX_Revenue_History | 33 | 0 | 0 |
@@ -127,7 +127,7 @@
 | TAIEX_Google_Visualizer | 1 | 0 | 0 |
 | debug-probe-app | 1 | 0 | 0 |
 
-![](https://img.shields.io/badge/CompanyInfo-1042_calls-blue)
+![](https://img.shields.io/badge/CompanyInfo-1046_calls-blue)
 ![](https://img.shields.io/badge/whisper--merge--review-616_calls-green)
 ![](https://img.shields.io/badge/skill--youtube--channel--srt--keyframe--extract-252_calls-orange)
 ![](https://img.shields.io/badge/TAIEX_Finguider_Pro-82_calls-red)
@@ -148,9 +148,9 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `baidu/Unlimited-OCR` | 6983 | 9 | 0 |
-| `whisper-large-v3` | 2286 | 77 | 0 |
-| `mlx-gemma4` | 79 | 59 | 0 |
+| `baidu/Unlimited-OCR` | 6983 | 0 | 0 |
+| `whisper-large-v3` | 2286 | 74 | 0 |
+| `mlx-gemma4` | 79 | 12 | 0 |
 | `mlx-qwen3` | 44 | 0 | 0 |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
 | `whisper-large-v3-turbo` | 6 | 0 | 0 |
@@ -161,9 +161,9 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1694 | 77 | 0 |
+| whisper-transcription | 1694 | 74 | 0 |
 | whisper-transcription-stage | 579 | 0 | 0 |
-| Synology-Photo-Tagger | 68 | 68 | 0 |
+| Synology-Photo-Tagger | 68 | 12 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
 | whisper-poc-sample | 33 | 0 | 0 |
 | eval-gemma4 | 26 | 0 | 0 |
@@ -178,16 +178,16 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1675 | 77 | 0 |
+| whisper-transcription | whisper-large-v3 | 1675 | 74 | 0 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
-| Synology-Photo-Tagger | mlx-gemma4 | 59 | 59 | 0 |
+| Synology-Photo-Tagger | mlx-gemma4 | 59 | 12 | 0 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
 | whisper-poc-sample | whisper-large-v3 | 33 | 0 | 0 |
 | test-mlx | mlx-qwen3 | 20 | 0 | 0 |
 | eval-gemma4 | mlx-gemma4 | 13 | 0 | 0 |
 | eval-gemma4 | mlx-qwen3 | 13 | 0 | 0 |
 | whisper-transcription | mlx-community/whisper-large-v3-turbo | 13 | 0 | 0 |
-| Synology-Photo-Tagger | Baidu OCR | 9 | 9 | 0 |
+| Synology-Photo-Tagger | Baidu OCR | 9 | 0 | 0 |
 | SmartTest | mlx-qwen3 | 8 | 0 | 0 |
 | whisper-transcription | whisper-large-v3-turbo | 6 | 0 | 0 |
 | test-mlx-gemma4 | mlx-gemma4 | 5 | 0 | 0 |
