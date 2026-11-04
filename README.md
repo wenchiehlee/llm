@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-04 07:40 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-04 11:18 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-25134-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-667-blue)
-![](https://img.shields.io/badge/Today-48-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-675-blue)
+![](https://img.shields.io/badge/Today-56-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 13466 | 560 | 44 |
+| `gemini-2.5-flash` | 13466 | 568 | 52 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -68,7 +68,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | GoogleAlertManager | 11490 | 218 | 23 |
-| skill-youtube-channel-srt-keyframe-extract | 1159 | 318 | 17 |
+| skill-youtube-channel-srt-keyframe-extract | 1159 | 326 | 25 |
 | CompanyInfo | 722 | 24 | 4 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
