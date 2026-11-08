@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-08 14:41 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-08 21:52 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-25487-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-622-blue)
-![](https://img.shields.io/badge/Today-60-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-633-blue)
+![](https://img.shields.io/badge/Today-71-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 13762 | 539 | 56 |
+| `gemini-2.5-flash` | 13762 | 547 | 64 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -68,7 +68,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | GoogleAlertManager | 11594 | 211 | 21 |
-| skill-youtube-channel-srt-keyframe-extract | 1335 | 304 | 35 |
+| skill-youtube-channel-srt-keyframe-extract | 1335 | 312 | 43 |
 | CompanyInfo | 738 | 24 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
@@ -149,7 +149,7 @@
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
 | `baidu/Unlimited-OCR` | 6983 | 0 | 0 |
-| `whisper-large-v3` | 2338 | 55 | 3 |
+| `whisper-large-v3` | 2338 | 58 | 6 |
 | `mlx-gemma4` | 79 | 0 | 0 |
 | `mlx-qwen3` | 44 | 0 | 0 |
 | `mlx-community/whisper-large-v3-turbo` | 13 | 0 | 0 |
@@ -161,7 +161,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1746 | 55 | 3 |
+| whisper-transcription | 1746 | 58 | 6 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | Synology-Photo-Tagger | 68 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
@@ -178,7 +178,7 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1727 | 55 | 3 |
+| whisper-transcription | whisper-large-v3 | 1727 | 58 | 6 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
 | Synology-Photo-Tagger | mlx-gemma4 | 59 | 0 | 0 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
