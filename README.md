@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-12 07:02 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-12 12:14 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-25848-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-615-blue)
-![](https://img.shields.io/badge/Today-53-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-641-blue)
+![](https://img.shields.io/badge/Today-79-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -149,7 +149,7 @@
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
 | `baidu/Unlimited-OCR` | 6983 | 0 | 0 |
-| `whisper-large-v3` | 2381 | 89 | 26 |
+| `whisper-large-v3` | 2381 | 115 | 52 |
 | `mlx-gemma4` | 79 | 0 | 0 |
 | `mlx-qwen3` | 44 | 0 | 0 |
 | `mlx-community/whisper-large-v3-turbo` | 14 | 1 | 0 |
@@ -161,7 +161,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1790 | 90 | 26 |
+| whisper-transcription | 1790 | 116 | 52 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | Synology-Photo-Tagger | 68 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
@@ -178,7 +178,7 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1770 | 89 | 26 |
+| whisper-transcription | whisper-large-v3 | 1770 | 115 | 52 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
 | Synology-Photo-Tagger | mlx-gemma4 | 59 | 0 | 0 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
