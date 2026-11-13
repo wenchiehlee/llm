@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-13 10:07 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-13 17:58 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-26040-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-707-blue)
-![](https://img.shields.io/badge/Today-63-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-748-blue)
+![](https://img.shields.io/badge/Today-104-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -42,14 +42,14 @@
 |--------|------------------------|--------------------|-------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 2285 | 204 | 19 | Automatic fallback to Gemini. |
+| Fallback (Error) | 2285 | 219 | 34 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-----|------------------------|--------------------|-------|
-| GoogleAlertManager | 1502 | 180 | 15 |
+| GoogleAlertManager | 1502 | 195 | 30 |
 | CompanyInfo | 902 | 24 | 4 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 14097 | 446 | 20 |
+| `gemini-2.5-flash` | 14097 | 461 | 35 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -67,7 +67,7 @@
 
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
-| GoogleAlertManager | 11734 | 189 | 16 |
+| GoogleAlertManager | 11734 | 204 | 31 |
 | skill-youtube-channel-srt-keyframe-extract | 1510 | 233 | 0 |
 | CompanyInfo | 758 | 24 | 4 |
 | ConceptStocks | 32 | 0 | 0 |
@@ -149,7 +149,7 @@
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
 | `baidu/Unlimited-OCR` | 6983 | 0 | 0 |
-| `whisper-large-v3` | 2533 | 234 | 39 |
+| `whisper-large-v3` | 2533 | 260 | 65 |
 | `mlx-gemma4` | 79 | 0 | 0 |
 | `mlx-qwen3` | 44 | 0 | 0 |
 | `mlx-community/whisper-large-v3-turbo` | 14 | 1 | 0 |
@@ -161,7 +161,7 @@
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
 | Baidu-OCR | 6926 | 0 | 0 |
-| whisper-transcription | 1942 | 235 | 39 |
+| whisper-transcription | 1942 | 261 | 65 |
 | whisper-transcription-stage | 579 | 0 | 0 |
 | Synology-Photo-Tagger | 68 | 0 | 0 |
 | ocr-engine-benchmark | 48 | 0 | 0 |
@@ -178,7 +178,7 @@
 | Application | Model / Engine | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|----------------|------------------------|--------------------|-------|
 | Baidu-OCR | Baidu OCR | 6926 | 0 | 0 |
-| whisper-transcription | whisper-large-v3 | 1922 | 234 | 39 |
+| whisper-transcription | whisper-large-v3 | 1922 | 260 | 65 |
 | whisper-transcription-stage | whisper-large-v3 | 578 | 0 | 0 |
 | Synology-Photo-Tagger | mlx-gemma4 | 59 | 0 | 0 |
 | ocr-engine-benchmark | Baidu OCR | 48 | 0 | 0 |
