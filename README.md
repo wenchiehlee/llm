@@ -18,11 +18,11 @@
 
 ## API Usage Statistics
 
-*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-16 11:06 CST*
+*Powered by [Amplitude Analytics](https://amplitude.com) · Updated: 2026-11-16 20:02 CST*
 
 ![](https://img.shields.io/badge/Past_365_Calendar_Days-26447-black)
-![](https://img.shields.io/badge/Last_7_Calendar_Days-826-blue)
-![](https://img.shields.io/badge/Today-10-green)
+![](https://img.shields.io/badge/Last_7_Calendar_Days-842-blue)
+![](https://img.shields.io/badge/Today-26-green)
 
 *Periods use the Amplitude project timezone: past 365 calendar dates, the last 7 calendar dates, and today (a partial day). Events without `app_name` are shown as `(missing app_name)`. Duration is omitted until the API query can be reported accurately.*
 
@@ -42,14 +42,14 @@
 |--------|------------------------|--------------------|-------|-------------|
 | Draft Passed | 10 | 0 | 0 | Saved powerful model cost. |
 | Judge Replaced | 83 | 0 | 0 | Corrected by powerful model. |
-| Fallback (Error) | 2373 | 202 | 10 | Automatic fallback to Gemini. |
+| Fallback (Error) | 2373 | 218 | 26 | Automatic fallback to Gemini. |
 | NAS Reflection | 71 | 0 | 0 | App used draft_provider='codex'; draft+judge ran entirely on NAS via gemini-cli. |
 
 #### Smart Routing by Application
 
 | App | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-----|------------------------|--------------------|-------|
-| GoogleAlertManager | 1586 | 182 | 10 |
+| GoogleAlertManager | 1586 | 198 | 26 |
 | CompanyInfo | 906 | 20 | 0 |
 | InvestorEvents | 29 | 0 | 0 |
 | ConceptStocks | 16 | 0 | 0 |
@@ -59,7 +59,7 @@
 
 | Model | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------|------------------------|--------------------|-------|
-| `gemini-2.5-flash` | 14186 | 305 | 10 |
+| `gemini-2.5-flash` | 14186 | 321 | 26 |
 | `gemini-2.0-flash` | 10 | 0 | 0 |
 | `gemini-2.5-flash-lite` | 3 | 0 | 0 |
 
@@ -67,7 +67,7 @@
 
 | Application | Past 365 Calendar Days | Last 7 Calendar Days | Today |
 |-------------|------------------------|--------------------|-------|
-| GoogleAlertManager | 11829 | 187 | 10 |
+| GoogleAlertManager | 11829 | 203 | 26 |
 | skill-youtube-channel-srt-keyframe-extract | 1510 | 98 | 0 |
 | CompanyInfo | 762 | 20 | 0 |
 | ConceptStocks | 32 | 0 | 0 |
