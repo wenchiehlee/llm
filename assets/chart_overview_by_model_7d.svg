@@ -13,26 +13,28 @@
 <text x="59" y="115" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">48</text>
 <line x1="65" y1="55" x2="880" y2="55" stroke="#EEEEEE" stroke-width="1"/>
 <text x="59" y="59" text-anchor="end" font-size="10" font-family="Arial,sans-serif" fill="#666">60</text>
-<rect x="88.3" y="209.0" width="69.9" height="126.0" fill="#1A6CF7"/>
-<rect x="88.3" y="92.3" width="69.9" height="116.7" fill="#00C2A0"/>
-<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/15</text>
-<rect x="204.7" y="213.7" width="69.9" height="121.3" fill="#1A6CF7"/>
-<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/16</text>
-<rect x="321.1" y="190.3" width="69.9" height="144.7" fill="#1A6CF7"/>
-<rect x="321.1" y="176.3" width="69.9" height="14.0" fill="#00C2A0"/>
-<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/17</text>
-<rect x="437.6" y="181.0" width="69.9" height="154.0" fill="#1A6CF7"/>
-<rect x="437.6" y="153.0" width="69.9" height="28.0" fill="#00C2A0"/>
-<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/18</text>
-<rect x="554.0" y="185.7" width="69.9" height="149.3" fill="#1A6CF7"/>
-<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/19</text>
-<rect x="670.4" y="167.0" width="69.9" height="168.0" fill="#1A6CF7"/>
-<rect x="670.4" y="125.0" width="69.9" height="42.0" fill="#00C2A0"/>
-<rect x="670.4" y="106.3" width="69.9" height="18.7" fill="#F7931A"/>
-<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/20</text>
-<rect x="786.9" y="176.3" width="69.9" height="158.7" fill="#1A6CF7"/>
-<rect x="786.9" y="157.7" width="69.9" height="18.7" fill="#F7931A"/>
-<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/21</text>
+<rect x="88.3" y="213.7" width="69.9" height="121.3" fill="#1A6CF7"/>
+<text x="123.2" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/16</text>
+<rect x="204.7" y="190.3" width="69.9" height="144.7" fill="#1A6CF7"/>
+<rect x="204.7" y="176.3" width="69.9" height="14.0" fill="#00C2A0"/>
+<text x="239.6" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/17</text>
+<rect x="321.1" y="181.0" width="69.9" height="154.0" fill="#1A6CF7"/>
+<rect x="321.1" y="153.0" width="69.9" height="28.0" fill="#00C2A0"/>
+<text x="356.1" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/18</text>
+<rect x="437.6" y="185.7" width="69.9" height="149.3" fill="#1A6CF7"/>
+<text x="472.5" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/19</text>
+<rect x="554.0" y="167.0" width="69.9" height="168.0" fill="#1A6CF7"/>
+<rect x="554.0" y="125.0" width="69.9" height="42.0" fill="#00C2A0"/>
+<rect x="554.0" y="106.3" width="69.9" height="18.7" fill="#F7931A"/>
+<text x="588.9" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/20</text>
+<rect x="670.4" y="176.3" width="69.9" height="158.7" fill="#1A6CF7"/>
+<rect x="670.4" y="171.7" width="69.9" height="4.7" fill="#00C2A0"/>
+<rect x="670.4" y="153.0" width="69.9" height="18.7" fill="#F7931A"/>
+<text x="705.4" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/21</text>
+<rect x="786.9" y="316.3" width="69.9" height="18.7" fill="#1A6CF7"/>
+<rect x="786.9" y="307.0" width="69.9" height="9.3" fill="#00C2A0"/>
+<rect x="786.9" y="288.3" width="69.9" height="18.7" fill="#F7931A"/>
+<text x="821.8" y="351" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#666">11/22</text>
 <rect x="65" y="370" width="10" height="10" rx="2" fill="#1A6CF7"/>
 <text x="81" y="379" font-size="11" font-family="Arial,sans-serif" fill="#444">gemini-2.5-flash</text>
 <rect x="202" y="370" width="10" height="10" rx="2" fill="#00C2A0"/>
