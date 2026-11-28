@@ -1,11 +1,6 @@
 name: Deploy Llm-Deck portal to Synology
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'portal/**'
-      - '.github/workflows/portal-pages-deploy.yml'
   workflow_dispatch:
 
 permissions:
