@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Llm-Deck · Unified LLM Client</title>
+  <meta name="description" content="Unified LLM client with provider fallback, smart routing, Gemini key rotation, CLI bridges, and local MLX inference.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-icon" aria-hidden="true">🧠</span><span>Llm-Deck</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#providers">Providers</a>
+      <a href="https://github.com/wenchiehlee/llm/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation ↗</a>
+    </nav>
+    <a class="repo-link" href="https://github.com/wenchiehlee/llm" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">UNIFIED LLM CLIENT · SMART ROUTING</p>
+      <h1>One client. Multiple inference paths.</h1>
+      <p class="lead">Llm-Deck brings Gemini, server-side CLI bridges, and local MLX inference behind a consistent Python client, with automatic fallback when a preferred provider is unavailable.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="https://github.com/wenchiehlee/llm/blob/main/README.md" target="_blank" rel="noopener noreferrer">Read the documentation <span aria-hidden="true">↗</span></a>
+        <a class="button secondary" href="https://github.com/wenchiehlee/llm" target="_blank" rel="noopener noreferrer">Browse source</a>
+      </div>
+      <div class="route" aria-label="Provider fallback order"><span>Gemini</span><i>→</i><span>CLI bridge</span><i>→</i><span>Local MLX</span></div>
+    </section>
+    <section id="capabilities" class="section">
+      <div class="section-heading"><p class="eyebrow">CAPABILITIES</p><h2>A flexible inference toolkit</h2></div>
+      <div class="cards">
+        <article class="card"><span class="card-icon">🔁</span><h3>Provider fallback</h3><p>Route requests across configured providers when the preferred path is unavailable.</p></article>
+        <article class="card"><span class="card-icon">🔑</span><h3>Gemini key rotation</h3><p>Rotate configured Gemini API keys and handle daily quota limits.</p></article>
+        <article class="card"><span class="card-icon">🖥️</span><h3>CLI and local bridges</h3><p>Connect to server-side Codex or Gemini CLI services and local Apple Silicon inference.</p></article>
+        <article class="card"><span class="card-icon">🧭</span><h3>Smart routing</h3><p>Evaluate draft and review paths to balance output quality, speed, and inference cost.</p></article>
+      </div>
+    </section>
+    <section id="providers" class="section provider-section">
+      <div><p class="eyebrow">PROVIDER PATHS</p><h2>Choose the right execution path</h2><p class="section-copy">Provider availability depends on the credentials and services configured by the application using the library.</p></div>
+      <ul class="provider-list">
+        <li><span class="provider-dot gemini"></span><span><strong>Gemini API</strong><small>Direct API calls with key rotation</small></span></li>
+        <li><span class="provider-dot bridge"></span><span><strong>CLI bridge</strong><small>Codex and Gemini CLI services</small></span></li>
+        <li><span class="provider-dot mlx"></span><span><strong>Local inference</strong><small>MLX and supported local models</small></span></li>
+      </ul>
+    </section>
+    <footer><span>Llm-Deck · Python library for unified LLM access</span><a href="https://github.com/wenchiehlee/llm" target="_blank" rel="noopener noreferrer">wenchiehlee/llm ↗</a></footer>
+  </main>
+</body>
+</html>
